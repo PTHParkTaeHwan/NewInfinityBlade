@@ -21,7 +21,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	virtual void PostInitializeComponents() override;
+
+protected:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const&DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+public:
+	void PushedMotion(AActor * DamageCauser);
 
 public:
 	// Called every frame
@@ -145,8 +149,16 @@ public:
 
 private:
 	bool HitMotionOn;
+	
+	//push motion 관련 변수
 	bool bPushed;
-	float PusedTime;
+	bool bPushedMove;
+	float PushedTime;
+	float MaxPushedTime;
+
+	FVector StartPos;
+	FVector TargetPos;
+
 
 
 //test parameter
@@ -156,5 +168,8 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
 	float TestFloat2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	float TestFloat3;
 
 };

@@ -49,6 +49,12 @@ enum class LSAttackMode
 	SKILL
 };
 
+enum class AttackStyle
+{
+	BASICATTACK,
+	CLAW,
+	ULITIMATE,	
+};
 
 DECLARE_LOG_CATEGORY_EXTERN(InfinityBlade, Log, All);
 #define ABLOG_CALLINFO (FString(__FUNCTION__) + TEXT("(") + FString::FromInt(__LINE__)+TEXT(")"))

@@ -322,7 +322,8 @@ void AIBCharacter::Tick(float DeltaTime)
 	
 	//AttackStep
 	MoveAttackType1();
-	
+	FirstSkillStepMove();
+
 	//일반, 콤보 어택 관리
 	if (TimeCheckStart) CheckIntervalTime += DeltaTime;
 	if (CheckIntervalTime > 0.17f && !SetAttackMode)
@@ -353,7 +354,6 @@ void AIBCharacter::PostInitializeComponents()
 			CurrentCombo++;
 			IBAnim->PlayAttackMontage();
 			IBAnim->JumpToAttackMontageSection(CurrentCombo);
-			
 		}
 	});
 
@@ -370,13 +370,18 @@ void AIBCharacter::PostInitializeComponents()
 		CharacterWidget->BindCharacterStat(CharacterStat);
 	}
 	AttackStepAddLambda();
+	
+	//Claw Skill 모션 관리
 	IBAnim->FOnFirstSkillStartCheck.AddLambda([this]() -> void {
 		bFirstSkillEffect = true;
 		SkillStartLocation = GetActorLocation() + FVector(0.0f, 0.0f, -90.0f);
 		SkillStartForwardVector = GetActorForwardVector();
 		if (ShieldSkill->IsActive()) ShieldSkill->SetVisibility(true);
 	});
-
+	IBAnim->FOnFirstSkillStepCheck.AddLambda([this]()->void {
+		if (!bClawStepMoveOn) bClawStepMoveOn = true;
+		else if (bClawStepMoveOn) bClawStepMoveOn = false;
+	});
 	IBAnim->FOnSecondSkillDoneCheck.AddLambda([this]() -> void {
 		IsAttacking = false;
 	});
@@ -458,9 +463,7 @@ void AIBCharacter::SetWeapon(AIBWeapon * NewWeapon)
 		NewWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, WeaponSocket);
 		NewWeapon->SetOwner(this);
 		CurrentWeapon = NewWeapon;
-		SetHitEffect(CurrentWeapon);
 	}
-
 }
 void AIBCharacter::UpDown(float NewAxisValue)
 {
@@ -621,7 +624,6 @@ void AIBCharacter::Attack()
 		}
 	}
 }
-
 void AIBCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupted)
 {
 	if (IsComboInputOn)
@@ -699,7 +701,7 @@ void AIBCharacter::AttackCheck()
 		GetActorLocation(),
 		GetActorLocation() + GetActorForwardVector() * AttackRange,
 		FQuat::Identity,
-		ECollisionChannel::ECC_GameTraceChannel2,
+		ECollisionChannel::ECC_GameTraceChannel4,
 		FCollisionShape::MakeSphere(AttackRadius),
 		Params);
 
@@ -751,17 +753,12 @@ void AIBCharacter::OnAssetLoadCompleted()
 	SetCharacterState(ECharacterState::READY);
 
 }
-void AIBCharacter::SetHitEffect(AIBWeapon * NewWeapon)
-{
-}
-
 void AIBCharacter::TestParameter()
 {
 	TestInt1 = 1;
 	TestFloat1 = 200.0f;
 	TestFloat2 = 0.3f;
 }
-
 void AIBCharacter::AttackStepAddLambda()
 {
 	//1Step
@@ -802,7 +799,6 @@ void AIBCharacter::AttackStepAddLambda()
 		IsAttackType_2Step = false;
 	});
 }
-
 void AIBCharacter::MoveAttackType1()
 {
 	//SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation() + GetActorForwardVector() * 300.0f, DeltaTime, 2.0f));
@@ -877,27 +873,29 @@ void AIBCharacter::MoveAttackType1()
 		}
 	}
 }
-
 void AIBCharacter::InitAttackStep()
 {
 	AttackStepNum = 0;
 	IsAttackType_1Step = false;
 	IsAttackType_2Step = false;
 }
-
 LSAttackMode AIBCharacter::GetCurrentAttackMode()
 {
 	return CurrentAttackMode;
 }
-
 int32 AIBCharacter::GetCurrntCombo()
 {
 	return CurrentCombo;
 }
 
+AttackStyle AIBCharacter::GetCurrentAttackStyle()
+{
+	return CurrentAttackStyle;
+}
 
-
-
+//========
+// 스킬 //
+//========
 void AIBCharacter::InitSkillParticle()
 {
 	//스킬_1 지면폭발
@@ -981,14 +979,15 @@ void AIBCharacter::InitSkillParticle()
 }
 void AIBCharacter::InitFirstSkill()
 {
+	CurrentAttackStyle = AttackStyle::CLAW;
 	if (ShieldSkill->IsActive())
 	{
 		ShieldSkill->SetVisibility(false);
 	}
 
-	IBAnim->PlayFirstSkillMontage(4);
+	IBAnim->PlayClawSkillMontage();
 	IsAttacking = true;
-	
+	bClawStepMoveOn = false;
 }
 void AIBCharacter::InitSecondSkill()
 {
@@ -1056,22 +1055,20 @@ void AIBCharacter::SkillHub(float DeltaTime)
 		EffectIntervalTime += DeltaTime;
 		if (EffectIntervalTime >= 0.05)
 		{
-			
-			EffectIntervalTime = 0.0f;
-			
+			EffectIntervalTime = 0.0f;	
 			SkillEffect_1->SetWorldLocation(SkillStartLocation + SkillStartForwardVector * (float)EffectNum*130.0f);
 			SkillEffect_1->Activate(true);
+			FirstSkillAttackCheck(SkillEffect_1->GetComponentLocation());
 			EffectNum++;
 			if (EffectNum >= 7)
 			{
 				SkillEffect_1_Final->SetWorldLocation(SkillStartLocation + SkillStartForwardVector* (float)EffectNum*130.0f);
 				SkillEffect_1_Final->Activate(true);
-				EffectNum = 1;
+				FirstSkillAttackCheck(SkillEffect_1_Final->GetComponentLocation());
 				InitGroundBurstSkillParameter();
-				
+				EffectNum = 1;
 			}
 		}
-
 	}
 
 	if (bSecondSkillEffect)
@@ -1248,6 +1245,53 @@ void AIBCharacter::SkillHub(float DeltaTime)
 		}
 	}
 }
+void AIBCharacter::FirstSkillAttackCheck(FVector ExplosionVector)
+{
+	FCollisionQueryParams Params(NAME_None, false, this);
+	TArray<FHitResult> HitResults;
+	bool bResults = GetWorld()->SweepMultiByChannel(HitResults,
+		ExplosionVector,
+		ExplosionVector,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel4,
+		FCollisionShape::MakeSphere(TestFloat1),
+		Params);
+
+#if ENABLE_DRAW_DEBUG
+
+	//FVector TraceVec = ExplosionVector * AttackRange;
+	//FVector Center = ExplosionVector + TraceVec * 0.5f;
+	//float HalfHeight = AttackRange * 0.5f + AttackRadius;
+	//FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
+	//FColor DrawColor = bResults ? FColor::Green : FColor::Red;
+	//float DebugLifeTime = 2.0f;
+	
+	DrawDebugPoint(GetWorld(), ExplosionVector, 20.0f, FColor::Red, false, 5.0f);
 
 
+#endif
+	if (bResults)
+	{
+		for (FHitResult HitResult : HitResults)
+		{
+			if (CurrentCombo < 4)
+			{
+				FDamageEvent DamageEvent;
+				HitResult.Actor->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
+			}
+			else
+			{
+				FDamageEvent DamageEvent;
+				HitResult.Actor->TakeDamage(CharacterStat->GetAttack() * 2, DamageEvent, GetController(), this);
+			}
+		}
+	}
+}
 
+void AIBCharacter::FirstSkillStepMove()
+{
+	if (bClawStepMoveOn)
+	{
+		SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation() + GetActorForwardVector() * 400.0f, GetWorld()->GetDeltaSeconds(), 0.2f));
+	}
+}

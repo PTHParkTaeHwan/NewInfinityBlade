@@ -192,8 +192,6 @@ public:
 	UParticleSystemComponent* TestParticle2;
 
 
-public:
-	void SetHitEffect(AIBWeapon * NewWeapon);
 
 
 //dead system
@@ -218,6 +216,7 @@ private:
 
 	//AttackMode
 private:
+	AttackStyle CurrentAttackStyle = AttackStyle::BASICATTACK;
 	LSAttackMode CurrentAttackMode = LSAttackMode::NONE;
 	float CheckIntervalTime;
 	bool FirstAttackClick;
@@ -230,9 +229,12 @@ private:
 	bool CanComboAttack;
 	int32 CurrentBasicAttackSection;
 
+	bool bClawStepMoveOn;
+
 public:
 	LSAttackMode GetCurrentAttackMode();
 	int32 GetCurrntCombo();
+	AttackStyle GetCurrentAttackStyle();
 
 	//skill
 public:
@@ -241,6 +243,9 @@ public:
 	void InitSecondSkill();
 	void InitForthSkill();
 	void Skill_3();
+
+	void FirstSkillAttackCheck(FVector ExplosionVector);
+	void FirstSkillStepMove();
 
 private:
 	void SkillHub(float DeltaTime);

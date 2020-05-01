@@ -28,6 +28,12 @@ UIBAnimInstance::UIBAnimInstance()
 		LSBasicAttackMontage = LSBASICATTACK_MONTAGE.Object;
 	}
 
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> FIRST_MONTAGE(TEXT("/Game/Book/Animations/Attack_Montage/SK_Mannequin_Skeleton_FirstSkillMontage.SK_Mannequin_Skeleton_FirstSkillMontage"));
+	if (FIRST_MONTAGE.Succeeded())
+	{
+		ClawMontage = FIRST_MONTAGE.Object;
+	}
+
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> SHIELD_MONTAGE(TEXT("/Game/Book/Animations/Attack_Montage/SK_Mannequin_Skeleton_ShieldSkillMontage.SK_Mannequin_Skeleton_ShieldSkillMontage"));
 	if (SHIELD_MONTAGE.Succeeded())
 	{
@@ -225,6 +231,15 @@ void UIBAnimInstance::AnimNotify_UltimateSkillStart()
 {
 	FOnForthSkillStartCheck.Broadcast();
 }
+void UIBAnimInstance::AnimNotify_FirstSkillStepStart()
+{
+	ABLOG(Warning, TEXT("AnimNotify_FirstSkillStepStart"));
+	FOnFirstSkillStepCheck.Broadcast();
+}
+void UIBAnimInstance::AnimNotify_FirstSkillStepDone()
+{
+	FOnFirstSkillStepCheck.Broadcast();
+}
 void UIBAnimInstance::SetAttackMontageType(WeaponType NewType)
 {
 	CurrentAttackMontageType = NewType;
@@ -232,8 +247,12 @@ void UIBAnimInstance::SetAttackMontageType(WeaponType NewType)
 void UIBAnimInstance::PlayFirstSkillMontage(int32 SectionNum)
 {
 	Montage_Play(AttackMontage, 1.0f);
-	Montage_JumpToSection(FName(*FString::Printf(TEXT("Attack4"))), AttackMontage);
-	
+	Montage_JumpToSection(FName(*FString::Printf(TEXT("Attack4"))), AttackMontage);	
+}
+
+void UIBAnimInstance::PlayClawSkillMontage()
+{
+	Montage_Play(ClawMontage, 1.2f);
 }
 
 void UIBAnimInstance::PlayShieldSkillMontage()

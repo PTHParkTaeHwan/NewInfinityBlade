@@ -57,7 +57,7 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 
 
 	//콜리전 프리셋 설정
-	GetCapsuleComponent()->SetCollisionProfileName(TEXT("IBCharacter"));
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("Enemy"));
 
 	AIControllerClass = AIB_E_GREATERSPIDER_AIController::StaticClass();
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
@@ -106,10 +106,13 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 		HitEffect->bAutoActivate = false;
 	}
 	
+	
+
 	//hitMontion 관련
 	HitMotionOn = false;
 	bPushed = false;
-	PusedTime = 0.0f;
+	PushedTime = 0.0f;
+	MaxPushedTime = 0.0f;
 
 	//test
 	TestFloat1 = 0.0f;
@@ -163,8 +166,11 @@ void AIB_E_GreaterSpider::PostInitializeComponents()
 
 	//hit motion
 	IB_E_GSAnim->E_OnHitCheck.AddLambda([this]()->void {
-		HitMotionOn = false;
-		TentionModeInit();
+		if (!bPushed)
+		{
+			HitMotionOn = false;
+			TentionModeInit();
+		}
 	});
 	
 	
@@ -175,14 +181,8 @@ float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & D
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	//IB_E_GSAnim->StopAllMontage();
-	AIBCharacter* AttackActor = Cast<AIBCharacter>(DamageCauser);
 	
-	if (AttackActor->GetCurrntCombo() == 4)
-	{
-		
-		Jump();
-		bPushed;
-	}
+	PushedMotion(DamageCauser);
 	HitMotionOn = true;	
 	HitEffect->Activate(true);
 	IB_E_GSAnim->PlayHitMontage();
@@ -196,6 +196,39 @@ float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & D
 		Destroy(this);
 	}
 	return FinalDamage;
+}
+
+void AIB_E_GreaterSpider::PushedMotion(AActor * DamageCauser)
+{
+	AIBCharacter* AttackActor = Cast<AIBCharacter>(DamageCauser);
+	
+	if (!bPushed && AttackActor->GetCurrntCombo() <= 3 && AttackActor->GetCurrentAttackStyle() == AttackStyle::BASICATTACK)
+	{
+		/*MaxPushedTime = TestFloat1;
+		StartPos = GetActorLocation();
+		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * TestFloat2;
+		bPushed = true;
+		bPushedMove = true;*/
+	}
+	else if (!bPushed && AttackActor->GetCurrntCombo() == 4 && AttackActor->GetCurrentAttackStyle() == AttackStyle::BASICATTACK)
+	{
+		ABLOG(Warning, TEXT("PushedMotion "));
+		MaxPushedTime = 1.16;
+		StartPos = GetActorLocation();
+		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 200.0f;
+		bPushed = true;
+	}
+
+	if (!bPushed && AttackActor->GetCurrentAttackStyle() == AttackStyle::CLAW)
+	{
+		GetCharacterMovement()->JumpZVelocity = 400.0f;
+		StartPos = GetActorLocation();
+		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 300.0f;
+		MaxPushedTime = 2.0f;
+		Jump();
+		bPushed = true;
+		bPushedMove = true;
+	}
 }
 
 // Called every frame
@@ -214,15 +247,17 @@ void AIB_E_GreaterSpider::Tick(float DeltaTime)
 
 	if (bPushed)
 	{
-		PusedTime += DeltaTime;
-		SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation() + (-1.0*GetActorForwardVector()) * 400.0f, DeltaTime, 70.0f));
-		if (PusedTime >= 1.0f)
+		PushedTime += DeltaTime;
+		SetActorLocation(FMath::VInterpTo(StartPos, TargetPos, DeltaTime, 5.0f));
+		StartPos = GetActorLocation();
+		if (PushedTime >= MaxPushedTime)
 		{
 			bPushed = false;
-			PusedTime = 0.0f;
+			HitMotionOn = false;
+			TentionModeInit();
+			PushedTime = 0.0f;
 		}
 	}
-
 }
 
 // Called to bind functionality to input

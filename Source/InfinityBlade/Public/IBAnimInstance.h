@@ -18,6 +18,8 @@ DECLARE_MULTICAST_DELEGATE(FOnFirstSkillStartCheckDelegate);
 DECLARE_MULTICAST_DELEGATE(FOnSecondSkillDoneCheckDelegate);
 DECLARE_MULTICAST_DELEGATE(FOnForthSkillStartCheckDelegate);
 
+DECLARE_MULTICAST_DELEGATE(FOnFirstSkillStepCheckDelegate);
+
 
 /**
  * 
@@ -66,6 +68,8 @@ public:
 	FOnSecondSkillDoneCheckDelegate FOnSecondSkillDoneCheck;
 	FOnForthSkillStartCheckDelegate FOnForthSkillStartCheck;
 
+	FOnFirstSkillStepCheckDelegate FOnFirstSkillStepCheck;
+
 private:
 	//AttackType1
 	UFUNCTION()
@@ -88,6 +92,12 @@ private:
 
 	UFUNCTION()
 	void AnimNotify_UltimateSkillStart();
+		
+	UFUNCTION()
+	void AnimNotify_FirstSkillStepStart();
+	
+	UFUNCTION()
+	void AnimNotify_FirstSkillStepDone();
 
 
 
@@ -114,6 +124,9 @@ private:
 		UAnimMontage* LSBasicAttackMontage;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	UAnimMontage* ClawMontage;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 	UAnimMontage* ShieldMontage;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
@@ -137,6 +150,7 @@ public:
 	void PlayFirstSkillMontage(int32 SectionNum);
 	FOnFirstSkillStartCheckDelegate FOnFirstSkillStartCheck;
 
+	void PlayClawSkillMontage();
 	void PlayShieldSkillMontage();
 	void PlayUltimateSkillMontage();
 };
