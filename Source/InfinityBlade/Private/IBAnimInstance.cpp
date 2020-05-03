@@ -15,7 +15,7 @@ UIBAnimInstance::UIBAnimInstance()
 	{
 		AttackMontage = ATTACK_MONTAGE.Object;
 	}
-
+	
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> LSATTACK_MONTAGE(TEXT("/Game/Book/Animations/Attack_Montage/LongSword_AttackMontage_Type1.LongSword_AttackMontage_Type1"));
 	if (LSATTACK_MONTAGE.Succeeded())
 	{

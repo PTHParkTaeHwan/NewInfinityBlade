@@ -14,6 +14,7 @@
 #include "IBPlayerState.h"
 #include "IBHUDWidget.h"
 #include "Enemy/IB_E_GreaterSpider.h"
+#include "PlayerCameraShake.h"
 
 
 // Sets default values
@@ -26,11 +27,13 @@ AIBCharacter::AIBCharacter()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
 	CharacterStat = CreateDefaultSubobject<UIBCharacterStatComponent>(TEXT("CHARACTERSTAT"));
 	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
-
+	
+	
+	
 	SpringArm->SetupAttachment(GetCapsuleComponent());
 	Camera->SetupAttachment(SpringArm);
 	HPBarWidget->SetupAttachment(GetMesh());
-
+	
 	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -88.0f), FRotator(0.0f, -90.0f, 0.0f));
 	SpringArm->TargetArmLength = 690.0f;
 	SpringArm->SetRelativeRotation(FRotator(-15.0f, 0.0f, 0.0f));
@@ -41,9 +44,11 @@ AIBCharacter::AIBCharacter()
 	{
 		GetMesh()->SetSkeletalMesh(CardBoard.Object);
 	}
-
+	
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
-
+	//GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake()
+	
+	
 	//애니메이션 인스턴스 가져오기
 	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/Book/Animations/WarriorAnimBlueprint.WarriorAnimBlueprint_C"));
 	if (WARRIOR_ANIM.Succeeded())
@@ -988,6 +993,9 @@ void AIBCharacter::InitFirstSkill()
 	IBAnim->PlayClawSkillMontage();
 	IsAttacking = true;
 	bClawStepMoveOn = false;
+	ABLOG(Warning,TEXT("%s"), *GetWorld()->GetFirstPlayerController()->GetName());
+	GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CameraShake, 1.0f);
+	
 }
 void AIBCharacter::InitSecondSkill()
 {
@@ -1067,6 +1075,7 @@ void AIBCharacter::SkillHub(float DeltaTime)
 				FirstSkillAttackCheck(SkillEffect_1_Final->GetComponentLocation());
 				InitGroundBurstSkillParameter();
 				EffectNum = 1;
+				CurrentAttackStyle = AttackStyle::BASICATTACK;
 			}
 		}
 	}

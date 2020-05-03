@@ -18,7 +18,7 @@ void UIBCharacterSelecterWidget::NextCharacter(bool bForward)
 	if (CurrentIndex == -1) CurrentIndex = MaxIndex - 1;
 	if (CurrentIndex == MaxIndex) CurrentIndex = 0;*/
 
-	CurrentIndex = 11;
+	/*CurrentIndex = 11;
 	auto CharacterSetting = GetDefault<UIBCharacterSetting>();
 	auto AssetRef = CharacterSetting->CharacterAssets[CurrentIndex];
 	ABLOG(Warning, TEXT("CurrentIndex %d"), CurrentIndex);
@@ -34,13 +34,13 @@ void UIBCharacterSelecterWidget::NextCharacter(bool bForward)
 		TargetComponent->SetSkeletalMesh(Asset);
 	}
 
-	CurrentIndex = 11;
+	CurrentIndex = 14;
 	AssetRef = CharacterSetting->CharacterAssets[CurrentIndex];
 	Asset = IBGameInstance->StreamableManager.LoadSynchronous<USkeletalMesh>(AssetRef);
 	if (nullptr != Asset)
 	{
 		TargetComponent2->SetSkeletalMesh(Asset);
-	}	
+	}	*/
 }
 
 void UIBCharacterSelecterWidget::NativeConstruct()
@@ -50,21 +50,44 @@ void UIBCharacterSelecterWidget::NativeConstruct()
 	CurrentIndex = 0;
 	auto CharacterSetting = GetDefault<UIBCharacterSetting>();
 	MaxIndex = CharacterSetting->CharacterAssets.Num();
-
+	int Temp = 0;
 	for (TActorIterator<ASkeletalMeshActor> It(GetWorld()); It; ++It)
 	{
-		if (!TargetComponent.IsValid())
+		if (!TargetComponent.IsValid() && Temp==0)
 		{
 			TargetComponent = It->GetSkeletalMeshComponent();
-			continue;
+			ABLOG(Warning, TEXT("TargetComponent %s"), *TargetComponent->GetName());
+			
 		}
-		if (!TargetComponent2.IsValid())
+		if (!TargetComponent2.IsValid() && Temp == 1)
 		{
 			TargetComponent2 = It->GetSkeletalMeshComponent();
+			ABLOG(Warning, TEXT("TargetComponent2 %s"), *TargetComponent2->GetName());
 			break;
 		}
+		Temp++;
 	}
 	
+
+	CurrentIndex = 11;
+	auto AssetRef = CharacterSetting->CharacterAssets[CurrentIndex];
+	auto IBGameInstance = GetWorld()->GetGameInstance<UIBGameInstance>();
+
+	USkeletalMesh* Asset = IBGameInstance->StreamableManager.LoadSynchronous<USkeletalMesh>(AssetRef);
+	if (nullptr != Asset)
+	{
+		TargetComponent->SetSkeletalMesh(Asset);
+	}
+
+	CurrentIndex = 14;
+	AssetRef = CharacterSetting->CharacterAssets[CurrentIndex];
+	Asset = IBGameInstance->StreamableManager.LoadSynchronous<USkeletalMesh>(AssetRef);
+	if (nullptr != Asset)
+	{
+		TargetComponent2->SetSkeletalMesh(Asset);
+	}
+
+	CurrentIndex = 0;
 	
 	//for (TActorIterator<ACameraActor> It(GetWorld()); It; ++It)
 	//{
@@ -90,20 +113,16 @@ void UIBCharacterSelecterWidget::NativeConstruct()
 
 	NextCharacter(true);
 
-	bLeftFirstClicked = false;
-	bRightFirstClicked = false;
+	bFirstClicked = false;
 	fLevelOpenBufferTime = 0.0f;
 }
 
 void UIBCharacterSelecterWidget::OnPrevClicked()
 {
-	//NextCharacter(false);
-	/*if (!bLeftFirstClicked)
+	if (!bFirstClicked)
 	{
-		bLeftFirstClicked = true;
-		bRightFirstClicked = true;
-		CurrentIndex = 14;
-		ABLOG(Warning, TEXT("CurrentIndex %d"), CurrentIndex);
+		bFirstClicked = true;
+		CurrentIndex = 11;
 		return ;
 	}
 	if (CurrentIndex == 11)
@@ -114,21 +133,17 @@ void UIBCharacterSelecterWidget::OnPrevClicked()
 	{
 		CurrentIndex = 11;
 	}
-	ABLOG(Warning, TEXT("CurrentIndex %d"), CurrentIndex);*/
-	//NextCharacter(true);
 }
 
 void UIBCharacterSelecterWidget::OnNextClicked()
 {
-	//NextCharacter(true);
-	/*if (!bRightFirstClicked)
+	if (!bFirstClicked)
 	{
-		bLeftFirstClicked = true;
-		bRightFirstClicked = true;
-		CurrentIndex = 11;
-		ABLOG(Warning, TEXT("CurrentIndex %d"), CurrentIndex);
+		bFirstClicked = true;
+		CurrentIndex = 14;
 		return;
 	}
+
 	if (CurrentIndex == 14)
 	{
 		CurrentIndex = 11;
@@ -137,14 +152,10 @@ void UIBCharacterSelecterWidget::OnNextClicked()
 	{
 		CurrentIndex = 14;
 	}
-	ABLOG(Warning, TEXT("CurrentIndex %d"), CurrentIndex);*/
-	//NextCharacter(false);
 }
 
 void UIBCharacterSelecterWidget::OnConfirmClicked()
 {
-	//bLeftFirstClicked = false;
-	//bRightFirstClicked = false;
 
 	FString CharacterName = TextBox->GetText().ToString();
 	if (CharacterName.Len() <= 0 || CharacterName.Len() > 20) return;

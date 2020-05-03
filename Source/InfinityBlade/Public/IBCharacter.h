@@ -80,6 +80,9 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = UI)
 	class UWidgetComponent* HPBarWidget;
 	
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UPlayerCameraShake> CameraShake;
+
 	//공격 모션
 	void Attack();
 	FOnAttackEndDelegate OnAttackEnd;

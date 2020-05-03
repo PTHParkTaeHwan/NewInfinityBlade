@@ -25,7 +25,7 @@ protected:
 protected:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const&DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 public:
-	void PushedMotion(AActor * DamageCauser);
+	void KnockBackMotion(AActor * DamageCauser);
 
 public:
 	// Called every frame
@@ -150,15 +150,18 @@ public:
 private:
 	bool HitMotionOn;
 	
-	//push motion 관련 변수
-	bool bPushed;
-	bool bPushedMove;
-	float PushedTime;
-	float MaxPushedTime;
+	//넉백 motion 관련 변수
+	bool bKnockBackByBasicAttack;
+	bool bKnockBackBySkill;
+	float KnockBackTime;
+	float MaxKnockBackTime;
+
+	bool bPushedbySkill;
 
 	FVector StartPos;
 	FVector TargetPos;
 
+	void KnockBackMotionHub(float DeltaTime);
 
 
 //test parameter

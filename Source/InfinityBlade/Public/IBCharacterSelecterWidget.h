@@ -64,8 +64,7 @@ private:
 
 
 private:
-	bool bLeftFirstClicked;
-	bool bRightFirstClicked;
+	bool bFirstClicked;
 
 	bool bLevelOpen;
 	float fLevelOpenBufferTime;
