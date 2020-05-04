@@ -28,14 +28,12 @@ AIBCharacter::AIBCharacter()
 	CharacterStat = CreateDefaultSubobject<UIBCharacterStatComponent>(TEXT("CHARACTERSTAT"));
 	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
 	
-	
-	
 	SpringArm->SetupAttachment(GetCapsuleComponent());
 	Camera->SetupAttachment(SpringArm);
 	HPBarWidget->SetupAttachment(GetMesh());
 	
 	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -88.0f), FRotator(0.0f, -90.0f, 0.0f));
-	SpringArm->TargetArmLength = 690.0f;
+	SpringArm->TargetArmLength = 410.0f;
 	SpringArm->SetRelativeRotation(FRotator(-15.0f, 0.0f, 0.0f));
 	SpringArm->SetRelativeLocation(FVector(0.0f, 0.0f, 85.0f));
 	
@@ -742,8 +740,6 @@ void AIBCharacter::AttackCheck()
 			{
 				FDamageEvent DamageEvent;
 				HitResult.Actor->TakeDamage(CharacterStat->GetAttack()*2, DamageEvent, GetController(), this);
-				AIB_E_GreaterSpider* HitActor = Cast<AIB_E_GreaterSpider>(HitResult.Actor);
-				HitActor->Jump();
 			}
 		}
 	}
@@ -989,7 +985,7 @@ void AIBCharacter::InitFirstSkill()
 	{
 		ShieldSkill->SetVisibility(false);
 	}
-
+	//good
 	IBAnim->PlayClawSkillMontage();
 	IsAttacking = true;
 	bClawStepMoveOn = false;
