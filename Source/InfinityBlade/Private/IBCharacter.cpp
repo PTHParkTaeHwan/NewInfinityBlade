@@ -15,7 +15,7 @@
 #include "IBHUDWidget.h"
 #include "Enemy/IB_E_GreaterSpider.h"
 #include "PlayerCameraShake.h"
-
+#include "MyCameraShake.h"
 
 // Sets default values
 AIBCharacter::AIBCharacter()
@@ -44,7 +44,7 @@ AIBCharacter::AIBCharacter()
 	}
 	
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
-	//GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake()
+	
 	
 	
 	//애니메이션 인스턴스 가져오기
@@ -729,6 +729,11 @@ void AIBCharacter::AttackCheck()
 #endif
 	if (bResults)
 	{
+		if (MyCameraShake == nullptr)
+		{
+			ABLOG(Warning, TEXT("CameraShake nullptr"));
+			//GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CameraShake, 1.0f);
+		}
 		for (FHitResult HitResult : HitResults)
 		{
 			if (CurrentCombo < 4)

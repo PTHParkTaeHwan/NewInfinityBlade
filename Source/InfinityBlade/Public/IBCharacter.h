@@ -81,7 +81,10 @@ public:
 	class UWidgetComponent* HPBarWidget;
 	
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<class UPlayerCameraShake> CameraShake;
+	TSubclassOf<UCameraShake> CameraShake;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UMyCameraShake> MyCameraShake;
 
 	//공격 모션
 	void Attack();
