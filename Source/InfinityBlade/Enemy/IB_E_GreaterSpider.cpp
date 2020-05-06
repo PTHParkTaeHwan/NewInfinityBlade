@@ -46,8 +46,9 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 
 	//HPBar Widget
 	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
+	HPBarWidget->bAbsoluteLocation = false;
 	HPBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
-	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
+	//HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
 	static ConstructorHelpers::FClassFinder<UUserWidget> UI_HUD(TEXT("/Game/dev/Enemy/UI/UI_E_HPUIBar.UI_E_HPUIBar_C"));
 	if (UI_HUD.Succeeded())
 	{
@@ -100,7 +101,8 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 	HitEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("HITEFFECT"));
 	HitEffect->SetupAttachment(RootComponent);
 	//static ConstructorHelpers::FObjectFinder<UParticleSystem> P_HIT(TEXT("/Game/InfinityBladeEffects/Effects/FX_Combat_Base/Impact/P_ImpactSpark.P_ImpactSpark"));
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_HIT(TEXT("/Game/InfinityBladeEffects/Effects/FX_Combat_Base/death/P_Impact_Gib_Poison.P_Impact_Gib_Poison"));
+	//static ConstructorHelpers::FObjectFinder<UParticleSystem> P_HIT(TEXT("/Game/InfinityBladeEffects/Effects/FX_Combat_Base/death/P_Impact_Gib_Poison.P_Impact_Gib_Poison"));
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_HIT(TEXT("/Game/InfinityBladeEffects/Effects/FX_Combat_Base/Impact/P_ImpactSpark.P_ImpactSpark"));
 	if (P_HIT.Succeeded())
 	{
 		HitEffect->SetTemplate(P_HIT.Object);
@@ -116,6 +118,9 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 	KnockBackTime = 0.0f;
 	MaxKnockBackTime = 0.0f;
 
+	//WidgetLocation
+	bInitWidgetLocation = false;
+
 	//test
 	TestFloat1 = 0.0f;
 	TestFloat2 = 0.0f;
@@ -125,7 +130,7 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 void AIB_E_GreaterSpider::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 }
 
 void AIB_E_GreaterSpider::PostInitializeComponents()
@@ -164,7 +169,7 @@ void AIB_E_GreaterSpider::PostInitializeComponents()
 	{
 		CharacterWidget->BindCharacterStat(CharacterStat);
 	}
-	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
+	//HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
 
 	//hit motion
 	IB_E_GSAnim->E_OnHitCheck.AddLambda([this]()->void {
@@ -183,7 +188,7 @@ float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & D
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	//IB_E_GSAnim->StopAllMontage();
-	
+	FinalDamage = 0.0f;
 	KnockBackMotion(DamageCauser);
 	HitMotionOn = true;	
 	HitEffect->Activate(true);
@@ -197,6 +202,13 @@ float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & D
 		IBPlayerController->NPCKill(this);
 		Destroy(this);
 	}
+
+	if (!bInitWidgetLocation)
+	{
+		bInitWidgetLocation = true;
+		HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
+	}
+
 	return FinalDamage;
 }
 // Called every frame
@@ -204,6 +216,7 @@ void AIB_E_GreaterSpider::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
+
 	if (IdleOn)
 	{
 		IdleTime += DeltaTime;
@@ -220,11 +233,19 @@ void AIB_E_GreaterSpider::KnockBackMotion(AActor * DamageCauser)
 {
 	AIBCharacter* AttackActor = Cast<AIBCharacter>(DamageCauser);
 	
+	if (!bKnockBackByBasicAttack && AttackActor->GetCurrntCombo() < 4 && AttackActor->GetCurrentAttackStyle() == AttackStyle::BASICATTACK)
+	{
+		MaxKnockBackTime = 0.5f;
+		StartPos = GetActorLocation();
+		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 100.0f;
+		bKnockBackByBasicAttack = true;
+	}
+
 	if (!bKnockBackByBasicAttack && AttackActor->GetCurrntCombo() == 4 && AttackActor->GetCurrentAttackStyle() == AttackStyle::BASICATTACK)
 	{
 		MaxKnockBackTime = 1.16;
 		StartPos = GetActorLocation();
-		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 200.0f;
+		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 300.0f;
 		bKnockBackByBasicAttack = true;
 	}
 
@@ -242,7 +263,7 @@ void AIB_E_GreaterSpider::KnockBackMotionHub(float DeltaTime)
 	if (bKnockBackByBasicAttack)
 	{
 		KnockBackTime += DeltaTime;
-		SetActorLocation(FMath::VInterpTo(StartPos, TargetPos, DeltaTime, 5.0f));
+		SetActorLocation(FMath::VInterpTo(StartPos, TargetPos, DeltaTime, 1.0f));
 		StartPos = GetActorLocation();
 		if (KnockBackTime >= MaxKnockBackTime)
 		{
@@ -280,13 +301,13 @@ void AIB_E_GreaterSpider::SetTentionMode()
 	{
 		IsAttacking = true;
 		int32 temp = FMath::RandRange(1, 10);
-		if (temp <= 7) IsStayHere = true;
+		if (temp <= 10) IsStayHere = true;
 		else IsStayHere = false;
 
 		if (IsStayHere)
 		{
 			int32 temp2 = FMath::RandRange(1, 10);
-			if (temp2 <= 7)
+			if (temp2 <= 10)
 			{
 				AttackOrIdle = true;
 			}

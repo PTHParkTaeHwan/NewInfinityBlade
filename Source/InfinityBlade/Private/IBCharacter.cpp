@@ -83,23 +83,23 @@ AIBCharacter::AIBCharacter()
 	AttackRange = 150.0f;
 	AttackRadius = 90.0f;
 
-	//파티클 시스템
-	FirstHitEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("HITEFFECT"));
-	FirstHitEffect->SetupAttachment(RootComponent);
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_HIT(TEXT("/Game/InfinityBladeEffects/Effects/FX_Combat_Base/Impact/P_ImpactSpark.P_ImpactSpark"));
-	if (P_HIT.Succeeded())
-	{
-		FirstHitEffect->SetTemplate(P_HIT.Object);
-		FirstHitEffect->bAutoActivate = false;
-	}
 
-	HitEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("HITEFFECTTEST"));
+	HitEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("HITEFFECT"));
 	HitEffect->SetupAttachment(RootComponent);
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_HITTEST(TEXT("/Game/InfinityBladeEffects/Effects/FX_Skill_Leap/P_Skill_Leap_Fire_Impact_Suction.P_Skill_Leap_Fire_Impact_Suction"));
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_HITTEST(TEXT("/Game/InfinityBladeEffects/Effects/FX_Combat_Base/Impact/P_ImpactSpark.P_ImpactSpark"));
 	if (P_HITTEST.Succeeded())
 	{
 		HitEffect->SetTemplate(P_HITTEST.Object);
 		HitEffect->bAutoActivate = false;
+	}
+
+	ShieldHitEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("SHIELDHITEFFECT"));
+	ShieldHitEffect->SetupAttachment(RootComponent);
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_SHIELDHIT(TEXT("/Game/InfinityBladeEffects/Effects/FX_Ability/Defense/P_Shield_Spawn.P_Shield_Spawn"));
+	if (P_SHIELDHIT.Succeeded())
+	{
+		ShieldHitEffect->SetTemplate(P_SHIELDHIT.Object);
+		ShieldHitEffect->bAutoActivate = false;
 	}
 
 	//스킬 관리
@@ -162,12 +162,6 @@ AIBCharacter::AIBCharacter()
 	{
 		CS_FirstSkill = CS_FIRSTSKILL.Class;
 	}
-
-	
-
-
-	
-
 }
 void AIBCharacter::SetCharacterState(ECharacterState NewState)
 {
@@ -423,9 +417,28 @@ void AIBCharacter::PostInitializeComponents()
 float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	FirstHitEffect->Activate(true);
+	ABLOG(Warning, TEXT("FinalDamage %f"), FinalDamage);
 	
+	/*
+	FVector LookVector = Target->GetActorLocation() - GreatSpider->GetActorLocation();
+	LookVector.Z = 0.0f;
+	FRotator TargetRot = FRotationMatrix::MakeFromX(LookVector).Rotator();
+	GreatSpider->SetActorRotation(FMath::RInterpTo(GreatSpider->GetActorRotation(), TargetRot, GetWorld()->GetDeltaSeconds(), 2.0f));
+
+	*/
 	//테스트용!!!!!
+	if (ShieldSkill->IsActive())
+	{
+		FinalDamage = FinalDamage * 0.8f;
+		ShieldHitEffect->SetWorldLocation(DamageCauser->GetActorLocation() + DamageCauser->GetActorForwardVector()*(DamageCauser->GetDistanceTo(this)*0.7f));		
+		ShieldHitEffect->Activate(true);
+		HitEffect->Activate(true);
+	}
+	else
+	{
+		HitEffect->Activate(true);
+	}
+	GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CS_FirstSkill, 1.0f);
 	FinalDamage = 0.0f;
 	switch (CurrentControlMode)
 	{
@@ -984,6 +997,7 @@ void AIBCharacter::InitSkillParticle()
 		ShieldSkill->SetWorldScale3D(FVector(1.0f, 1.0f, 1.2f));
 	}
 	
+	
 	//스킬_4
 	for (int i = 0; i < 8; i++)
 	{
@@ -1089,6 +1103,7 @@ void AIBCharacter::InitGroundBurstSkillParameter()
 void AIBCharacter::InitShieldSkillParameter()
 {
 	ShieldSkillActiveTime = 0.0f;
+	fMaxShieldSkillTime = 20.0f;
 	bSecondSkillEffect = false;
 }
 void AIBCharacter::InitUltimateSkillParameter()
@@ -1128,7 +1143,7 @@ void AIBCharacter::SkillHub(float DeltaTime)
 	{
 		ShieldSkill->SetWorldLocation(GetActorLocation() + FVector(0.0f, 0.0f, -48.0f));
 		ShieldSkillActiveTime += DeltaTime;
-		if (ShieldSkillActiveTime >= 5.0f)
+		if (/*ShieldSkillActiveTime >= fMaxShieldSkillTime*/false)
 		{
 			InitShieldSkillParameter();
 			ShieldSkill->Activate(false);
@@ -1340,7 +1355,6 @@ void AIBCharacter::FirstSkillAttackCheck(FVector ExplosionVector)
 		}
 	}
 }
-
 void AIBCharacter::FirstSkillStepMove()
 {
 	if (bClawStepMoveOn)

@@ -175,11 +175,12 @@ private:
 
 //파티클 시스템
 public:
-	UPROPERTY(VisibleAnywhere, Category = Effect)
-	UParticleSystemComponent* FirstHitEffect;
 
 	UPROPERTY(VisibleAnywhere, Category = Effect)
 	UParticleSystemComponent* HitEffect;
+
+	UPROPERTY(VisibleAnywhere, Category = Effect)
+	UParticleSystemComponent* ShieldHitEffect;
 
 	UPROPERTY(VisibleAnywhere, Category = Skill)
 	UParticleSystemComponent* SkillEffect_1;
@@ -269,6 +270,7 @@ private:
 	void InitShieldSkillParameter();
 	bool bSecondSkillEffect;
 	float ShieldSkillActiveTime;
+	float fMaxShieldSkillTime;
 
 
 	//4th
@@ -311,10 +313,14 @@ private:
 	void TestParameter();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
-	float TestFloat1;//거리
+	float TestFloat1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
-	float TestFloat2; //스킬 발동 시간 간격
+	float TestFloat2; 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	float TestFloat3;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
 	int32 TestInt1;

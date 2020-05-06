@@ -163,6 +163,9 @@ private:
 
 	void KnockBackMotionHub(float DeltaTime);
 
+private:
+	bool bInitWidgetLocation;
+
 
 //test parameter
 private:
