@@ -14,8 +14,8 @@
 #include "IBPlayerState.h"
 #include "IBHUDWidget.h"
 #include "Enemy/IB_E_GreaterSpider.h"
-#include "PlayerCameraShake.h"
 #include "MyCameraShake.h"
+
 
 // Sets default values
 AIBCharacter::AIBCharacter()
@@ -143,6 +143,31 @@ AIBCharacter::AIBCharacter()
 	//AttackStep
 	InitAttackStep();
 	TestParameter();
+
+	//static ConstructorHelpers::FClassFinder<UCameraShake> CAMERASHAKE(TEXT("/Game/dev/Camera/NewCameraShake.NewCameraShake_C"));
+	/*static ConstructorHelpers::FClassFinder<UCameraShake> CAMERASHAKE(TEXT("/Game/dev/Camera/MyMyCameraShake.MyMyCameraShake_C"));
+	if (CAMERASHAKE.Succeeded())
+	{
+		MyShake = CAMERASHAKE.Class;
+	}*/
+	
+	static ConstructorHelpers::FClassFinder<UCameraShake> CAMERASHAKE(TEXT("/Game/dev/Camera/MyMyCameraShake.MyMyCameraShake_C"));
+	if (CAMERASHAKE.Succeeded())
+	{
+		NewMyShake = CAMERASHAKE.Class;
+	}
+	
+	static ConstructorHelpers::FClassFinder<UCameraShake> CS_FIRSTSKILL(TEXT("/Game/dev/Camera/CS_FirstSkill.CS_FirstSkill_C"));
+	if (CS_FIRSTSKILL.Succeeded())
+	{
+		CS_FirstSkill = CS_FIRSTSKILL.Class;
+	}
+
+	
+
+
+	
+
 }
 void AIBCharacter::SetCharacterState(ECharacterState NewState)
 {
@@ -380,6 +405,8 @@ void AIBCharacter::PostInitializeComponents()
 		SkillStartLocation = GetActorLocation() + FVector(0.0f, 0.0f, -90.0f);
 		SkillStartForwardVector = GetActorForwardVector();
 		if (ShieldSkill->IsActive()) ShieldSkill->SetVisibility(true);
+		GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CS_FirstSkill, 1.0f);
+
 	});
 	IBAnim->FOnFirstSkillStepCheck.AddLambda([this]()->void {
 		if (!bClawStepMoveOn) bClawStepMoveOn = true;
@@ -391,6 +418,7 @@ void AIBCharacter::PostInitializeComponents()
 	IBAnim->FOnForthSkillStartCheck.AddLambda([this]()->void {
 		bForthSkillEffect = true;
 	});
+
 }
 float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
@@ -729,10 +757,14 @@ void AIBCharacter::AttackCheck()
 #endif
 	if (bResults)
 	{
-		if (MyCameraShake == nullptr)
+		if (NewMyShake == nullptr)
 		{
 			ABLOG(Warning, TEXT("CameraShake nullptr"));
-			//GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CameraShake, 1.0f);
+			
+		}
+		else
+		{
+			GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(NewMyShake, 1.0f);
 		}
 		for (FHitResult HitResult : HitResults)
 		{
@@ -757,6 +789,18 @@ void AIBCharacter::OnAssetLoadCompleted()
 	GetMesh()->SetSkeletalMesh(AssetLoaded);
 	
 	SetCharacterState(ECharacterState::READY);
+
+}
+void AIBCharacter::InitCameraShakeParam()
+{
+	
+	/*MyShake->OscillationDuration = 0.25f;
+	MyShake->AnimBlendInTime = 0.1f;
+	MyShake->AnimBlendOutTime = 0.2f;
+	MyShake
+	MyShake->RotOscillation.Pitch.Amplitude = CurrentlyDesiredAmplitude;
+	MyShake->RotOscillation.Pitch.Frequency = CurrentlyDesiredFrequency;
+	MyShake->RotOscillation.Pitch.InitialOffset = EInitialOscillatorOffset::EOO_OffsetZero;*/
 
 }
 void AIBCharacter::TestParameter()
@@ -995,7 +1039,6 @@ void AIBCharacter::InitFirstSkill()
 	IsAttacking = true;
 	bClawStepMoveOn = false;
 	ABLOG(Warning,TEXT("%s"), *GetWorld()->GetFirstPlayerController()->GetName());
-	GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CameraShake, 1.0f);
 	
 }
 void AIBCharacter::InitSecondSkill()

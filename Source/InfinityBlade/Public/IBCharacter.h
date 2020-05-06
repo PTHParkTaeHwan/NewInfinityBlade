@@ -81,10 +81,13 @@ public:
 	class UWidgetComponent* HPBarWidget;
 	
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<UCameraShake> CameraShake;
+	TSubclassOf<UCameraShake> MyShake;
+	
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UCameraShake> NewMyShake;
 
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<class UMyCameraShake> MyCameraShake;
+	TSubclassOf<UCameraShake> CS_FirstSkill;
 
 	//공격 모션
 	void Attack();
@@ -299,6 +302,9 @@ private:
 	FVector SkillStartLocation = FVector::ZeroVector;
 	FVector SkillStartForwardVector = FVector::ZeroVector;
 
+
+private:
+	void InitCameraShakeParam();
 
 	//테스트용 Parameter
 private:

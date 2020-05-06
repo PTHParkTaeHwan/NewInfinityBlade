@@ -1,0 +1,870 @@
+﻿Log file open, 05/06/20 10:42:44
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogInit: Display: Running engine for game: InfinityBlade
+LogPlatformFile: Not using cached read wrapper
+LogInit: Display: RandInit(887543758) SRandInit(887543758).
+LogInit: Read version file with build ID '3944462'
+LogInit: Overriding engine version to CL 4033788, compatible CL 3944462
+LogInit: Registered custom module enumerator with build ID '3944462'
+LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.302570
+LogD3D11RHI: Aftermath initialized
+LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: +9:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin LinearTimecode
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleARKit
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin ImmediatePhysics
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Plugin shader directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders found
+LogPluginManager: Mapping shader source directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders to virtual directory /Plugin/OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogStreaming: Display: Took  0.157s to configure plugins.
+LogModuleManager: Display: Found up-to-date module file ../../../../../../dev/NewInfinityBlade/Binaries/Win64/UE4Editor-InfinityBladeSetting.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../../../../dev/NewInfinityBlade/Binaries/Win64/UE4Editor-InfinityBlade.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2DEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperSpriteSheetImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperTiledImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-SmartSnapping.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Animation/LiveLink/Binaries/Win64/UE4Editor-LiveLink.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Animation/LiveLink/Binaries/Win64/UE4Editor-LiveLinkEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Blendables/LightPropagationVolume/Binaries/Win64/UE4Editor-LightPropagationVolumeRuntime.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Blendables/LightPropagationVolume/Binaries/Win64/UE4Editor-LightPropagationVolumeEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/CLionSourceCodeAccess/Binaries/Win64/UE4Editor-CLionSourceCodeAccess.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/GitSourceControl/Binaries/Win64/UE4Editor-GitSourceControl.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/PerforceSourceControl/Binaries/Win64/UE4Editor-PerforceSourceControl.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/SubversionSourceControl/Binaries/Win64/UE4Editor-SubversionSourceControl.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/UObjectPlugin/Binaries/Win64/UE4Editor-UObjectPlugin.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/VisualStudioCodeSourceCodeAccess/Binaries/Win64/UE4Editor-VisualStudioCodeSourceCodeAccess.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/VisualStudioSourceCodeAccess/Binaries/Win64/UE4Editor-VisualStudioSourceCodeAccess.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/AssetManagerEditor/Binaries/Win64/UE4Editor-AssetManagerEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/CryptoKeys/Binaries/Win64/UE4Editor-CryptoKeys.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/CryptoKeys/Binaries/Win64/UE4Editor-CryptoKeysOpenSSL.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/DataValidation/Binaries/Win64/UE4Editor-DataValidation.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/FacialAnimation/Binaries/Win64/UE4Editor-FacialAnimation.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/FacialAnimation/Binaries/Win64/UE4Editor-FacialAnimationEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/GameplayTagsEditor/Binaries/Win64/UE4Editor-GameplayTagsEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/MobileLauncherProfileWizard/Binaries/Win64/UE4Editor-MobileLauncherProfileWizard.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/PluginBrowser/Binaries/Win64/UE4Editor-PluginBrowser.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/SpeedTreeImporter/Binaries/Win64/UE4Editor-SpeedTreeImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Enterprise/DatasmithContent/Binaries/Win64/UE4Editor-DatasmithContent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/AlembicImporter/Binaries/Win64/UE4Editor-AlembicImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/AlembicImporter/Binaries/Win64/UE4Editor-AlembicLibrary.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/CharacterAI/Binaries/Win64/UE4Editor-CharacterAI.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/HTML5Networking/Binaries/Win64/UE4Editor-HTML5Networking.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AndroidMedia/Binaries/Win64/UE4Editor-AndroidMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AndroidMedia/Binaries/Win64/UE4Editor-AndroidMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AvfMedia/Binaries/Win64/UE4Editor-AvfMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AvfMedia/Binaries/Win64/UE4Editor-AvfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AvfMedia/Binaries/Win64/UE4Editor-AvfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMedia.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-OpenExrWrapper.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/LinearTimecode/Binaries/Win64/UE4Editor-LinearTimecode.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/MediaCompositing/Binaries/Win64/UE4Editor-MediaCompositing.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/MediaCompositing/Binaries/Win64/UE4Editor-MediaCompositingEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/MediaPlayerEditor/Binaries/Win64/UE4Editor-MediaPlayerEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMedia.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Messaging/TcpMessaging/Binaries/Win64/UE4Editor-TcpMessaging.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Messaging/UdpMessaging/Binaries/Win64/UE4Editor-UdpMessaging.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/MovieScene/ActorSequence/Binaries/Win64/UE4Editor-ActorSequence.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor-LevelSequenceEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/MovieScene/MatineeToLevelSequence/Binaries/Win64/UE4Editor-MatineeToLevelSequence.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/NetcodeUnitTest/NetcodeUnitTest/Binaries/Win64/UE4Editor-NetcodeUnitTest.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/NetcodeUnitTest/NUTUnrealEngine4/Binaries/Win64/UE4Editor-NUTUnrealEngine4.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystem/Binaries/Win64/UE4Editor-OnlineSubsystem.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystemNull/Binaries/Win64/UE4Editor-OnlineSubsystemNull.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystemUtils/Binaries/Win64/UE4Editor-OnlineSubsystemUtils.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystemUtils/Binaries/Win64/UE4Editor-OnlineBlueprintSupport.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AndroidDeviceProfileSelector/Binaries/Win64/UE4Editor-AndroidDeviceProfileSelector.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AndroidPermission/Binaries/Win64/UE4Editor-AndroidPermission.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AppleARKit/Binaries/Win64/UE4Editor-AppleARKit.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ArchVisCharacter/Binaries/Win64/UE4Editor-ArchVisCharacter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AudioCapture/Binaries/Win64/UE4Editor-AudioCapture.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AudioCapture/Binaries/Win64/UE4Editor-AudioCaptureEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/CableComponent/Binaries/Win64/UE4Editor-CableComponent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/CustomMeshComponent/Binaries/Win64/UE4Editor-CustomMeshComponent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ExampleDeviceProfileSelector/Binaries/Win64/UE4Editor-ExampleDeviceProfileSelector.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ImmediatePhysics/Binaries/Win64/UE4Editor-ImmediatePhysics.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ImmediatePhysics/Binaries/Win64/UE4Editor-ImmediatePhysicsEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/LocationServicesBPLibrary/Binaries/Win64/UE4Editor-LocationServicesBPLibrary.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/MobilePatchingUtils/Binaries/Win64/UE4Editor-MobilePatchingUtils.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Binaries/Win64/UE4Editor-OculusHMD.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Binaries/Win64/UE4Editor-OculusInput.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Binaries/Win64/UE4Editor-OculusEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/PhysXVehicles/Binaries/Win64/UE4Editor-PhysXVehicles.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/PhysXVehicles/Binaries/Win64/UE4Editor-PhysXVehiclesEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ProceduralMeshComponent/Binaries/Win64/UE4Editor-ProceduralMeshComponent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ProceduralMeshComponent/Binaries/Win64/UE4Editor-ProceduralMeshComponentEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor-RuntimePhysXCooking.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Steam/SteamVR/Binaries/Win64/UE4Editor-SteamVR.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Steam/SteamVR/Binaries/Win64/UE4Editor-SteamVRController.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/WindowsMoviePlayer/Binaries/Win64/UE4Editor-WindowsMoviePlayer.dll (API version 3944462).
+LogInit: Using libcurl 7.47.1
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2g
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogInit: WinSock: I am DESKTOP-2UPP01C (192.168.0.76:0)
+LogInit: Build: ++UE4+Release-4.19-CL-4033788
+LogInit: Engine Version: 4.19.2-4033788+++UE4+Release-4.19
+LogInit: Compatible Engine Version: 4.19.0-3944462+++UE4+Release-4.19
+LogInit: Net CL: 3944462
+LogDevObjectVersion: Number of dev versions registered: 18
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 23
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 33
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 25
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 6
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 1
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 2
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 16
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogInit: Compiled (64-bit): Apr 27 2018 02:06:57
+LogInit: Compiled with Visual C++: 19.00.24215.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.19
+LogInit: Command Line: 
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogStreaming: Display: Took  0.012s to delete old logs.
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2020.05.06-01.42.47:635][  0]LogInit: Selected Device Profile: [Windows]
+[2020.05.06-01.42.47:635][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2020.05.06-01.42.47:645][  0]LogInit: Computer: DESKTOP-2UPP01C
+[2020.05.06-01.42.47:645][  0]LogInit: User: pth08
+[2020.05.06-01.42.47:645][  0]LogInit: CPU Page size=4096, Cores=4
+[2020.05.06-01.42.47:645][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2020.05.06-01.42.47:645][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2020.05.06-01.42.47:645][  0]LogMemory: Platform Memory Stats for Windows
+[2020.05.06-01.42.47:645][  0]LogMemory: Process Physical Memory: 280.07 MB used, 280.07 MB peak
+[2020.05.06-01.42.47:646][  0]LogMemory: Process Virtual Memory: 276.98 MB used, 276.98 MB peak
+[2020.05.06-01.42.47:646][  0]LogMemory: Physical Memory: 6961.58 MB used,  9337.71 MB free, 16299.29 MB total
+[2020.05.06-01.42.47:646][  0]LogMemory: Virtual Memory: 4791.43 MB used,  9337.71 MB free, 134217728.00 MB total
+[2020.05.06-01.42.47:669][  0]LogInit: Using OS detected language (ko-KR).
+[2020.05.06-01.42.47:669][  0]LogInit: Using OS detected locale (ko-KR).
+[2020.05.06-01.42.47:674][  0]LogTextLocalizationManager: No specific localization for 'ko-KR' exists, so the 'ko' localization will be used.
+[2020.05.06-01.42.48:018][  0]LogStreaming: Display: Took  0.348s to EndInitTextLocalization.
+[2020.05.06-01.42.48:018][  0]LogInit: Setting process to per monitor DPI aware
+[2020.05.06-01.42.48:134][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2020.05.06-01.42.48:134][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2020.05.06-01.42.48:504][  0]LogD3D11RHI: D3D11 adapters:
+[2020.05.06-01.42.48:521][  0]LogD3D11RHI:    0. 'Intel(R) UHD Graphics 620' (Feature Level 11_0)
+[2020.05.06-01.42.48:521][  0]LogD3D11RHI:       128/0/8149 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x8086
+[2020.05.06-01.42.48:552][  0]LogD3D11RHI:    1. 'Radeon(TM) 540 Graphics' (Feature Level 11_0)
+[2020.05.06-01.42.48:552][  0]LogD3D11RHI:       1995/0/8149 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1002
+[2020.05.06-01.42.48:555][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2020.05.06-01.42.48:555][  0]LogD3D11RHI:       0/0/8149 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2020.05.06-01.42.48:555][  0]LogD3D11RHI: Chosen D3D11 Adapter: 1
+[2020.05.06-01.42.48:566][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2020.05.06-01.42.48:566][  0]LogD3D11RHI:     GPU DeviceId: 0x699f (for the marketing name, search the web for "GPU Device Id")
+[2020.05.06-01.42.48:566][  0]LogWindows: EnumDisplayDevices:
+[2020.05.06-01.42.48:566][  0]LogWindows:    0. 'Intel(R) UHD Graphics 620' (P:0 D:1)
+[2020.05.06-01.42.48:567][  0]LogWindows:    1. 'Intel(R) UHD Graphics 620' (P:1 D:1)
+[2020.05.06-01.42.48:567][  0]LogWindows:    2. 'Intel(R) UHD Graphics 620' (P:0 D:0)
+[2020.05.06-01.42.48:568][  0]LogWindows:    3. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:569][  0]LogWindows:    4. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:569][  0]LogWindows:    5. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:570][  0]LogWindows:    6. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:571][  0]LogWindows:    7. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:571][  0]LogWindows:    8. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:572][  0]LogWindows:    9. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:572][  0]LogWindows:    10. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:573][  0]LogWindows:    11. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:574][  0]LogWindows:    12. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:575][  0]LogWindows:    13. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:575][  0]LogWindows:    14. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:576][  0]LogWindows:    15. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:576][  0]LogWindows:    16. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:577][  0]LogWindows:    17. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:578][  0]LogWindows:    18. 'Radeon(TM) 540 Graphics' (P:0 D:0)
+[2020.05.06-01.42.48:578][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[2020.05.06-01.42.48:578][  0]LogD3D11RHI:     Adapter Name: Radeon(TM) 540 Graphics
+[2020.05.06-01.42.48:578][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
+[2020.05.06-01.42.48:578][  0]LogD3D11RHI:      Driver Date: Unknown
+[2020.05.06-01.42.48:578][  0]LogRHI: Texture pool is 1396 MB (70% of 1995 MB)
+[2020.05.06-01.42.49:560][  0]LogD3D11RHI: Async texture creation enabled
+[2020.05.06-01.42.49:571][  0]LogD3D11RHI: GPU Timing Frequency: 25.000000 (Debug: 2 1)
+[2020.05.06-01.42.49:573][  0]LogShaderCompilers: Guid format shader working directory is 7 characters bigger than the processId version (../../../../../../dev/NewInfinityBlade/Intermediate/Shaders/WorkingDirectory/28124/).
+[2020.05.06-01.42.49:573][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/pth08/AppData/Local/Temp/UnrealShaderWorkingDir/3824AA344BCB63400251C3BD29E4DA68/'.
+[2020.05.06-01.42.49:887][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2020.05.06-01.42.49:906][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2020.05.06-01.42.49:925][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2020.05.06-01.42.49:947][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2020.05.06-01.42.49:965][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2020.05.06-01.42.49:986][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2020.05.06-01.42.50:004][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2020.05.06-01.42.50:021][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2020.05.06-01.42.50:030][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2020.05.06-01.42.50:044][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
+[2020.05.06-01.42.50:058][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
+[2020.05.06-01.42.50:072][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
+[2020.05.06-01.42.50:087][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
+[2020.05.06-01.42.50:102][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
+[2020.05.06-01.42.50:115][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
+[2020.05.06-01.42.50:144][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
+[2020.05.06-01.42.50:144][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
+[2020.05.06-01.42.50:159][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2020.05.06-01.42.50:162][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2020.05.06-01.42.50:203][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2020.05.06-01.42.50:216][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2020.05.06-01.42.50:230][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2020.05.06-01.42.50:244][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2020.05.06-01.42.50:257][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2020.05.06-01.42.50:270][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2020.05.06-01.42.50:270][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2020.05.06-01.42.50:433][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2020.05.06-01.42.50:434][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2020.05.06-01.42.50:434][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2020.05.06-01.42.51:303][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2020.05.06-01.42.51:380][  0]LogDerivedDataCache: Loaded boot cache 0.08s 100MB C:/Users/pth08/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2020.05.06-01.42.51:380][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/pth08/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
+[2020.05.06-01.42.51:381][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../dev/NewInfinityBlade/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2020.05.06-01.42.51:381][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2020.05.06-01.42.51:381][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../dev/NewInfinityBlade/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.05.06-01.42.51:381][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2020.05.06-01.42.51:397][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2020.05.06-01.42.51:410][  0]LogDerivedDataCache: Using Local data cache path C:/Users/pth08/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2020.05.06-01.42.51:410][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2020.05.06-01.42.51:410][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2020.05.06-01.42.51:421][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2020.05.06-01.42.51:421][  0]LogSlate: Using Freetype 2.6.0
+[2020.05.06-01.42.51:422][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.05.06-01.42.51:422][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.05.06-01.42.51:576][  0]LogAssetRegistry: FAssetRegistry took 0.0267 seconds to start up
+[2020.05.06-01.42.51:970][  0]LogInit: Selected Device Profile: [Windows]
+[2020.05.06-01.42.52:068][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2020.05.06-01.42.52:072][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2020.05.06-01.42.52:072][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2020.05.06-01.42.52:072][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2020.05.06-01.42.52:072][  0]LogMeshReduction: No automatic mesh merging module available
+[2020.05.06-01.42.52:072][  0]LogMeshMerging: No automatic mesh merging module available
+[2020.05.06-01.42.52:202][  0]LogNetVersion: InfinityBlade , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 376743747)
+[2020.05.06-01.42.52:638][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.064817 seconds
+[2020.05.06-01.42.52:643][  0]LogUObjectArray: 36728 objects as part of root set at end of initial load.
+[2020.05.06-01.42.52:643][  0]LogUObjectAllocator: 7314312 out of 0 bytes used by permanent object pool.
+[2020.05.06-01.42.52:643][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2020.05.06-01.42.54:562][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2020.05.06-01.42.54:598][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2020.05.06-01.42.55:274][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.158400ms] /Game/InfinityBladeAdversaries/Enemy/Enemy_Great_Spider/SK_Greater_Spider.SK_Greater_Spider
+[2020.05.06-01.42.55:302][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002719c69d4b8, Size=8, Default__GreaterSpiderAnimBlueprint_C Function /Game/dev/Enemy/Animation/GreaterSpiderAnimBlueprint.GreaterSpiderAnimBlueprint_C:ExecuteUbergraph_GreaterSpiderAnimBlueprint
+[2020.05.06-01.42.55:305][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002719c69d4b8, Size=8
+[2020.05.06-01.42.55:305][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002719c69d4b8, Size=8, Default__GreaterSpiderAnimBlueprint_C Function /Engine/Transient.REINST_GreaterSpiderAnimBlueprint_C_0:ExecuteUbergraph_GreaterSpiderAnimBlueprint
+[2020.05.06-01.42.55:308][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002719c69d380, Size=8, Default__GreaterSpiderAnimBlueprint_C Function /Game/dev/Enemy/Animation/GreaterSpiderAnimBlueprint.GreaterSpiderAnimBlueprint_C:ExecuteUbergraph_GreaterSpiderAnimBlueprint
+[2020.05.06-01.42.55:433][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.203100ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Bladed.SK_CharM_Bladed
+[2020.05.06-01.42.55:454][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002718f8851b0, Size=20, Default__WarriorAnimBlueprint_C Function /Game/Book/Animations/WarriorAnimBlueprint.WarriorAnimBlueprint_C:ExecuteUbergraph_WarriorAnimBlueprint
+[2020.05.06-01.42.55:463][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002718f8851b0, Size=20
+[2020.05.06-01.42.55:463][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002718f8851b0, Size=20, Default__WarriorAnimBlueprint_C Function /Engine/Transient.REINST_WarriorAnimBlueprint_C_1:ExecuteUbergraph_WarriorAnimBlueprint
+[2020.05.06-01.42.55:472][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002719c8fd318, Size=20, Default__WarriorAnimBlueprint_C Function /Game/Book/Animations/WarriorAnimBlueprint.WarriorAnimBlueprint_C:ExecuteUbergraph_WarriorAnimBlueprint
+[2020.05.06-01.42.55:678][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.069000ms] /Game/InfinityBladeWeapons/Weapons/Blade/Swords/Blade_BlackKnight/SK_Blade_BlackKnight.SK_Blade_BlackKnight
+[2020.05.06-01.42.55:702][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.166000ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Cardboard.SK_CharM_Cardboard
+[2020.05.06-01.42.55:806][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.129200ms] /Game/InfinityBladeAdversaries/Enemy/Enemy_Wolf/SK_Enemy_Wolf_Armored.SK_Enemy_Wolf_Armored
+[2020.05.06-01.42.55:995][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.06-01.42.55:995][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.06-01.42.56:019][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.06-01.42.56:042][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.06-01.42.56:670][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2020.05.06-01.42.57:451][  0]LogOcInput: OculusInput pre-init called
+[2020.05.06-01.42.57:595][  0]LogEngine: Initializing Engine...
+[2020.05.06-01.42.57:597][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.05.06-01.42.57:599][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2020.05.06-01.42.57:599][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2020.05.06-01.42.57:810][  0]LogAIModule: Creating AISystem for world Untitled
+[2020.05.06-01.42.58:245][  0]LogInit: XAudio2 using '헤드폰(Realtek(R) Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.06-01.42.58:434][  0]LogInit: FAudioDevice initialized.
+[2020.05.06-01.42.58:496][  0]LogDerivedDataCache: Saved boot cache 0.06s 100MB C:/Users/pth08/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2020.05.06-01.42.58:509][  0]LogInit: Texture streaming: Enabled
+[2020.05.06-01.42.58:531][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2020.05.06-01.42.58:548][  0]LogInit: Transaction tracking system initialized
+[2020.05.06-01.42.58:579][  0]BlueprintLog: New page: 에디터 로드
+[2020.05.06-01.42.58:689][  0]LocalizationService: 현지화 서비스가 비활성화되었습니다.
+[2020.05.06-01.42.59:102][  0]LogConsoleResponse: Display: 
+[2020.05.06-01.42.59:282][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2020.05.06-01.42.59:282][  0]LogCook: Display: Mobile HDR setting 1
+[2020.05.06-01.42.59:282][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2020.05.06-01.42.59:282][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2020.05.06-01.42.59:282][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2020.05.06-01.42.59:822][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Content/' took 0.12s
+[2020.05.06-01.42.59:822][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.06-01.42.59:822][  0]Cmd: MAP LOAD FILE="../../../../../../dev/NewInfinityBlade/Content/dev/Maps/StartRoom.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.05.06-01.42.59:823][  0]LightingResults: New page: 라이팅 빌드
+[2020.05.06-01.42.59:826][  0]MapCheck: New page: 맵 체크
+[2020.05.06-01.42.59:826][  0]LightingResults: New page: 라이팅 빌드
+[2020.05.06-01.42.59:837][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002719c69d4b8, Size=8
+[2020.05.06-01.42.59:837][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002718f8851b0, Size=20
+[2020.05.06-01.42.59:990][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271a1322480, Size=624, Default__StartRoom_C Function /Game/dev/Maps/StartRoom.StartRoom_C:ExecuteUbergraph_StartRoom
+[2020.05.06-01.42.59:996][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000271a1322480, Size=624
+[2020.05.06-01.42.59:996][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271a1322480, Size=624, Default__StartRoom_C Function /Engine/Transient.REINST_StartRoom_C_11:ExecuteUbergraph_StartRoom
+[2020.05.06-01.43.00:001][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271a2f6ae80, Size=624, Default__StartRoom_C Function /Game/dev/Maps/StartRoom.StartRoom_C:ExecuteUbergraph_StartRoom
+[2020.05.06-01.43.00:232][  0]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.06-01.43.00:310][  0]LogStreaming: Display: ULevelStreaming::RequestLevel(/Game/InfinityBladeGrassLands/Maps/ElvenRuins) is flushing async loading
+[2020.05.06-01.43.01:740][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [1.056200ms] /Game/InfinityBladeGrassLands/Environments/Earth/EX_EnvAssets/Meshes/SK_Env_Ice_Deco2_BlowingFlag.SK_Env_Ice_Deco2_BlowingFlag
+[2020.05.06-01.43.01:741][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.764600ms] /Game/InfinityBladeGrassLands/Environments/Earth/EX_EnvAssets/Meshes/SK_Env_Ice_Deco2_BlowingFlag3.SK_Env_Ice_Deco2_BlowingFlag3
+[2020.05.06-01.43.01:839][  0]LogStreaming: Display: ULevelStreaming::RequestLevel(/Game/InfinityBladeIceLands/Maps/FrozenCove) is flushing async loading
+[2020.05.06-01.43.02:939][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_MelancholicTroll01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.02:939][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.03:202][  0]LogPackageName: SearchForPackageOnDisk took   0.263s, but failed to resolve Env_Ice_Rocky.
+[2020.05.06-01.43.03:202][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_MelancholicTroll01" could not be resolved.
+[2020.05.06-01.43.03:205][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.03:205][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.03:462][  0]LogPackageName: SearchForPackageOnDisk took   0.256s, but failed to resolve Env_Ice_Rocky.
+[2020.05.06-01.43.03:462][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" could not be resolved.
+[2020.05.06-01.43.03:467][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.03:467][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.03:731][  0]LogPackageName: SearchForPackageOnDisk took   0.264s, but failed to resolve Env_Ice_Rocky.
+[2020.05.06-01.43.03:731][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" could not be resolved.
+[2020.05.06-01.43.03:735][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Texture.Env_Ice_RockyStairs01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.03:735][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.03:990][  0]LogPackageName: SearchForPackageOnDisk took   0.255s, but failed to resolve Env_Ice_Rocky.
+[2020.05.06-01.43.03:990][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Texture.Env_Ice_RockyStairs01" could not be resolved.
+[2020.05.06-01.43.03:996][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_RuinedSteps001" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.03:996][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.04:242][  0]LogPackageName: SearchForPackageOnDisk took   0.245s, but failed to resolve Env_Ice_Rocky.
+[2020.05.06-01.43.04:242][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_RuinedSteps001" could not be resolved.
+[2020.05.06-01.43.04:245][  0]LogPackageName: Warning: String asset reference "Env_Ice_RuinedWalls001" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.04:245][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.04:499][  0]LogPackageName: SearchForPackageOnDisk took   0.255s, but failed to resolve Env_Ice_RuinedWalls001.
+[2020.05.06-01.43.04:499][  0]LogPackageName: Warning: String asset reference "Env_Ice_RuinedWalls001" could not be resolved.
+[2020.05.06-01.43.04:565][  0]LogPackageName: Warning: String asset reference "Env_ALL_Artifacts.Mesh.Env_ALL_Terminus001" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.04:565][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.04:813][  0]LogPackageName: SearchForPackageOnDisk took   0.248s, but failed to resolve Env_ALL_Artifacts.
+[2020.05.06-01.43.04:813][  0]LogPackageName: Warning: String asset reference "Env_ALL_Artifacts.Mesh.Env_ALL_Terminus001" could not be resolved.
+[2020.05.06-01.43.04:816][  0]LogPackageName: Warning: String asset reference "S_ClothTarps_03.SM.Mesh.S_ClothTarps_03" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.06-01.43.04:816][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.06-01.43.05:056][  0]LogPackageName: SearchForPackageOnDisk took   0.241s, but failed to resolve S_ClothTarps_03.
+[2020.05.06-01.43.05:056][  0]LogPackageName: Warning: String asset reference "S_ClothTarps_03.SM.Mesh.S_ClothTarps_03" could not be resolved.
+[2020.05.06-01.43.05:686][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [1.013000ms] /Game/InfinityBladeIceLands/Environments/Ice/EX_EnvAssets/Meshes/SK_Env_Ice_Deco2_BlowingFlag3.SK_Env_Ice_Deco2_BlowingFlag3
+[2020.05.06-01.43.05:853][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.05.06-01.43.05:866][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000271a1322480, Size=624
+[2020.05.06-01.43.05:867][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.05.06-01.43.06:159][  0]MapCheck: 맵 체크 완료: 오류 0 회, 경고 0 회, 소요 시간 292.381ms.
+[2020.05.06-01.43.06:159][  0]LogFileHelpers: Loading map 'StartRoom' took 6.337
+[2020.05.06-01.43.06:384][  0]LogCollectionManager: Loaded 0 collections in 0.003028 seconds
+[2020.05.06-01.43.06:442][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Saved/Collections/' took 0.01s
+[2020.05.06-01.43.06:442][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Content/Developers/pth08/Collections/' took 0.01s
+[2020.05.06-01.43.06:442][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Content/Collections/' took 0.01s
+[2020.05.06-01.43.06:442][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2020.05.06-01.43.06:463][  0]LogContentBrowser: Native class hierarchy populated in 0.0207 seconds. Added 2495 classes and 567 folders.
+[2020.05.06-01.43.06:485][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0110 seconds. Added 0 classes and 0 folders.
+[2020.05.06-01.43.06:610][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0105 seconds. Added 0 classes and 0 folders.
+[2020.05.06-01.43.06:626][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0104 seconds. Added 1 classes and 2 folders.
+[2020.05.06-01.43.06:764][  0]LogSlate: Took 0.000348 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2020.05.06-01.43.06:769][  0]LogSlate: Took 0.003225 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothic.ttf' (4243K)
+[2020.05.06-01.43.06:776][  0]LogSlate: Took 0.003259 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothicBold.ttf' (4188K)
+[2020.05.06-01.43.06:777][  0]LogSlate: Took 0.000359 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2020.05.06-01.43.06:784][  0]LogSlate: Took 0.001416 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2020.05.06-01.43.06:906][  0]LogRenderer: Reallocating scene render targets to support 932x464 Format 9 NumSamples 1 (Frame:1).
+[2020.05.06-01.43.07:197][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0119 seconds. Added 0 classes and 0 folders.
+[2020.05.06-01.43.07:197][  0]LogLoad: (Engine Initialization) Total time: 23.48 seconds
+[2020.05.06-01.43.07:197][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2020.05.06-01.43.07:217][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2020.05.06-01.43.07:272][  0]InfinityBlade: Error: UIBCharacterStatComponent::SetNewLevel(37)ASSERTION : 'nullptr != IBGameInstance'
+[2020.05.06-01.43.07:279][  0]InfinityBlade: Error: UIB_E_GS_StatComponent::SetNewLevel(47)ASSERTION : 'nullptr != IBGameInstance'
+[2020.05.06-01.43.07:296][  0]LogContentStreaming: Texture pool size now 600 MB
+[2020.05.06-01.43.08:083][  7]LogAssetRegistry: Asset discovery search completed in 16.5302 seconds
+[2020.05.06-01.43.08:103][  7]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000009 seconds (updated 0 objects)
+[2020.05.06-01.43.08:327][ 10]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271f90d9d00, Size=1264, Default__UI_Select_C Function /Game/Book/UI/UI_Select.UI_Select_C:ExecuteUbergraph_UI_Select
+[2020.05.06-01.43.08:346][ 10]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000271f90d9d00, Size=1264
+[2020.05.06-01.43.08:346][ 10]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271fad0d600, Size=1264, Default__UI_Select_C Function /Engine/Transient.REINST_UI_Select_C_6:ExecuteUbergraph_UI_Select
+[2020.05.06-01.43.08:365][ 10]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271fac11600, Size=1264, Default__UI_Select_C Function /Game/Book/UI/UI_Select.UI_Select_C:ExecuteUbergraph_UI_Select
+[2020.05.06-01.43.08:463][ 10]LogSlate: Took 0.001328 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.05.06-01.43.08:474][ 10]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-01.43.08:778][ 10]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0106 seconds. Added 116 classes and 0 folders.
+[2020.05.06-01.43.09:071][ 10]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271d6cecce0, Size=4, Default__SKEL_PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.SKEL_PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
+[2020.05.06-01.43.09:072][ 10]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271d6cecca8, Size=4, Default__PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
+[2020.05.06-01.43.09:529][ 10]LogContentBrowser: Native class hierarchy updated for 'SkeletonEditor' in 0.0113 seconds. Added 1 classes and 2 folders.
+[2020.05.06-01.43.09:802][ 10]LogSkeletalMesh: Skeletal Mesh found in DDC [1.070300ms] /Game/InfinityBladeWeapons/Weapons/Blade/Swords/Blade_HeroSword22/SK_Blade_HeroSword22.SK_Blade_HeroSword22
+[2020.05.06-01.43.09:807][ 10]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.Actor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.06-01.43.09:822][ 10]LogContentBrowser: Native class hierarchy updated for 'PinnedCommandList' in 0.0102 seconds. Added 1 classes and 0 folders.
+[2020.05.06-01.43.40:961][ 57]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.06-01.43.41:013][ 57]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.43.41:013][ 57]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.43.41:014][ 57]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.43.41:014][ 57]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.06-01.43.41:014][ 57]PIE: New page: PIE 세션: StartRoom (2020. 5. 6. 오후 7:43:41)
+[2020.05.06-01.43.41:014][ 57]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_StartRoom
+[2020.05.06-01.43.41:035][ 57]LogPlayLevel: PIE: StaticDuplicateObject took: (0.020550s)
+[2020.05.06-01.43.41:036][ 57]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.06-01.43.41:036][ 57]LogPlayLevel: PIE: World Init took: (0.001135s)
+[2020.05.06-01.43.41:036][ 57]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/StartRoom.StartRoom to /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom (0.021955s)
+[2020.05.06-01.43.41:066][ 57]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000271fad0d600, Size=1264
+[2020.05.06-01.43.41:560][ 57]LogInit: XAudio2 using '헤드폰(Realtek(R) Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.06-01.43.41:642][ 57]LogInit: FAudioDevice initialized.
+[2020.05.06-01.43.41:682][ 57]LogLoad: Game class is 'IBGameMode'
+[2020.05.06-01.43.41:686][ 57]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom up for play (max tick rate 60) at 2020.05.06-10.43.41
+[2020.05.06-01.43.41:687][ 57]LogWorld: Bringing up level for play took: 0.004464
+[2020.05.06-01.43.41:688][ 57]InfinityBlade: Warning: AIBPlayerController::SetupInputComponent(30)SetupInputComponent
+[2020.05.06-01.43.41:702][ 57]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0097 seconds. Added 11 classes and 0 folders.
+[2020.05.06-01.43.41:706][ 57]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.43.41:706][ 57]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.43.41:706][ 57]PIE: /Game/dev/Maps/UEDPIE_0_StartRoom 에 대한 에디터에서 플레이 시작 시간: 0.969
+[2020.05.06-01.43.41:706][ 57]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.43.41:706][ 57]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.43.41:706][ 57]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.43.41:732][ 57]LogSlate: Took 0.001997 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/../../Editor/Slate/Fonts/NanumGothic.ttf' (4243K)
+[2020.05.06-01.43.41:822][ 60]LogSkeletalMesh: Skeletal Mesh found in DDC [2.369900ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Ram.SK_CharM_Ram
+[2020.05.06-01.43.44:411][214]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-01.43.44:878][234]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.43.46:567][328]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-01.43.46:601][330]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.43.47:413][370]LogSlate: Took 0.000328 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2020.05.06-01.43.47:477][370]LogSlate: Took 0.002513 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothicExtraBold.ttf' (4074K)
+[2020.05.06-01.43.48:773][444]InfinityBlade: Warning: AIBCharacter::AttackCheck(732)CameraShake nullptr
+[2020.05.06-01.43.51:324][597]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.43.51:325][597]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.43.51:326][597]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.43.51:367][597]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.43.51:367][597]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.43.51:368][597]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.43.53:300][691]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.06-01.44.32:664][133]LogSlate: Took 0.000558 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.05.06-01.44.59:994][673]Running C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/dev/NewInfinityBlade/InfinityBlade.uproject" -game -rocket -progress
+[2020.05.06-01.45.00:402][673]Discovering modules, targets and source code for project...
+[2020.05.06-01.45.06:362][673]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2020.05.06-01.45.06:385][673]Candidate modules for hot reload:
+[2020.05.06-01.45.06:385][673]  InfinityBlade
+[2020.05.06-01.45.06:385][673]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/DotNET/UnrealBuildTool.exe InfinityBlade -ModuleWithSuffix=InfinityBlade,4506 Win64 Development -editorrecompile -canskiplink "C:/dev/NewInfinityBlade/InfinityBlade.uproject" ]
+[2020.05.06-01.45.40:790][673]CompilerResultsLog: New page: 컴파일 - 2020. 5. 6. 오후 7:45:40
+[2020.05.06-01.45.40:790][673]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2020.05.06-01.45.40:791][673]CompilerResultsLog: Creating makefile for hot reloading InfinityBlade (UHT file was deleted)
+[2020.05.06-01.45.40:791][673]CompilerResultsLog: Compiling game modules for hot reload
+[2020.05.06-01.45.40:791][673]CompilerResultsLog: Parsing headers for InfinityBladeEditor
+[2020.05.06-01.45.40:791][673]CompilerResultsLog:   Running UnrealHeaderTool "C:\dev\NewInfinityBlade\InfinityBlade.uproject" "C:\dev\NewInfinityBlade\Intermediate\Build\Win64\InfinityBladeEditor\Development\InfinityBladeEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2020.05.06-01.45.40:792][673]CompilerResultsLog: Reflection code generated for InfinityBladeEditor in 11.5090758 seconds
+[2020.05.06-01.45.40:792][673]CompilerResultsLog: [Adaptive unity build] Disabling PCH for excluded files. Set bAdaptiveUnityDisablesPCH to false in BuildConfiguration.xml to change this behavior.
+[2020.05.06-01.45.40:792][673]CompilerResultsLog: [Adaptive unity build] Excluded from InfinityBlade unity file: IBCharacter.cpp, MyCameraShake.cpp
+[2020.05.06-01.45.40:792][673]CompilerResultsLog: Performing 4 actions (4 in parallel)
+[2020.05.06-01.45.40:792][673]CompilerResultsLog: Module.InfinityBlade.gen.cpp
+[2020.05.06-01.45.40:793][673]CompilerResultsLog: MyCameraShake.cpp
+[2020.05.06-01.45.40:793][673]CompilerResultsLog: [3/4] Link UE4Editor-InfinityBlade-4506.dll
+[2020.05.06-01.45.40:793][673]CompilerResultsLog: [4/4] Link UE4Editor-InfinityBlade-4506.lib
+[2020.05.06-01.45.40:793][673]CompilerResultsLog:    C:\dev\NewInfinityBlade\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InfinityBlade-4506.lib ???̺귯?? ?? C:\dev\NewInfinityBlade\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InfinityBlade-4506.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2020.05.06-01.45.40:799][673]LogSlate: Took 0.005334 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2020.05.06-01.45.40:806][673]LogSlate: Took 0.003635 seconds to synchronously load lazily loaded font '../../../Engine/Content/SlateDebug/Fonts/LastResort.ttf' (5269K)
+[2020.05.06-01.45.40:806][673]CompilerResultsLog:    C:\dev\NewInfinityBlade\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InfinityBlade-4506.suppressed.lib ???̺귯?? ?? C:\dev\NewInfinityBlade\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InfinityBlade-4506.suppressed.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2020.05.06-01.45.40:807][673]CompilerResultsLog: Total build time: 34.14 seconds (Local executor: 10.08 seconds)
+[2020.05.06-01.45.40:807][673]LogMainFrame: MainFrame: Module compiling took 34.445 seconds
+[2020.05.06-01.45.41:263][673]LogClass: Could not find existing class MyCameraShake in package /Script/InfinityBlade for HotReload, assuming new class
+[2020.05.06-01.45.41:266][673]LogClass: ECharacterState HotReload.
+[2020.05.06-01.45.41:266][673]LogClass: IB_E_GSData HotReload.
+[2020.05.06-01.45.41:266][673]LogClass: IBCharacterData HotReload.
+[2020.05.06-01.45.41:268][673]LogHotReload: Re-instancing BTTask_E_GS_MoveTo after hot-reload.
+[2020.05.06-01.45.41:377][673]LogHotReload: Re-instancing IB_E_GreaterSpider after hot-reload.
+[2020.05.06-01.45.41:708][673]LogHotReload: Re-instancing IBCharacter after hot-reload.
+[2020.05.06-01.45.41:916][673]LogHotReload: Re-instancing IBItemWeapon after hot-reload.
+[2020.05.06-01.45.42:224][673]LogHotReload: Re-instancing IBPawn after hot-reload.
+[2020.05.06-01.45.42:424][673]LogHotReload: Re-instancing IBSection after hot-reload.
+[2020.05.06-01.45.42:741][673]LogContentBrowser: Native class hierarchy updated for 'InfinityBlade' in 0.0131 seconds. Added 41 classes and 3 folders.
+[2020.05.06-01.45.42:746][673]Display: HotReload successful (30 functions remapped  2 scriptstructs remapped)
+[2020.05.06-01.45.43:232][673]LogContentBrowser: Native class hierarchy populated in 0.0232 seconds. Added 2498 classes and 571 folders.
+[2020.05.06-01.45.43:232][673]Display: HotReload took 36.9s.
+[2020.05.06-01.45.43:234][673]Warning: HotReload operation took 36.9s.
+[2020.05.06-01.45.43:344][673]LogSlate: Window 'C++ 클래스 추가' being destroyed
+[2020.05.06-01.45.43:513][674]LogHotReload: New module detected: UE4Editor-InfinityBlade-4506.dll
+[2020.05.06-01.45.43:597][675]LogHotReload: Starting Hot-Reload from IDE
+[2020.05.06-01.45.43:837][675]LogContentBrowser: Native class hierarchy updated for 'InfinityBlade' in 0.0153 seconds. Added 41 classes and 3 folders.
+[2020.05.06-01.45.43:840][675]Display: HotReload successful (0 functions remapped  2 scriptstructs remapped)
+[2020.05.06-01.45.44:285][675]LogContentBrowser: Native class hierarchy populated in 0.0263 seconds. Added 2498 classes and 571 folders.
+[2020.05.06-01.45.44:309][675]Display: HotReload took  0.7s.
+[2020.05.06-01.45.45:656][679]InfinityBlade: Error: UIBCharacterStatComponent::SetNewLevel(37)ASSERTION : 'nullptr != IBGameInstance'
+[2020.05.06-01.46.14:479][682]LogVSAccessor: Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2020.05.06-01.49.46:192][317]LogHotReload: New module detected: UE4Editor-InfinityBlade-821.dll
+[2020.05.06-01.49.47:886][323]LogHotReload: Starting Hot-Reload from IDE
+[2020.05.06-01.49.48:803][323]LogClass: ECharacterState HotReload.
+[2020.05.06-01.49.48:804][323]LogClass: IB_E_GSData HotReload.
+[2020.05.06-01.49.48:804][323]LogClass: IBCharacterData HotReload.
+[2020.05.06-01.49.48:806][323]LogHotReload: Re-instancing BTTask_E_GS_MoveTo after hot-reload.
+[2020.05.06-01.49.48:942][323]LogHotReload: Re-instancing IB_E_GreaterSpider after hot-reload.
+[2020.05.06-01.49.49:347][323]LogHotReload: Re-instancing IBItemWeapon after hot-reload.
+[2020.05.06-01.49.49:768][323]LogHotReload: Re-instancing IBPawn after hot-reload.
+[2020.05.06-01.49.50:054][323]LogHotReload: Re-instancing IBSection after hot-reload.
+[2020.05.06-01.49.50:486][323]LogHotReload: Re-instancing MyCameraShake after hot-reload.
+[2020.05.06-01.49.50:641][323]LogContentBrowser: Native class hierarchy updated for 'InfinityBlade' in 0.0152 seconds. Added 41 classes and 3 folders.
+[2020.05.06-01.49.50:646][323]Display: HotReload successful (30 functions remapped  2 scriptstructs remapped)
+[2020.05.06-01.49.51:103][323]LogContentBrowser: Native class hierarchy populated in 0.0247 seconds. Added 2498 classes and 571 folders.
+[2020.05.06-01.49.51:132][323]Display: HotReload took  3.2s.
+[2020.05.06-01.52.48:496][855]LogHotReload: New module detected: UE4Editor-InfinityBlade-8973.dll
+[2020.05.06-01.52.49:523][859]LogHotReload: Starting Hot-Reload from IDE
+[2020.05.06-01.52.50:381][859]LogClass: Could not find existing class IBCharacter in package /Script/InfinityBlade for HotReload, assuming new class
+[2020.05.06-01.52.50:382][859]LogClass: Function OnAttackMontageEnded is new.
+[2020.05.06-01.52.50:408][859]LogClass: ECharacterState HotReload.
+[2020.05.06-01.52.50:409][859]LogClass: IB_E_GSData HotReload.
+[2020.05.06-01.52.50:409][859]LogClass: IBCharacterData HotReload.
+[2020.05.06-01.52.50:413][859]LogHotReload: Re-instancing BTTask_E_GS_MoveTo after hot-reload.
+[2020.05.06-01.52.50:527][859]LogHotReload: Re-instancing IB_E_GreaterSpider after hot-reload.
+[2020.05.06-01.52.50:875][859]LogHotReload: Re-instancing IBCharacter after hot-reload.
+[2020.05.06-01.52.51:090][859]LogHotReload: Re-instancing IBItemWeapon after hot-reload.
+[2020.05.06-01.52.51:395][859]LogHotReload: Re-instancing IBPawn after hot-reload.
+[2020.05.06-01.52.51:608][859]LogHotReload: Re-instancing IBSection after hot-reload.
+[2020.05.06-01.52.51:918][859]LogHotReload: Re-instancing MyCameraShake after hot-reload.
+[2020.05.06-01.52.52:041][859]LogContentBrowser: Native class hierarchy updated for 'InfinityBlade' in 0.0111 seconds. Added 41 classes and 3 folders.
+[2020.05.06-01.52.52:045][859]Display: HotReload successful (29 functions remapped  2 scriptstructs remapped)
+[2020.05.06-01.52.52:433][859]LogContentBrowser: Native class hierarchy populated in 0.0193 seconds. Added 2498 classes and 571 folders.
+[2020.05.06-01.52.52:460][859]Display: HotReload took  2.9s.
+[2020.05.06-01.52.53:246][863]InfinityBlade: Error: UIBCharacterStatComponent::SetNewLevel(37)ASSERTION : 'nullptr != IBGameInstance'
+[2020.05.06-01.52.55:433][958]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.06-01.52.55:493][958]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.52.55:495][958]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.52.55:496][958]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.52.55:498][958]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.06-01.52.55:499][958]PIE: New page: PIE 세션: StartRoom (2020. 5. 6. 오후 7:52:55)
+[2020.05.06-01.52.55:499][958]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_StartRoom
+[2020.05.06-01.52.55:526][958]LogPlayLevel: PIE: StaticDuplicateObject took: (0.026081s)
+[2020.05.06-01.52.55:528][958]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.06-01.52.55:528][958]LogPlayLevel: PIE: World Init took: (0.001951s)
+[2020.05.06-01.52.55:529][958]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/StartRoom.StartRoom to /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom (0.029272s)
+[2020.05.06-01.52.56:151][958]LogInit: XAudio2 using '헤드폰(Realtek(R) Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.06-01.52.56:244][958]LogInit: FAudioDevice initialized.
+[2020.05.06-01.52.56:272][958]LogLoad: Game class is 'IBGameMode'
+[2020.05.06-01.52.56:277][958]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom up for play (max tick rate 60) at 2020.05.06-10.52.56
+[2020.05.06-01.52.56:279][958]LogWorld: Bringing up level for play took: 0.006037
+[2020.05.06-01.52.56:281][958]InfinityBlade: Warning: AIBPlayerController::SetupInputComponent(30)SetupInputComponent
+[2020.05.06-01.52.56:284][958]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.52.56:284][958]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.52.56:284][958]PIE: /Game/dev/Maps/UEDPIE_0_StartRoom 에 대한 에디터에서 플레이 시작 시간: 1.547
+[2020.05.06-01.52.56:285][958]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.52.56:286][958]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.52.56:287][958]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.52.58:786][105]InfinityBlade: Warning: AIBCharacter::AttackCheck(732)CameraShake nullptr
+[2020.05.06-01.53.00:526][205]InfinityBlade: Warning: AIBCharacter::AttackCheck(732)CameraShake nullptr
+[2020.05.06-01.53.01:002][229]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-01.53.03:262][334]InfinityBlade: Warning: AIBCharacter::AttackCheck(732)CameraShake nullptr
+[2020.05.06-01.53.04:198][390]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.53.04:199][390]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.53.04:201][390]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.53.04:246][390]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.53.04:246][390]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.53.04:247][390]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.53.05:746][460]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.06-01.53.36:706][688]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/dev/Maps/StartRoom" FILE="../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/StartRoom_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2020.05.06-01.53.36:774][688]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000271a2f6ae80, Size=624
+[2020.05.06-01.53.36:774][688]LogUObjectGlobals: Created PersistentFrame Addr=0x00000271a2c93880, Size=624, Default__StartRoom_C Function /Engine/Transient.REINST_StartRoom_C_32:ExecuteUbergraph_StartRoom
+[2020.05.06-01.53.36:783][688]LogUObjectGlobals: Created PersistentFrame Addr=0x0000027132313600, Size=624, Default__StartRoom_C Function /Game/dev/Maps/StartRoom.StartRoom_C:ExecuteUbergraph_StartRoom
+[2020.05.06-01.53.37:243][688]LogSavePackage: Save=511.97ms
+[2020.05.06-01.53.37:243][688]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/StartRoom_Auto14685A88E46D020B44E8FDE9FD4C67517.tmp' to '../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/StartRoom_Auto1.umap'
+[2020.05.06-01.53.37:248][688]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/StartRoom_Auto1.umap
+[2020.05.06-01.53.37:255][688]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/dev/Maps/StartRoom' took 0.592
+[2020.05.06-01.53.37:256][688]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.592
+[2020.05.06-01.53.37:258][688]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/dev/Maps/SelectLevel_Sequence/Se_1] ([1] browsable assets)...
+[2020.05.06-01.53.37:258][688]OBJ SavePackage: Finished generating thumbnails for package [/Game/dev/Maps/SelectLevel_Sequence/Se_1]
+[2020.05.06-01.53.37:277][688]LogSavePackage: Save=12.93ms
+[2020.05.06-01.53.37:277][688]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/Se_1_Auto10D84EE1048EEDAA4FD412E8152FCA841.tmp' to '../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/SelectLevel_Sequence/Se_1_Auto1.uasset'
+[2020.05.06-01.53.37:281][688]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/SelectLevel_Sequence/Se_1_Auto1.uasset
+[2020.05.06-01.53.37:281][688]LogFileHelpers: Auto-saving content packages took 0.025
+[2020.05.06-01.56.00:500][372]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.06-01.56.00:569][372]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.56.00:570][372]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.56.00:571][372]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.56.00:573][372]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.06-01.56.00:573][372]PIE: New page: PIE 세션: StartRoom (2020. 5. 6. 오후 7:56:00)
+[2020.05.06-01.56.00:573][372]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_StartRoom
+[2020.05.06-01.56.00:602][372]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028520s)
+[2020.05.06-01.56.00:604][372]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.06-01.56.00:604][372]LogPlayLevel: PIE: World Init took: (0.001687s)
+[2020.05.06-01.56.00:605][372]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/StartRoom.StartRoom to /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom (0.031354s)
+[2020.05.06-01.56.00:643][372]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000271a2c93880, Size=624
+[2020.05.06-01.56.01:256][372]LogInit: XAudio2 using '헤드폰(Realtek(R) Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.06-01.56.01:359][372]LogInit: FAudioDevice initialized.
+[2020.05.06-01.56.01:391][372]LogLoad: Game class is 'IBGameMode'
+[2020.05.06-01.56.01:395][372]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom up for play (max tick rate 60) at 2020.05.06-10.56.01
+[2020.05.06-01.56.01:397][372]LogWorld: Bringing up level for play took: 0.005756
+[2020.05.06-01.56.01:398][372]InfinityBlade: Warning: AIBPlayerController::SetupInputComponent(30)SetupInputComponent
+[2020.05.06-01.56.01:405][372]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.01:406][372]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.01:406][372]PIE: /Game/dev/Maps/UEDPIE_0_StartRoom 에 대한 에디터에서 플레이 시작 시간: 0.668
+[2020.05.06-01.56.01:407][372]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.56.01:408][372]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.56.01:408][372]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.56.01:950][402]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-01.56.05:632][593]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.07:307][680]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.09:767][785]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.11:866][891]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.13:605][988]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.15:799][ 88]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.20:151][192]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.56.29:528][490]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.56.29:529][490]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.56.29:530][490]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.56.29:628][490]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.56.29:629][490]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.56.29:630][490]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.56.32:316][601]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.06-01.57.52:361][958]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.06-01.57.52:424][958]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.57.52:426][958]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.57.52:427][958]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.57.52:429][958]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.06-01.57.52:430][958]PIE: New page: PIE 세션: StartRoom (2020. 5. 6. 오후 7:57:52)
+[2020.05.06-01.57.52:430][958]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_StartRoom
+[2020.05.06-01.57.52:457][958]LogPlayLevel: PIE: StaticDuplicateObject took: (0.027658s)
+[2020.05.06-01.57.52:458][958]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.06-01.57.52:459][958]LogPlayLevel: PIE: World Init took: (0.001506s)
+[2020.05.06-01.57.52:459][958]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/StartRoom.StartRoom to /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom (0.030371s)
+[2020.05.06-01.57.53:153][958]LogInit: XAudio2 using '헤드폰(Realtek(R) Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.06-01.57.53:260][958]LogInit: FAudioDevice initialized.
+[2020.05.06-01.57.53:290][958]LogLoad: Game class is 'IBGameMode'
+[2020.05.06-01.57.53:294][958]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom up for play (max tick rate 60) at 2020.05.06-10.57.53
+[2020.05.06-01.57.53:296][958]LogWorld: Bringing up level for play took: 0.004996
+[2020.05.06-01.57.53:297][958]InfinityBlade: Warning: AIBPlayerController::SetupInputComponent(30)SetupInputComponent
+[2020.05.06-01.57.53:301][958]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.57.53:302][958]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.57.53:302][958]PIE: /Game/dev/Maps/UEDPIE_0_StartRoom 에 대한 에디터에서 플레이 시작 시간: 0.564
+[2020.05.06-01.57.53:302][958]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-01.57.53:303][958]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-01.57.53:304][958]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-01.57.55:715][101]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-01.57.56:892][167]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-01.57.59:069][235]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-02.00.10:853][841]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-02.00.10:854][841]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-02.00.10:854][841]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-02.00.10:944][841]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-02.00.10:945][841]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-02.00.10:946][841]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-02.03.26:971][788]LogHotReload: New module detected: UE4Editor-InfinityBlade-1999.dll
+[2020.05.06-02.03.28:326][793]LogHotReload: Starting Hot-Reload from IDE
+[2020.05.06-02.03.29:183][793]LogClass: ECharacterState HotReload.
+[2020.05.06-02.03.29:184][793]LogClass: IB_E_GSData HotReload.
+[2020.05.06-02.03.29:184][793]LogClass: IBCharacterData HotReload.
+[2020.05.06-02.03.29:185][793]LogHotReload: Re-instancing BTTask_E_GS_MoveTo after hot-reload.
+[2020.05.06-02.03.29:300][793]LogHotReload: Re-instancing IB_E_GreaterSpider after hot-reload.
+[2020.05.06-02.03.29:614][793]LogUObjectGlobals: Warning: 'Class /Script/InfinityBlade.MyCameraShake_C' 오브젝트를 찾는 데 실패했습니다.
+[2020.05.06-02.03.29:617][793]Error: CDO Constructor (IBCharacter): Failed to find /Script/InfinityBlade.MyCameraShake_C
+
+[2020.05.06-02.03.29:618][793]LogHotReload: Re-instancing IBCharacter after hot-reload.
+[2020.05.06-02.03.29:829][793]LogHotReload: Re-instancing IBItemWeapon after hot-reload.
+[2020.05.06-02.03.30:138][793]LogHotReload: Re-instancing IBPawn after hot-reload.
+[2020.05.06-02.03.30:402][793]LogHotReload: Re-instancing IBSection after hot-reload.
+[2020.05.06-02.03.30:754][793]LogHotReload: Re-instancing MyCameraShake after hot-reload.
+[2020.05.06-02.03.30:870][793]LogContentBrowser: Native class hierarchy updated for 'InfinityBlade' in 0.0109 seconds. Added 41 classes and 3 folders.
+[2020.05.06-02.03.30:870][793]Warning: Some classes could not be reloaded:
+Error: CDO Constructor (IBCharacter): Failed to find /Script/InfinityBlade.MyCameraShake_C
+
+
+[2020.05.06-02.03.30:873][793]Display: HotReload successful (30 functions remapped  2 scriptstructs remapped)
+[2020.05.06-02.03.31:251][793]LogContentBrowser: Native class hierarchy populated in 0.0196 seconds. Added 2498 classes and 571 folders.
+[2020.05.06-02.03.31:277][793]Display: HotReload took  2.9s.
+[2020.05.06-02.03.32:722][810]InfinityBlade: Error: UIBCharacterStatComponent::SetNewLevel(37)ASSERTION : 'nullptr != IBGameInstance'
+[2020.05.06-02.03.34:756][903]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.06-02.03.34:809][903]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-02.03.34:810][903]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-02.03.34:811][903]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-02.03.34:812][903]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.06-02.03.34:813][903]PIE: New page: PIE 세션: StartRoom (2020. 5. 6. 오후 8:03:34)
+[2020.05.06-02.03.34:813][903]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_StartRoom
+[2020.05.06-02.03.34:835][903]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021424s)
+[2020.05.06-02.03.34:836][903]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.06-02.03.34:836][903]LogPlayLevel: PIE: World Init took: (0.001254s)
+[2020.05.06-02.03.34:836][903]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/StartRoom.StartRoom to /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom (0.023460s)
+[2020.05.06-02.03.35:457][903]LogInit: XAudio2 using '헤드폰(Realtek(R) Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.06-02.03.35:555][903]LogInit: FAudioDevice initialized.
+[2020.05.06-02.03.35:583][903]LogLoad: Game class is 'IBGameMode'
+[2020.05.06-02.03.35:587][903]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom up for play (max tick rate 60) at 2020.05.06-11.03.35
+[2020.05.06-02.03.35:589][903]LogWorld: Bringing up level for play took: 0.004421
+[2020.05.06-02.03.35:590][903]InfinityBlade: Warning: AIBPlayerController::SetupInputComponent(30)SetupInputComponent
+[2020.05.06-02.03.35:593][903]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-02.03.35:593][903]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-02.03.35:593][903]PIE: /Game/dev/Maps/UEDPIE_0_StartRoom 에 대한 에디터에서 플레이 시작 시간: 0.856
+[2020.05.06-02.03.35:594][903]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-02.03.35:594][903]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-02.03.35:595][903]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-02.03.36:376][948]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-02.03.42:608][160]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-02.03.44:826][236]InfinityBlade: Warning: AIBCharacter::AttackCheck(742)CameraShake nullptr
+[2020.05.06-02.03.45:782][269]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-02.03.46:436][286]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-02.03.52:322][480]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.06-02.03.53:168][505]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.06-02.04.05:780][969]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-02.04.05:782][969]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-02.04.05:783][969]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-02.04.05:878][969]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-02.04.05:879][969]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-02.04.05:880][969]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-02.04.47:188][204]LogHotReload: New module detected: UE4Editor-InfinityBlade-1650.dll
+[2020.05.06-02.04.48:544][209]LogHotReload: Starting Hot-Reload from IDE
+[2020.05.06-02.04.51:257][209]LogClass: ECharacterState HotReload.
+[2020.05.06-02.04.51:258][209]LogClass: IB_E_GSData HotReload.
+[2020.05.06-02.04.51:258][209]LogClass: IBCharacterData HotReload.
+[2020.05.06-02.04.51:260][209]LogHotReload: Re-instancing BTTask_E_GS_MoveTo after hot-reload.
+[2020.05.06-02.04.51:393][209]LogHotReload: Re-instancing IB_E_GreaterSpider after hot-reload.
+[2020.05.06-02.04.51:809][209]LogHotReload: Re-instancing IBCharacter after hot-reload.
+[2020.05.06-02.04.52:090][209]LogHotReload: Re-instancing IBItemWeapon after hot-reload.
+[2020.05.06-02.04.52:497][209]LogHotReload: Re-instancing IBPawn after hot-reload.
+[2020.05.06-02.04.52:776][209]LogHotReload: Re-instancing IBSection after hot-reload.
+[2020.05.06-02.04.53:195][209]LogHotReload: Re-instancing MyCameraShake after hot-reload.
+[2020.05.06-02.04.53:330][209]LogContentBrowser: Native class hierarchy updated for 'InfinityBlade' in 0.0142 seconds. Added 41 classes and 3 folders.
+[2020.05.06-02.04.53:334][209]Display: HotReload successful (30 functions remapped  2 scriptstructs remapped)
+[2020.05.06-02.04.53:763][209]LogContentBrowser: Native class hierarchy populated in 0.0268 seconds. Added 2498 classes and 571 folders.
+[2020.05.06-02.04.53:792][209]Display: HotReload took  5.2s.
+[2020.05.06-02.04.58:694][301]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.06-02.04.58:757][301]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.06-02.04.58:758][301]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.06-02.04.58:759][301]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.06-02.04.58:761][301]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.06-02.04.58:761][301]PIE: New page: PIE 세션: StartRoom (2020. 5. 6. 오후 8:04:58)
+[2020.05.06-02.04.58:762][301]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_StartRoom
+[2020.05.06-02.04.58:784][301]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021835s)
+[2020.05.06-02.04.58:785][301]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.06-02.04.58:786][301]LogPlayLevel: PIE: World Init took: (0.001349s)
+[2020.05.06-02.04.58:786][301]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/StartRoom.StartRoom to /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom (0.024331s)
+[2020.05.06-02.04.59:409][301]LogInit: XAudio2 using '헤드폰(Realtek(R) Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.06-02.04.59:504][301]LogInit: FAudioDevice initialized.
+[2020.05.06-02.04.59:538][301]LogLoad: Game class is 'IBGameMode'
+[2020.05.06-02.04.59:542][301]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom up for play (max tick rate 60) at 2020.05.06-11.04.59
+[2020.05.06-02.04.59:544][301]LogWorld: Bringing up level for play took: 0.004938
+[2020.05.06-02.04.59:545][301]InfinityBlade: Warning: AIBPlayerController::SetupInputComponent(30)SetupInputComponent
+[2020.05.06-02.04.59:551][301]LogWindows: Windows GetLastError: 작업을 완료했습니다. (0)
+[2020.05.06-02.05.10:458][301]LogWindows: Error: === Critical error: ===
+[2020.05.06-02.05.10:458][301]LogWindows: Error: 
+[2020.05.06-02.05.10:458][301]LogWindows: Error: Fatal error: [File:D:\Build\++UE4+Release-4.19+Compile\Sync\Engine\Source\Runtime\CoreUObject\Private\UObject\UObjectGlobals.cpp] [Line: 3259] 
+[2020.05.06-02.05.10:458][301]LogWindows: Error: FObjectFinders can't be used outside of constructors to find /Script/InfinityBlade.MyCameraShake_C
+[2020.05.06-02.05.10:458][301]LogWindows: Error: 
+[2020.05.06-02.05.10:458][301]LogWindows: Error: 
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x00000000CB9DA799 KERNELBASE.dll!UnknownFunction []
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000009DA07884 UE4Editor-ApplicationCore.dll!FWindowsErrorOutputDevice::Serialize() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\applicationcore\private\windows\windowserroroutputdevice.cpp:65]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000008B2B6D9B UE4Editor-Core.dll!FOutputDevice::LogfImpl() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\core\private\misc\outputdevice.cpp:70]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000008B1F1949 UE4Editor-Core.dll!FDebug::AssertFailed() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\core\private\misc\assertionmacros.cpp:419]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000008060F18B UE4Editor-CoreUObject.dll!ConstructorHelpers::CheckIfIsInConstructor() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\uobjectglobals.cpp:3260]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x0000000047A1B253 UE4Editor-InfinityBlade-1650.dll!AIBCharacter::PostInitializeComponents() [c:\dev\newinfinityblade\source\infinityblade\private\ibcharacter.cpp:398]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005AD58473 UE4Editor-Engine.dll!AActor::PostActorConstruction() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\actor.cpp:2946]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005AD3484A UE4Editor-Engine.dll!AActor::FinishSpawning() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\actor.cpp:2872]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005AD5C349 UE4Editor-Engine.dll!AActor::PostSpawnInitialize() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\actor.cpp:2814]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005B6C33D4 UE4Editor-Engine.dll!UWorld::SpawnActor() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\levelactor.cpp:470]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005B4C1425 UE4Editor-Engine.dll!AGameModeBase::SpawnDefaultPawnAtTransform_Implementation() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\gamemodebase.cpp:1176]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005B197CCE UE4Editor-Engine.dll!AGameModeBase::execSpawnDefaultPawnAtTransform() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\classes\gameframework\gamemodebase.h:48]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x00000000803DE094 UE4Editor-CoreUObject.dll!UFunction::Invoke() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\class.cpp:4551]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x00000000805C9D73 UE4Editor-CoreUObject.dll!UObject::ProcessEvent() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\scriptcore.cpp:1345]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005AD5CCFB UE4Editor-Engine.dll!AActor::ProcessEvent() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\actor.cpp:687]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005C0C0434 UE4Editor-Engine.dll!AGameModeBase::SpawnDefaultPawnAtTransform() []
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005B4C1705 UE4Editor-Engine.dll!AGameModeBase::SpawnDefaultPawnFor_Implementation() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\gamemodebase.cpp:1168]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005B197DA8 UE4Editor-Engine.dll!AGameModeBase::execSpawnDefaultPawnFor() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\classes\gameframework\gamemodebase.h:48]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x00000000803DE094 UE4Editor-CoreUObject.dll!UFunction::Invoke() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\class.cpp:4551]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x00000000805C9D73 UE4Editor-CoreUObject.dll!UObject::ProcessEvent() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\scriptcore.cpp:1345]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005AD5CCFB UE4Editor-Engine.dll!AActor::ProcessEvent() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\actor.cpp:687]
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005C0C04B7 UE4Editor-Engine.dll!AGameModeBase::SpawnDefaultPawnFor() []
+[2020.05.06-02.05.10:458][301]LogWindows: Error: [Callstack] 0x000000005B4BCB53 UE4Editor-Engine.dll!AGameModeBase::RestartPlayerAtPlayerStart() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\gamemodebase.cpp:1240]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005B4BC82E UE4Editor-Engine.dll!AGameModeBase::RestartPlayer() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\gamemodebase.cpp:1207]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005B4A38A0 UE4Editor-Engine.dll!AGameModeBase::HandleStartingNewPlayer_Implementation() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\gamemodebase.cpp:1022]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005B196AB6 UE4Editor-Engine.dll!AGameModeBase::execHandleStartingNewPlayer() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\classes\gameframework\gamemodebase.h:48]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x00000000803DE094 UE4Editor-CoreUObject.dll!UFunction::Invoke() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\class.cpp:4551]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x00000000805C9D73 UE4Editor-CoreUObject.dll!UObject::ProcessEvent() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\scriptcore.cpp:1345]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005AD5CCFB UE4Editor-Engine.dll!AActor::ProcessEvent() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\actor.cpp:687]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005C0BE149 UE4Editor-Engine.dll!AGameModeBase::HandleStartingNewPlayer() []
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x0000000047A07326 UE4Editor-InfinityBlade-1650.dll!AIBGameMode::PostLogin() [c:\dev\newinfinityblade\source\infinityblade\private\ibgamemode.cpp:23]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005B6C4A97 UE4Editor-Engine.dll!UWorld::SpawnPlayActor() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\levelactor.cpp:739]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005B6C4354 UE4Editor-Engine.dll!ULocalPlayer::SpawnPlayActor() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\localplayer.cpp:250]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000005B4C42FB UE4Editor-Engine.dll!UGameInstance::StartPlayInEditorGameInstance() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\gameinstance.cpp:329]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006DE927E0 UE4Editor-UnrealEd.dll!UEditorEngine::CreatePIEGameInstance() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\unrealed\private\playlevel.cpp:3274]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006DEB1246 UE4Editor-UnrealEd.dll!UEditorEngine::PlayInEditor() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\unrealed\private\playlevel.cpp:2410]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006DECBBEF UE4Editor-UnrealEd.dll!UEditorEngine::StartQueuedPlayMapRequest() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\unrealed\private\playlevel.cpp:1271]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006D93C961 UE4Editor-UnrealEd.dll!UEditorEngine::Tick() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\unrealed\private\editorengine.cpp:1581]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006E1D9626 UE4Editor-UnrealEd.dll!UUnrealEdEngine::Tick() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\unrealed\private\unrealedengine.cpp:401]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006E995EAC UE4Editor.exe!FEngineLoop::Tick() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\launchengineloop.cpp:3339]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006E9A6BD0 UE4Editor.exe!GuardedMain() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\launch.cpp:166]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006E9A6C4A UE4Editor.exe!GuardedMainWrapper() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:144]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006E9B4177 UE4Editor.exe!WinMain() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:223]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x000000006E9B5B87 UE4Editor.exe!__scrt_common_main_seh() [f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl:253]
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x00000000CDDE7BD4 KERNEL32.DLL!UnknownFunction []
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x00000000CE58CE51 ntdll.dll!UnknownFunction []
+[2020.05.06-02.05.10:459][301]LogWindows: Error: [Callstack] 0x00000000CE58CE51 ntdll.dll!UnknownFunction []
+[2020.05.06-02.05.10:459][301]LogWindows: Error: 
+[2020.05.06-02.05.10:478][301]LogExit: Executing StaticShutdownAfterError
+[2020.05.06-02.05.10:493][301]LogWindows: FPlatformMisc::RequestExit(1)
+[2020.05.06-02.05.10:494][301]Log file closed, 05/06/20 11:05:10

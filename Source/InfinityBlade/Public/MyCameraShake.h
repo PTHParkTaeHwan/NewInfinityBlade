@@ -17,4 +17,10 @@ class INFINITYBLADE_API UMyCameraShake : public UCameraShake
 public:
 	UMyCameraShake();
 	
+protected:
+	void InitCameraShakeParam();
+
+public:
+	void Test();
+	
 };
