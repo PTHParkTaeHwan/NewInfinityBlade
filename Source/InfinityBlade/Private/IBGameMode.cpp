@@ -14,6 +14,7 @@ AIBGameMode::AIBGameMode()
 	PlayerControllerClass = AIBPlayerController::StaticClass();
 	PlayerStateClass = AIBPlayerState::StaticClass();
 	GameStateClass = AIBGameState::StaticClass();
+	//AWorldSettings::StaticClass();
 }
 
 void AIBGameMode::PostLogin(APlayerController * NewPlayer)

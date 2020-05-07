@@ -89,6 +89,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UCameraShake> CS_FirstSkill;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UCameraShake> CS_BasicHit;
+
 	//공격 모션
 	void Attack();
 	FOnAttackEndDelegate OnAttackEnd;
@@ -116,7 +119,6 @@ private:
 	//캐릭터 걷기 모션
 	void ModeChange();
 	void RunChange();
-	void ShiftButtonChange();
 
 	float ArmLengthTo = 0.0f;
 	FRotator ArmRotationTo = FRotator::ZeroRotator;
@@ -131,8 +133,21 @@ private:
 	bool IsRun;
 	bool CurrentShiftButtonOn;
 	bool IsDefense;
+	
+	//Hit Motion
+	bool IsHit;
+	bool bHitRotator;
+	FRotator TargetRot;
+	FVector TargetPos = FVector::ZeroVector;
 
+	//Dodge Motion
+	bool bCanDodge;
+	bool bSkipTakeDamage;
+	void DodgeMotion();
+public:
+	void SetCanDodge(bool NewDodgeState);
 
+private:
 	UFUNCTION()
 	void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);
 
@@ -320,7 +335,6 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
 	float TestFloat3;
-
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
 	int32 TestInt1;

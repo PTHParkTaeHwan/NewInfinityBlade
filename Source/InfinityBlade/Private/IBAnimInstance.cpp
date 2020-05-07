@@ -46,8 +46,24 @@ UIBAnimInstance::UIBAnimInstance()
 		UltimateSkill = ULTIMATE_MONTAGE.Object;
 	}
 
-}
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> Hit_MONTAGE(TEXT("/Game/Book/Animations/Hit_Montage/SK_Mannequin_Skeleton_HitMontage.SK_Mannequin_Skeleton_HitMontage"));
+	if (Hit_MONTAGE.Succeeded())
+	{
+		HitMontage = Hit_MONTAGE.Object;
+	}
 
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> Dodge_MONTAGE(TEXT("/Game/Book/Animations/Dodge_Montage/SK_Mannequin_Skeleton_DodgeMontage.SK_Mannequin_Skeleton_DodgeMontage"));
+	if (Dodge_MONTAGE.Succeeded())
+	{
+		DodgeMontage = Dodge_MONTAGE.Object;
+	}
+
+	TestParameter();
+
+}
+//================================
+//          PlayMontage         //
+//================================
 void UIBAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
 	Super::NativeUpdateAnimation(DeltaSeconds);
@@ -73,7 +89,6 @@ void UIBAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		}
 	}
 }
-
 void UIBAnimInstance::PlayAttackMontage()
 {
 	ABCHECK(!IsDead);
@@ -89,7 +104,6 @@ void UIBAnimInstance::PlayAttackMontage()
 		break;
 	}
 }
-
 void UIBAnimInstance::StopAttackMontage()
 {
 	switch (CurrentAttackMontageType)
@@ -101,7 +115,6 @@ void UIBAnimInstance::StopAttackMontage()
 		break;
 	}
 }
-
 void UIBAnimInstance::JumpToAttackMontageSection(int32 NewSection)
 {
 	ABCHECK(!IsDead);
@@ -127,22 +140,18 @@ void UIBAnimInstance::JumpToAttackMontageSection(int32 NewSection)
 		break;
 	}
 }
-
 void UIBAnimInstance::PlayBasicAttackNontage()
 {
 	Montage_Play(LSBasicAttackMontage, 1.4f);
 }
-
 void UIBAnimInstance::StopBasicAttackMontage()
 {
 	Montage_Stop(0.2f, LSBasicAttackMontage);
 }
-
 void UIBAnimInstance::JumpToBasicAttackMontageSection(int32 NewSection)
 {
 	Montage_JumpToSection(GetAttackMontageSectionName(NewSection), LSBasicAttackMontage);
 }
-
 void UIBAnimInstance::AnimNotify_AttackHitCheck()
 {
 	switch (CurrentAttackMontageType)
@@ -157,7 +166,6 @@ void UIBAnimInstance::AnimNotify_AttackHitCheck()
 		break;
 	}
 }
-
 void UIBAnimInstance::AnimNotify_NextAttackCheck()
 {
 	switch (CurrentAttackMontageType)
@@ -172,7 +180,6 @@ void UIBAnimInstance::AnimNotify_NextAttackCheck()
 		break;
 	}
 }
-
 FName UIBAnimInstance::GetAttackMontageSectionName(int32 Section)
 {
 	ABCHECK(FMath::IsWithinInclusive<int32>(Section, 1, 4), NAME_None);
@@ -202,7 +209,52 @@ FName UIBAnimInstance::GetAttackMontageSectionName(int32 Section)
 	}
 	return FName(*FString::Printf(TEXT("AttackType%d"), Section));
 }
-
+void UIBAnimInstance::SetAttackMontageType(WeaponType NewType)
+{
+	CurrentAttackMontageType = NewType;
+}
+void UIBAnimInstance::PlayFirstSkillMontage(int32 SectionNum)
+{
+	Montage_Play(AttackMontage, 1.0f);
+	Montage_JumpToSection(FName(*FString::Printf(TEXT("Attack4"))), AttackMontage);	
+}
+void UIBAnimInstance::PlayClawSkillMontage()
+{
+	Montage_Play(ClawMontage, 1.2f);
+}
+void UIBAnimInstance::PlayShieldSkillMontage()
+{
+	Montage_Play(ShieldMontage, 1.2f);
+}
+void UIBAnimInstance::PlayUltimateSkillMontage()
+{
+	Montage_Play(UltimateSkill, 1.0f);
+}
+void UIBAnimInstance::PlayHitMontage(int32 SectionNum)
+{
+	Montage_Play(HitMontage, 1.2f);
+	Montage_JumpToSection(GetHitMontageSectionName(SectionNum), HitMontage);
+}
+FName UIBAnimInstance::GetHitMontageSectionName(int32 Section)
+{
+	return FName(*FString::Printf(TEXT("Hit%d"), Section));
+}
+bool UIBAnimInstance::GetIsPlayHitMontage()
+{
+	return Montage_IsPlaying(HitMontage);
+}
+void UIBAnimInstance::PlayDodgeMontage(int32 SectionNum)
+{
+	Montage_Play(DodgeMontage, 2.0f);
+	Montage_JumpToSection(GetDodgeMontageSectionName(SectionNum), DodgeMontage);
+}
+FName UIBAnimInstance::GetDodgeMontageSectionName(int32 Section)
+{
+	return FName(*FString::Printf(TEXT("Dodge%d"), Section));
+}
+//================================
+//          AnimNotify          //
+//================================
 void UIBAnimInstance::AnimNotify_AttackType1_1StepStart()
 {
 	FOnAttackType1_1StepStartCheck.Broadcast();
@@ -240,27 +292,20 @@ void UIBAnimInstance::AnimNotify_FirstSkillStepDone()
 {
 	FOnFirstSkillStepCheck.Broadcast();
 }
-void UIBAnimInstance::SetAttackMontageType(WeaponType NewType)
+void UIBAnimInstance::AnimNotify_HitMotionDone()
 {
-	CurrentAttackMontageType = NewType;
+	Montage_Stop(0.3f, HitMontage);
+	FOnHitMotionDoneCheck.Broadcast();
 }
-void UIBAnimInstance::PlayFirstSkillMontage(int32 SectionNum)
+void UIBAnimInstance::AnimNotify_DodgeMotionDone()
 {
-	Montage_Play(AttackMontage, 1.0f);
-	Montage_JumpToSection(FName(*FString::Printf(TEXT("Attack4"))), AttackMontage);	
-}
-
-void UIBAnimInstance::PlayClawSkillMontage()
-{
-	Montage_Play(ClawMontage, 1.2f);
+	FOnDodgeMotionDoneCheck.Broadcast();
 }
 
-void UIBAnimInstance::PlayShieldSkillMontage()
+void UIBAnimInstance::TestParameter()
 {
-	Montage_Play(ShieldMontage, 1.2f);
-}
-
-void UIBAnimInstance::PlayUltimateSkillMontage()
-{
-	Montage_Play(UltimateSkill, 1.0f);
+	TestFloat1 = 1.0f;
+	TestFloat2 = 1.0f;
+	TestFloat3 = 1.0f;
+	TestInt1 = 0;
 }

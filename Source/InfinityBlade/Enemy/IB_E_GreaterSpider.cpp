@@ -180,8 +180,7 @@ void AIB_E_GreaterSpider::PostInitializeComponents()
 		}
 	});
 	
-	
-
+	IB_E_GSAnim->E_FOnDodgeCheck.AddUObject(this, &AIB_E_GreaterSpider::PlayerCheck);
 }
 
 float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
@@ -419,6 +418,48 @@ void AIB_E_GreaterSpider::AttackCheck()
 				FDamageEvent DamageEvent;
 				HitResult.Actor->TakeDamage(CharacterStat->GetAttack() * 2, DamageEvent, GetController(), this);
 			}
+		}
+	}
+}
+
+void AIB_E_GreaterSpider::PlayerCheck()
+{
+	FCollisionQueryParams Params(NAME_None, false, this);
+	TArray<FHitResult> HitResults;
+	bool bResults = GetWorld()->SweepMultiByChannel(HitResults,
+		GetActorLocation(),
+		GetActorLocation() + GetActorForwardVector() * AttackRange,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel2,
+		FCollisionShape::MakeSphere(AttackRadius),
+		Params);
+
+#if ENABLE_DRAW_DEBUG
+
+	FVector TraceVec = GetActorForwardVector() * AttackRange;
+	FVector Center = GetActorLocation() + TraceVec * 0.5f;
+	float HalfHeight = AttackRange * 0.5f + AttackRadius;
+	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
+	FColor DrawColor = bResults ? FColor::Blue : FColor::Yellow;
+	float DebugLifeTime = 2.0f;
+
+	DrawDebugCapsule(GetWorld(),
+		Center,
+		HalfHeight,
+		AttackRadius,
+		CapsuleRot,
+		DrawColor,
+		false,
+		DebugLifeTime);
+
+#endif
+	if (bResults)
+	{
+		for (FHitResult HitResult : HitResults)
+		{
+			auto Player = Cast<AIBCharacter>(HitResult.Actor);
+			Player->SetCanDodge(true);
+			ABLOG(Warning, TEXT("SetCanDodge"));
 		}
 	}
 }

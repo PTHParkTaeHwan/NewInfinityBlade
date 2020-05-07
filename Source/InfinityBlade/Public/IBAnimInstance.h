@@ -20,6 +20,10 @@ DECLARE_MULTICAST_DELEGATE(FOnForthSkillStartCheckDelegate);
 
 DECLARE_MULTICAST_DELEGATE(FOnFirstSkillStepCheckDelegate);
 
+DECLARE_MULTICAST_DELEGATE(FOnHitMotionDoneCheckDelegate);
+
+DECLARE_MULTICAST_DELEGATE(FOnDodgeMotionDoneCheckDelegate);
+
 
 /**
  * 
@@ -70,6 +74,9 @@ public:
 
 	FOnFirstSkillStepCheckDelegate FOnFirstSkillStepCheck;
 
+	FOnHitMotionDoneCheckDelegate FOnHitMotionDoneCheck;
+
+	FOnDodgeMotionDoneCheckDelegate FOnDodgeMotionDoneCheck;
 private:
 	//AttackType1
 	UFUNCTION()
@@ -99,6 +106,11 @@ private:
 	UFUNCTION()
 	void AnimNotify_FirstSkillStepDone();
 
+	UFUNCTION()
+	void AnimNotify_HitMotionDone();
+
+	UFUNCTION()
+	void AnimNotify_DodgeMotionDone();
 
 
 private:
@@ -123,14 +135,20 @@ private:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		UAnimMontage* LSBasicAttackMontage;
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Skill, Meta = (AllowPrivateAccess = true))
 	UAnimMontage* ClawMontage;
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Skill, Meta = (AllowPrivateAccess = true))
 	UAnimMontage* ShieldMontage;
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Skill, Meta = (AllowPrivateAccess = true))
 	UAnimMontage* UltimateSkill;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Hit, Meta = (AllowPrivateAccess = true))
+	UAnimMontage* HitMontage;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Dodge, Meta = (AllowPrivateAccess = true))
+	UAnimMontage* DodgeMontage;
 
 
 
@@ -150,7 +168,34 @@ public:
 	void PlayFirstSkillMontage(int32 SectionNum);
 	FOnFirstSkillStartCheckDelegate FOnFirstSkillStartCheck;
 
+	//스킬
 	void PlayClawSkillMontage();
 	void PlayShieldSkillMontage();
 	void PlayUltimateSkillMontage();
+
+	//hit 모션
+	void PlayHitMontage(int32 SectionNum);
+	FName GetHitMontageSectionName(int32 Section);
+	bool GetIsPlayHitMontage();
+
+	//Dodge 모션
+	void PlayDodgeMontage(int32 SectionNum);
+	FName GetDodgeMontageSectionName(int32 Section);
+
+private:
+
+	void TestParameter();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	float TestFloat1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	float TestFloat2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	float TestFloat3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	int32 TestInt1;
+
 };

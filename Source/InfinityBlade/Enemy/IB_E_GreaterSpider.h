@@ -64,6 +64,8 @@ private:
 	//공격 충돌처리
 	void AttackCheck();
 
+	//Dodge 가능 확인
+	void PlayerCheck();
 
 private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))

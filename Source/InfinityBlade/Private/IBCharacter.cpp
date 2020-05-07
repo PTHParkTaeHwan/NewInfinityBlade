@@ -66,15 +66,26 @@ AIBCharacter::AIBCharacter()
 	GetCharacterMovement()->MaxWalkSpeed = 400;
 	GetCharacterMovement()->JumpZVelocity = 600.0f;
 	
+	
 	//공격 모션 관리
 	IsAttacking = false;
 	bBasicAttackMontage = true;
 	bWeaponTypeSetUp = false;
 		
+
 	//공격 콤보 관리
 	MaxCombo = 4;
 	CurrentBasicAttackSection = 1;
 	AttackEndAttackState();
+
+	//HIT 모션 관리
+	IsHit = false;
+	bHitRotator = false;
+	TargetRot = FRotator::ZeroRotator;
+
+	//Dodge 모션
+	bCanDodge = false;
+	bSkipTakeDamage = false;
 
 	//콜리전 프리셋 설정
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("IBCharacter"));
@@ -143,13 +154,6 @@ AIBCharacter::AIBCharacter()
 	//AttackStep
 	InitAttackStep();
 	TestParameter();
-
-	//static ConstructorHelpers::FClassFinder<UCameraShake> CAMERASHAKE(TEXT("/Game/dev/Camera/NewCameraShake.NewCameraShake_C"));
-	/*static ConstructorHelpers::FClassFinder<UCameraShake> CAMERASHAKE(TEXT("/Game/dev/Camera/MyMyCameraShake.MyMyCameraShake_C"));
-	if (CAMERASHAKE.Succeeded())
-	{
-		MyShake = CAMERASHAKE.Class;
-	}*/
 	
 	static ConstructorHelpers::FClassFinder<UCameraShake> CAMERASHAKE(TEXT("/Game/dev/Camera/MyMyCameraShake.MyMyCameraShake_C"));
 	if (CAMERASHAKE.Succeeded())
@@ -162,6 +166,12 @@ AIBCharacter::AIBCharacter()
 	{
 		CS_FirstSkill = CS_FIRSTSKILL.Class;
 	}
+
+	static ConstructorHelpers::FClassFinder<UCameraShake> CS_BASICHIT(TEXT("/Game/dev/Camera/CS_BasicHit.CS_BasicHit_C"));
+	if (CS_BASICHIT.Succeeded())
+	{
+		CS_BasicHit = CS_BASICHIT.Class;
+	}	
 }
 void AIBCharacter::SetCharacterState(ECharacterState NewState)
 {
@@ -355,10 +365,27 @@ void AIBCharacter::Tick(float DeltaTime)
 		CurrentAttackMode = LSAttackMode::BASIC;
 		Attack();
 	}	
-
+	//스킬
 	SkillHub(DeltaTime);
-	SpringArm->SetRelativeRotation(FRotator(TestFloat1, 0.0f, 0.0f));
+	//hit모션
+	if (bHitRotator)
+	{
+		SetActorRotation(FMath::RInterpTo(GetActorRotation(), TargetRot, DeltaTime, 3.0f));
+		SetActorLocation(FMath::VInterpTo(GetActorLocation(), TargetPos, DeltaTime, 1.0f));
+	}
+	
+	if (this->GetVelocity().Size() <= 300.0f)
+	{
+		IsRun = false;
+		GetCharacterMovement()->MaxWalkSpeed = 400.0f;
+	}
+	else
+	{
+		IsRun = true;
+		GetCharacterMovement()->MaxWalkSpeed = 530.0f;
+	}	
 
+	ABLOG(Warning, TEXT("GetMovementComponent()->Velocity.Size() %f"), GetMovementComponent()->Velocity.Size());
 }
 void AIBCharacter::PostInitializeComponents()
 {
@@ -413,20 +440,23 @@ void AIBCharacter::PostInitializeComponents()
 		bForthSkillEffect = true;
 	});
 
+	IBAnim->FOnHitMotionDoneCheck.AddLambda([this]()->void {
+		IsHit = false;
+		bHitRotator = false;
+	});
+
+	IBAnim->FOnDodgeMotionDoneCheck.AddLambda([this]()->void {
+		bCanDodge = false;
+		bSkipTakeDamage = false;
+		GetWorld()->GetWorldSettings()->SetTimeDilation(1.0f);
+	});
+
 }
 float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	ABLOG(Warning, TEXT("FinalDamage %f"), FinalDamage);
-	
-	/*
-	FVector LookVector = Target->GetActorLocation() - GreatSpider->GetActorLocation();
-	LookVector.Z = 0.0f;
-	FRotator TargetRot = FRotationMatrix::MakeFromX(LookVector).Rotator();
-	GreatSpider->SetActorRotation(FMath::RInterpTo(GreatSpider->GetActorRotation(), TargetRot, GetWorld()->GetDeltaSeconds(), 2.0f));
-
-	*/
-	//테스트용!!!!!
+	if (bSkipTakeDamage) return 0.0f;
+	IsHit = true;	
 	if (ShieldSkill->IsActive())
 	{
 		FinalDamage = FinalDamage * 0.8f;
@@ -438,7 +468,16 @@ float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEv
 	{
 		HitEffect->Activate(true);
 	}
-	GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CS_FirstSkill, 1.0f);
+	GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CS_BasicHit, 1.0f);
+	IBAnim->PlayHitMontage(FMath::RandRange(1, 7));
+	
+	bHitRotator = true;
+	FVector LookVector = DamageCauser->GetActorLocation() - GetActorLocation();
+	LookVector.Z = 0.0f;
+	TargetRot = FRotationMatrix::MakeFromX(LookVector).Rotator();
+	TargetPos = GetActorLocation() + DamageCauser->GetActorForwardVector()*(DamageCauser->GetDistanceTo(this)*1.2f);
+
+	//================== 추후수정 =================
 	FinalDamage = 0.0f;
 	switch (CurrentControlMode)
 	{
@@ -463,6 +502,7 @@ float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEv
 			IBPlayerController->NPCKill(this);
 		}
 	}
+
 	return FinalDamage;
 }
 // Called to bind functionality to input
@@ -478,8 +518,8 @@ void AIBCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("DefenseMode"), EInputEvent::IE_Released, this, &AIBCharacter::ModeChange);
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &AIBCharacter::Jump);
 	
-	PlayerInputComponent->BindAction(TEXT("Runing"), EInputEvent::IE_Pressed, this, &AIBCharacter::ShiftButtonChange);
-	PlayerInputComponent->BindAction(TEXT("Runing"), EInputEvent::IE_Released, this, &AIBCharacter::ShiftButtonChange);
+	PlayerInputComponent->BindAction(TEXT("Runing"), EInputEvent::IE_Pressed, this, &AIBCharacter::DodgeMotion);
+	//PlayerInputComponent->BindAction(TEXT("Runing"), EInputEvent::IE_Released, this, &AIBCharacter::ShiftButtonChange);
 	PlayerInputComponent->BindAction(TEXT("Attack"), EInputEvent::IE_Pressed, this, &AIBCharacter::Attack);
 	PlayerInputComponent->BindAction(TEXT("Skill_1"), EInputEvent::IE_Pressed, this, &AIBCharacter::InitFirstSkill);
 	PlayerInputComponent->BindAction(TEXT("Skill_2"), EInputEvent::IE_Pressed, this, &AIBCharacter::InitSecondSkill);
@@ -511,22 +551,16 @@ void AIBCharacter::SetWeapon(AIBWeapon * NewWeapon)
 }
 void AIBCharacter::UpDown(float NewAxisValue)
 {
-	if(!IsAttacking) AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue);
-	else
-	{
-		//AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue);
-		AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue/100);
-		//SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation() + GetActorForwardVector() * 30.0f, GetWorld()->GetDeltaSeconds(), 2.0f));
-	}
+	if (IsHit) return;
+	else if(!IsAttacking) AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue);
+	else if(IsAttacking) AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue/100);	
+	
 }
 void AIBCharacter::LeftRight(float NewAxisValue)
 {
-	if (!IsAttacking) AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::Y), NewAxisValue);
-	else
-	{
-		//AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::Y), NewAxisValue);
-		AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::Y), NewAxisValue / 100);
-	}
+	if (IsHit) return;
+	else if (!IsAttacking) AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::Y), NewAxisValue);
+	else if(IsAttacking) AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::Y), NewAxisValue / 100);
 }
 void AIBCharacter::LookUp(float NewAxisValue)
 {
@@ -551,13 +585,14 @@ void AIBCharacter::ModeChange()
 }
 void AIBCharacter::RunChange()
 {
+	if (IsHit) return;
 	switch (CurrentControlMode)
 	{
 	case AIBCharacter::EControlMode::GTA:
 		if (CurrentShiftButtonOn && this->GetVelocity().Size() > 0)
 		{
 			IsRun = true;
-			GetCharacterMovement()->MaxWalkSpeed = 600;
+			GetCharacterMovement()->MaxWalkSpeed = 530.0f;
 		}
 		else if (!CurrentShiftButtonOn && this->GetVelocity().Size() > 0)
 		{
@@ -574,24 +609,11 @@ void AIBCharacter::RunChange()
 		GetCharacterMovement()->MaxWalkSpeed = 200;
 		break;
 	}
-	
-}
-void AIBCharacter::ShiftButtonChange()
-{
-	if (!CurrentShiftButtonOn)
-	{
-		CurrentShiftButtonOn = true;
-		IsAttacking = false;
-		AttackEndAttackState();
-		IBAnim->StopAttackMontage();
-	}
-	else if (CurrentShiftButtonOn)
-	{
-		CurrentShiftButtonOn = false;
-	}
 }
 void AIBCharacter::Attack()
 {	
+	if (IsHit) return;
+
 	if (bBasicAttackMontage)
 	{
 		if (!IsAttacking)
@@ -668,6 +690,22 @@ void AIBCharacter::Attack()
 		}
 	}
 }
+void AIBCharacter::DodgeMotion()
+{
+	ABLOG(Warning, TEXT("%d"), bCanDodge);
+	if (!bCanDodge) return;
+	bSkipTakeDamage = true;
+	IBAnim->PlayDodgeMontage(FMath::RandRange(1, 3));	
+	GetWorld()->GetWorldSettings()->SetTimeDilation(0.5f);
+	FVector BackVector = -1 * GetActorForwardVector();
+	BackVector.X = BackVector.X * 4000.0f;
+	BackVector.Y = BackVector.Y * 4000.0f;
+	GetMovementComponent()->Velocity = BackVector;
+}
+void AIBCharacter::SetCanDodge(bool NewDodgeState)
+{
+	bCanDodge = NewDodgeState;
+}
 void AIBCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupted)
 {
 	if (IsComboInputOn)
@@ -679,7 +717,6 @@ void AIBCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupte
 		IsAttacking = false;
 		CurrentCombo = 0;
 	}
-
 	//AttackEndAttackState();
 	if (!bBasicAttackMontage)
 	{
@@ -818,9 +855,10 @@ void AIBCharacter::InitCameraShakeParam()
 }
 void AIBCharacter::TestParameter()
 {
-	TestInt1 = 1;
-	TestFloat1 = 200.0f;
-	TestFloat2 = 0.3f;
+	TestInt1 = 0.0f;
+	TestFloat1 = 0.001;
+	TestFloat2 = 1.0f;
+	TestFloat3 = 1.0f;
 }
 void AIBCharacter::AttackStepAddLambda()
 {
@@ -950,7 +988,6 @@ int32 AIBCharacter::GetCurrntCombo()
 {
 	return CurrentCombo;
 }
-
 AttackStyle AIBCharacter::GetCurrentAttackStyle()
 {
 	return CurrentAttackStyle;

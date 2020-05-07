@@ -155,6 +155,11 @@ void UIB_E_GreaterSpider_AnimInstance::AnimNotify_Hit()
 	E_OnHitCheck.Broadcast();
 }
 
+void UIB_E_GreaterSpider_AnimInstance::AnimNotify_CanDodgeCheck()
+{
+	E_FOnDodgeCheck.Broadcast();
+}
+
 void UIB_E_GreaterSpider_AnimInstance::StopAllMontage()
 {
 	if (Montage_IsPlaying(E_AttackMontage))
