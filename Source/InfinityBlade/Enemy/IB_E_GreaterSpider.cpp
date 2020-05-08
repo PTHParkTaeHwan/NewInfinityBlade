@@ -125,14 +125,12 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 	TestFloat1 = 0.0f;
 	TestFloat2 = 0.0f;
 }
-
 // Called when the game starts or when spawned
 void AIB_E_GreaterSpider::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
-
 void AIB_E_GreaterSpider::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
@@ -181,8 +179,9 @@ void AIB_E_GreaterSpider::PostInitializeComponents()
 	});
 	
 	IB_E_GSAnim->E_FOnDodgeCheck.AddUObject(this, &AIB_E_GreaterSpider::PlayerCheck);
-}
+	IB_E_GSAnim->E_FOnSlowMotionDoneCheck.AddUObject(this, &AIB_E_GreaterSpider::IsDodgeCheck);
 
+}
 float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
@@ -227,7 +226,6 @@ void AIB_E_GreaterSpider::Tick(float DeltaTime)
 
 	KnockBackMotionHub(DeltaTime);
 }
-
 void AIB_E_GreaterSpider::KnockBackMotion(AActor * DamageCauser)
 {
 	AIBCharacter* AttackActor = Cast<AIBCharacter>(DamageCauser);
@@ -287,13 +285,11 @@ void AIB_E_GreaterSpider::KnockBackMotionHub(float DeltaTime)
 		}
 	}
 }
-
 // Called to bind functionality to input
 void AIB_E_GreaterSpider::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
-
 void AIB_E_GreaterSpider::SetTentionMode()
 {
 	if (!IsAttacking)
@@ -330,8 +326,6 @@ void AIB_E_GreaterSpider::SetTentionMode()
 		}
 	}
 }
-
-
 void AIB_E_GreaterSpider::Attack()
 {
 	if (!AttackOn && !HitMotionOn)
@@ -342,12 +336,10 @@ void AIB_E_GreaterSpider::Attack()
 		IB_E_GSAnim->JumpToAttackMontageSection(CurrentCombo);
 	}
 }
-
 void AIB_E_GreaterSpider::SetHPBarWidgetHiddenInGame(bool NewStat)
 {
 	HPBarWidget->SetHiddenInGame(NewStat);
 }
-
 void AIB_E_GreaterSpider::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupted)
 { 
 	if (AnimNotify_NextAttackCheckOn)
@@ -364,7 +356,6 @@ void AIB_E_GreaterSpider::OnAttackMontageEnded(UAnimMontage * Montage, bool bInt
 		OnAttackEnd.Broadcast();
 	}
 }
-
 void AIB_E_GreaterSpider::AttackStartComboState()
 {
 	//CanNextCombo = true;
@@ -372,7 +363,6 @@ void AIB_E_GreaterSpider::AttackStartComboState()
 	ABCHECK(FMath::IsWithinInclusive<int32>(CurrentCombo, 0, MaxCombo - 1));
 	CurrentCombo = FMath::Clamp<int32>(CurrentCombo + 1, 1, MaxCombo);
 }
-
 void AIB_E_GreaterSpider::AttackCheck()
 {
 	FCollisionQueryParams Params(NAME_None, false, this);
@@ -403,6 +393,17 @@ void AIB_E_GreaterSpider::AttackCheck()
 		false,
 		DebugLifeTime);
 
+	auto TempPlayer = Cast<AIBCharacter>(GetWorld()->GetFirstPlayerController()->GetCharacter());
+	if (TempPlayer == nullptr)
+	{
+		ABLOG(Warning, TEXT("TempPlayer nullptr"));
+	}
+	else
+	{
+		if(TempPlayer->GetSkipTakeDamage())
+			GetWorld()->GetWorldSettings()->SetTimeDilation(0.1f);
+	}
+
 #endif
 	if (bResults)
 	{
@@ -420,8 +421,8 @@ void AIB_E_GreaterSpider::AttackCheck()
 			}
 		}
 	}
-}
 
+}
 void AIB_E_GreaterSpider::PlayerCheck()
 {
 	FCollisionQueryParams Params(NAME_None, false, this);
@@ -451,7 +452,7 @@ void AIB_E_GreaterSpider::PlayerCheck()
 		DrawColor,
 		false,
 		DebugLifeTime);
-
+	
 #endif
 	if (bResults)
 	{
@@ -459,16 +460,30 @@ void AIB_E_GreaterSpider::PlayerCheck()
 		{
 			auto Player = Cast<AIBCharacter>(HitResult.Actor);
 			Player->SetCanDodge(true);
-			ABLOG(Warning, TEXT("SetCanDodge"));
 		}
 	}
 }
-
+void AIB_E_GreaterSpider::IsDodgeCheck()
+{
+	auto TempPlayer = Cast<AIBCharacter>(GetWorld()->GetFirstPlayerController()->GetCharacter());
+	if (TempPlayer == nullptr)
+	{
+		ABLOG(Warning, TEXT("TempPlayer nullptr"));
+	}
+	else
+	{
+		if (TempPlayer->GetSkipTakeDamage())
+		{
+			TempPlayer->SetCanDodge(false);
+			TempPlayer->SetSkipTakeDamage(false);
+			GetWorld()->GetWorldSettings()->SetTimeDilation(1.0f);
+		}
+	}
+}
 bool AIB_E_GreaterSpider::GetIsRoar()
 {
 	return IsRoar;
 }
-
 void AIB_E_GreaterSpider::TentionModeInit()
 {
 	AnimNotify_NextAttackCheckOn = false;
@@ -489,44 +504,34 @@ void AIB_E_GreaterSpider::TentionModeInit()
 	GetCharacterMovement()->MaxWalkSpeed = 500.0f;
 
 }
-
-
-
 bool AIB_E_GreaterSpider::GetIsStayHere()
 {
 	return IsStayHere;
 }
-
 bool AIB_E_GreaterSpider::GetAttackOrIdle()
 {
 	return AttackOrIdle;
 }
-
 bool AIB_E_GreaterSpider::GetLeftOrRight()
 {
 	return LeftOrRight;
 }
-
 bool AIB_E_GreaterSpider::GetIsAttacking()
 {
 	return IsAttacking;
 }
-
 void AIB_E_GreaterSpider::SetIsAttacking(bool NewState)
 {
 	IsAttacking = NewState;
 }
-
 bool AIB_E_GreaterSpider::GetAttackOn()
 {
 	return AttackOn;
 }
-
 void AIB_E_GreaterSpider::SetbOrientRotationToMovement(bool NewRotation)
 {
 	GetCharacterMovement()->bOrientRotationToMovement = NewRotation;
 }
-
 void AIB_E_GreaterSpider::PlayLeftOrRightMontage()
 {
 	if (LeftOrRight && !HitMotionOn)
@@ -540,28 +545,22 @@ void AIB_E_GreaterSpider::PlayLeftOrRightMontage()
 		IsLeftOrRightMove = true;
 	}
 }
-
 bool AIB_E_GreaterSpider::GetIsLeftOrRightMove()
 {
 	return IsLeftOrRightMove;
 }
-
 int32 AIB_E_GreaterSpider::GetExp() const
 {
 	return CharacterStat->GetDropExp();
 }
-
 bool AIB_E_GreaterSpider::GetHitMotionOn()
 {
 	return HitMotionOn;
 }
-
-
 void AIB_E_GreaterSpider::SetCharacterInAttackRange(bool InAttackRange)
 {
 	CharacterInAttackRange = InAttackRange;
 }
-
 void AIB_E_GreaterSpider::SetEnemyMode(EnemyMode NewMode)
 {
 	switch (NewMode)
@@ -585,4 +584,3 @@ void AIB_E_GreaterSpider::SetEnemyMode(EnemyMode NewMode)
 		break;
 	}
 }
-

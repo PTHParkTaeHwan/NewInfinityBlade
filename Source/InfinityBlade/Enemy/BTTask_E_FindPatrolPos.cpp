@@ -26,7 +26,7 @@ EBTNodeResult::Type UBTTask_E_FindPatrolPos::ExecuteTask(UBehaviorTreeComponent 
 	{
 		return EBTNodeResult::Failed;
 	}
-
+	
 	FVector Origin = OwnerComp.GetBlackboardComponent()->GetValueAsVector(AIB_E_GREATERSPIDER_AIController::HomePosKey);
 	FNavLocation NextPatrol;
 

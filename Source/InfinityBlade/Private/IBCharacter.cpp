@@ -15,6 +15,8 @@
 #include "IBHUDWidget.h"
 #include "Enemy/IB_E_GreaterSpider.h"
 #include "MyCameraShake.h"
+#include "PlayerSkillActor.h"
+#include "IBSkillProjectile.h"
 
 
 // Sets default values
@@ -172,6 +174,8 @@ AIBCharacter::AIBCharacter()
 	{
 		CS_BasicHit = CS_BASICHIT.Class;
 	}	
+
+
 }
 void AIBCharacter::SetCharacterState(ECharacterState NewState)
 {
@@ -295,6 +299,11 @@ void AIBCharacter::BeginPlay()
 	ABCHECK(nullptr != IBGameInstance);
 	AssetStreamingHandle = IBGameInstance->StreamableManager.RequestAsyncLoad(CharacterAssetToLoad, FStreamableDelegate::CreateUObject(this, &AIBCharacter::OnAssetLoadCompleted));
 	SetCharacterState(ECharacterState::LOADING);
+
+
+	SkillActorClass = APlayerSkillActor::StaticClass();
+	ProjectileClass = AIBSkillProjectile::StaticClass();
+
 }
 void AIBCharacter::SetControlMode(EControlMode NewControlMode)
 {
@@ -384,8 +393,6 @@ void AIBCharacter::Tick(float DeltaTime)
 		IsRun = true;
 		GetCharacterMovement()->MaxWalkSpeed = 530.0f;
 	}	
-
-	ABLOG(Warning, TEXT("GetMovementComponent()->Velocity.Size() %f"), GetMovementComponent()->Velocity.Size());
 }
 void AIBCharacter::PostInitializeComponents()
 {
@@ -444,13 +451,6 @@ void AIBCharacter::PostInitializeComponents()
 		IsHit = false;
 		bHitRotator = false;
 	});
-
-	IBAnim->FOnDodgeMotionDoneCheck.AddLambda([this]()->void {
-		bCanDodge = false;
-		bSkipTakeDamage = false;
-		GetWorld()->GetWorldSettings()->SetTimeDilation(1.0f);
-	});
-
 }
 float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
@@ -695,16 +695,27 @@ void AIBCharacter::DodgeMotion()
 	ABLOG(Warning, TEXT("%d"), bCanDodge);
 	if (!bCanDodge) return;
 	bSkipTakeDamage = true;
-	IBAnim->PlayDodgeMontage(FMath::RandRange(1, 3));	
-	GetWorld()->GetWorldSettings()->SetTimeDilation(0.5f);
-	FVector BackVector = -1 * GetActorForwardVector();
+	IBAnim->PlayDodgeMontage(1);	
+	//GetWorld()->GetWorldSettings()->SetTimeDilation(0.5f);
+	/*FVector BackVector = -1 * GetActorForwardVector();
 	BackVector.X = BackVector.X * 4000.0f;
-	BackVector.Y = BackVector.Y * 4000.0f;
-	GetMovementComponent()->Velocity = BackVector;
+	BackVector.Y = BackVector.Y * 4000.0f;*/
+	FVector ForwardVector = GetActorForwardVector();
+	ForwardVector.X = ForwardVector.X * 3000.0f;
+	ForwardVector.Y = ForwardVector.Y * 3000.0f;
+	GetMovementComponent()->Velocity = ForwardVector;
 }
 void AIBCharacter::SetCanDodge(bool NewDodgeState)
 {
 	bCanDodge = NewDodgeState;
+}
+void AIBCharacter::SetSkipTakeDamage(bool NewState)
+{
+	bSkipTakeDamage = NewState;
+}
+bool AIBCharacter::GetSkipTakeDamage()
+{
+	return bSkipTakeDamage;
 }
 void AIBCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupted)
 {
@@ -1089,8 +1100,6 @@ void AIBCharacter::InitFirstSkill()
 	IBAnim->PlayClawSkillMontage();
 	IsAttacking = true;
 	bClawStepMoveOn = false;
-	ABLOG(Warning,TEXT("%s"), *GetWorld()->GetFirstPlayerController()->GetName());
-	
 }
 void AIBCharacter::InitSecondSkill()
 {
@@ -1134,6 +1143,7 @@ void AIBCharacter::InitGroundBurstSkillParameter()
 {
 	IsAttacking = false;
 	bFirstSkillEffect = false;
+	bInitLoction = false;
 	EffectIntervalTime = 0.0f;
 	EffectNum = 1;
 }
@@ -1151,28 +1161,98 @@ void AIBCharacter::InitUltimateSkillParameter()
 	EffectIntervalTime = 0.0f;
 	EffectNum = 1;
 }
+void AIBCharacter::FirstSkillAttackCheck(FVector ExplosionVector)
+{
+	FCollisionQueryParams Params(NAME_None, false, this);
+	TArray<FHitResult> HitResults;
+	bool bResults = GetWorld()->SweepMultiByChannel(HitResults,
+		ExplosionVector,
+		ExplosionVector,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel4,
+		FCollisionShape::MakeSphere(200.0f),
+		Params);
+
+#if ENABLE_DRAW_DEBUG
+
+	//FVector TraceVec = ExplosionVector * AttackRange;
+	//FVector Center = ExplosionVector + TraceVec * 0.5f;
+	//float HalfHeight = AttackRange * 0.5f + AttackRadius;
+	//FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
+	//FColor DrawColor = bResults ? FColor::Green : FColor::Red;
+	//float DebugLifeTime = 2.0f;
+	
+	DrawDebugPoint(GetWorld(), ExplosionVector, 20.0f, FColor::Red, false, 5.0f);
+
+
+#endif
+	if (bResults)
+	{
+		for (FHitResult HitResult : HitResults)
+		{
+			if (CurrentCombo < 4)
+			{
+				FDamageEvent DamageEvent;
+				HitResult.Actor->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
+			}
+			else
+			{
+				FDamageEvent DamageEvent;
+				HitResult.Actor->TakeDamage(CharacterStat->GetAttack() * 2, DamageEvent, GetController(), this);
+			}
+		}
+	}
+}
+void AIBCharacter::FirstSkillStepMove()
+{
+	if (bClawStepMoveOn)
+	{
+		SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation() + GetActorForwardVector() * 400.0f, GetWorld()->GetDeltaSeconds(), 0.2f));
+	}
+}
 void AIBCharacter::SkillHub(float DeltaTime)
 {
 	if (bFirstSkillEffect)
 	{
-
 		EffectIntervalTime += DeltaTime;
-		if (EffectIntervalTime >= 0.05)
+
+		if (!bInitLoction)
+		{
+			bInitLoction = true;
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.Owner = this;
+			SpawnParams.Instigator = Instigator;
+
+			UWorld* World = GetWorld();
+			FVector PlayForward = GetActorLocation() + GetActorForwardVector()*100.0f;
+			PlayForward.Z = PlayForward.Z - TestFloat1;
+			Projectile = World->SpawnActor<AIBSkillProjectile>(ProjectileClass, PlayForward, GetActorRotation(), SpawnParams);
+			if (Projectile)
+			{
+				FVector Temp = GetActorForwardVector();
+				Projectile->FireInDirection(Temp, TestFloat2);
+				Projectile->Setradius(TestFloat3);
+				Projectile->SetProjectileGravityScale(TestFloat4);
+				ABLOG(Warning, TEXT("Projectile"));
+			}
+		}
+
+		if (EffectIntervalTime >= 0.05 && EffectNum < 7)
 		{
 			EffectIntervalTime = 0.0f;	
-			SkillEffect_1->SetWorldLocation(SkillStartLocation + SkillStartForwardVector * (float)EffectNum*130.0f);
+			SkillEffect_1->SetWorldLocation(Projectile->GetActorLocation());
 			SkillEffect_1->Activate(true);
 			FirstSkillAttackCheck(SkillEffect_1->GetComponentLocation());
 			EffectNum++;
-			if (EffectNum >= 7)
-			{
-				SkillEffect_1_Final->SetWorldLocation(SkillStartLocation + SkillStartForwardVector* (float)EffectNum*130.0f);
-				SkillEffect_1_Final->Activate(true);
-				FirstSkillAttackCheck(SkillEffect_1_Final->GetComponentLocation());
-				InitGroundBurstSkillParameter();
-				EffectNum = 1;
-				CurrentAttackStyle = AttackStyle::BASICATTACK;
-			}
+		}
+		if (EffectNum >= 7)
+		{
+			SkillEffect_1_Final->SetWorldLocation(Projectile->GetActorLocation()/*SkillStartLocation + SkillStartForwardVector* (float)EffectNum*130.0f*/);
+			SkillEffect_1_Final->Activate(true);
+			FirstSkillAttackCheck(SkillEffect_1_Final->GetComponentLocation());
+			InitGroundBurstSkillParameter();
+			EffectNum = 1;
+			CurrentAttackStyle = AttackStyle::BASICATTACK;
 		}
 	}
 
@@ -1348,54 +1428,5 @@ void AIBCharacter::SkillHub(float DeltaTime)
 				}
 			}
 		}
-	}
-}
-void AIBCharacter::FirstSkillAttackCheck(FVector ExplosionVector)
-{
-	FCollisionQueryParams Params(NAME_None, false, this);
-	TArray<FHitResult> HitResults;
-	bool bResults = GetWorld()->SweepMultiByChannel(HitResults,
-		ExplosionVector,
-		ExplosionVector,
-		FQuat::Identity,
-		ECollisionChannel::ECC_GameTraceChannel4,
-		FCollisionShape::MakeSphere(TestFloat1),
-		Params);
-
-#if ENABLE_DRAW_DEBUG
-
-	//FVector TraceVec = ExplosionVector * AttackRange;
-	//FVector Center = ExplosionVector + TraceVec * 0.5f;
-	//float HalfHeight = AttackRange * 0.5f + AttackRadius;
-	//FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
-	//FColor DrawColor = bResults ? FColor::Green : FColor::Red;
-	//float DebugLifeTime = 2.0f;
-	
-	DrawDebugPoint(GetWorld(), ExplosionVector, 20.0f, FColor::Red, false, 5.0f);
-
-
-#endif
-	if (bResults)
-	{
-		for (FHitResult HitResult : HitResults)
-		{
-			if (CurrentCombo < 4)
-			{
-				FDamageEvent DamageEvent;
-				HitResult.Actor->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
-			}
-			else
-			{
-				FDamageEvent DamageEvent;
-				HitResult.Actor->TakeDamage(CharacterStat->GetAttack() * 2, DamageEvent, GetController(), this);
-			}
-		}
-	}
-}
-void AIBCharacter::FirstSkillStepMove()
-{
-	if (bClawStepMoveOn)
-	{
-		SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation() + GetActorForwardVector() * 400.0f, GetWorld()->GetDeltaSeconds(), 0.2f));
 	}
 }

@@ -160,6 +160,11 @@ void UIB_E_GreaterSpider_AnimInstance::AnimNotify_CanDodgeCheck()
 	E_FOnDodgeCheck.Broadcast();
 }
 
+void UIB_E_GreaterSpider_AnimInstance::AnimNotify_SlowMotionDoneCheck()
+{
+	E_FOnSlowMotionDoneCheck.Broadcast();
+}
+
 void UIB_E_GreaterSpider_AnimInstance::StopAllMontage()
 {
 	if (Montage_IsPlaying(E_AttackMontage))

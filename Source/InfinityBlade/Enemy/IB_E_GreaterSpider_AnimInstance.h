@@ -13,6 +13,7 @@ DECLARE_MULTICAST_DELEGATE(E_FOnLeftCheckDelegate);
 DECLARE_MULTICAST_DELEGATE(E_FOnRightCheckDelegate);
 DECLARE_MULTICAST_DELEGATE(E_FOnHitCheckDelegate);
 DECLARE_MULTICAST_DELEGATE(E_FOnDodgeCheckDelegate);
+DECLARE_MULTICAST_DELEGATE(E_FOnSlowMotionDoneCheckDelegate);
 
 
 
@@ -57,6 +58,7 @@ public:
 	E_FOnRightCheckDelegate E_OnRightCheck;
 	E_FOnHitCheckDelegate E_OnHitCheck;
 	E_FOnDodgeCheckDelegate E_FOnDodgeCheck;
+	E_FOnSlowMotionDoneCheckDelegate E_FOnSlowMotionDoneCheck;
 
 	void SetDeadAnim() { IsDead = true; }
 
@@ -81,6 +83,9 @@ private:
 
 	UFUNCTION()
 	void AnimNotify_CanDodgeCheck();
+
+	UFUNCTION()
+	void AnimNotify_SlowMotionDoneCheck();
 
 
 	FName GetAttackMontageSectionName(int32 Section);

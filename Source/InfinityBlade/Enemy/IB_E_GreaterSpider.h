@@ -64,8 +64,10 @@ private:
 	//공격 충돌처리
 	void AttackCheck();
 
-	//Dodge 가능 확인
+	//Dodge 
 	void PlayerCheck();
+	void IsDodgeCheck();
+
 
 private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
@@ -78,25 +80,26 @@ private:
 	bool IsComboInputOn;*/
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		int32 CurrentCombo;
+	int32 CurrentCombo;
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		int32 MaxCombo;
+	int32 MaxCombo;
 
 	UPROPERTY()
-		class UIB_E_GreaterSpider_AnimInstance* IB_E_GSAnim;
+	class UIB_E_GreaterSpider_AnimInstance* IB_E_GSAnim;
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		float AttackRange;
+	float AttackRange;
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		float AttackRadius;
+	float AttackRadius;
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		bool CharacterInAttackRange;
+	bool CharacterInAttackRange;
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		bool AnimNotify_NextAttackCheckOn;
+	bool AnimNotify_NextAttackCheckOn;
+
 
 
 	//roar 구현

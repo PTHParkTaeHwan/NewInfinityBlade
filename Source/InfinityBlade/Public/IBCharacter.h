@@ -92,6 +92,11 @@ public:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UCameraShake> CS_BasicHit;
 
+	UPROPERTY(EditInstanceOnly, Category = Skill)
+	TSubclassOf<class APlayerSkillActor> SkillActorClass;
+
+	class APlayerSkillActor * NewSkillActor;
+
 	//공격 모션
 	void Attack();
 	FOnAttackEndDelegate OnAttackEnd;
@@ -146,6 +151,8 @@ private:
 	void DodgeMotion();
 public:
 	void SetCanDodge(bool NewDodgeState);
+	void SetSkipTakeDamage(bool NewState);
+	bool GetSkipTakeDamage();
 
 private:
 	UFUNCTION()
@@ -272,14 +279,23 @@ public:
 	void FirstSkillAttackCheck(FVector ExplosionVector);
 	void FirstSkillStepMove();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	FVector MuzzleOffset;
+
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	TSubclassOf<class AIBSkillProjectile> ProjectileClass;
+
 private:
 	void SkillHub(float DeltaTime);
 
 	//1st
 	void InitGroundBurstSkillParameter();
 	bool bFirstSkillEffect;
+	bool bInitLoction;
 	float EffectIntervalTime;
 	int32 EffectNum;
+	AIBSkillProjectile* Projectile;
+
 
 	//2nd
 	void InitShieldSkillParameter();
@@ -335,6 +351,13 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
 	float TestFloat3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	float TestFloat4;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
+	float TestFloat5;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Testparameter, Meta = (AllowPrivateAccess = true))
 	int32 TestInt1;
