@@ -1224,30 +1224,36 @@ void AIBCharacter::SkillHub(float DeltaTime)
 			SpawnParams.Instigator = Instigator;
 
 			UWorld* World = GetWorld();
-			FVector PlayForward = GetActorLocation() + GetActorForwardVector()*100.0f;
-			PlayForward.Z = PlayForward.Z - TestFloat1;
-			Projectile = World->SpawnActor<AIBSkillProjectile>(ProjectileClass, PlayForward, GetActorRotation(), SpawnParams);
-			if (Projectile)
+			FVector PlayForward = GetActorLocation() + GetActorForwardVector()*10.0f;
+			ABLOG(Warning, TEXT("PlayForward %s"), *PlayForward.ToString());
+			PlayForward.Z = PlayForward.Z - 50.0f;
+
+			SkillEffect_1->SetWorldLocation(PlayForward);
+			SkillEffect_1->Activate(true);
+
+			SkillActor = World->SpawnActor<APlayerSkillActor>(SkillActorClass, PlayForward, GetActorRotation(), SpawnParams);
+			if (SkillActor)
 			{
-				FVector Temp = GetActorForwardVector();
-				Projectile->FireInDirection(Temp, TestFloat2);
-				Projectile->Setradius(TestFloat3);
-				Projectile->SetProjectileGravityScale(TestFloat4);
-				ABLOG(Warning, TEXT("Projectile"));
+				SkillActor->SetLoctation(GetActorLocation() + GetActorForwardVector()*950.0f);
 			}
 		}
 
-		if (EffectIntervalTime >= 0.05 && EffectNum < 7)
+		if (EffectIntervalTime >= 0.03 && EffectNum < 7)
 		{
 			EffectIntervalTime = 0.0f;	
-			SkillEffect_1->SetWorldLocation(Projectile->GetActorLocation());
+			if (SkillActor == nullptr)
+			{
+				ABLOG(Warning, TEXT("SkillActor == nullptr"));
+				return;
+			}
+			SkillEffect_1->SetWorldLocation(SkillActor->GetMovementComponent()->GetActorNavLocation());
 			SkillEffect_1->Activate(true);
 			FirstSkillAttackCheck(SkillEffect_1->GetComponentLocation());
 			EffectNum++;
 		}
 		if (EffectNum >= 7)
 		{
-			SkillEffect_1_Final->SetWorldLocation(Projectile->GetActorLocation()/*SkillStartLocation + SkillStartForwardVector* (float)EffectNum*130.0f*/);
+			SkillEffect_1_Final->SetWorldLocation(SkillActor->GetMovementComponent()->GetActorNavLocation()/*SkillStartLocation + SkillStartForwardVector* (float)EffectNum*130.0f*/);
 			SkillEffect_1_Final->Activate(true);
 			FirstSkillAttackCheck(SkillEffect_1_Final->GetComponentLocation());
 			InitGroundBurstSkillParameter();

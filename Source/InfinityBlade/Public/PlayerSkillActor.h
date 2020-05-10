@@ -27,21 +27,16 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UPROPERTY(VisibleAnywhere, Category = Collision)
-	USphereComponent* CollisionComponent;
-
-	UPROPERTY(VisibleAnywhere, Category = Collision)
-	UCapsuleComponent* SkillCapsule;
-
-	UPROPERTY(VisibleAnywhere, Category = Visual)
-	USkeletalMeshComponent* SkillMesh;
-
-	UPROPERTY(VisibleAnywhere, Category = Movement)
-	UMovementComponent* SkillMovement;
-
 public:
 	void SetVelocity();
+	void SetLoctation(FVector TargetPos);
 
+private:
+	UPROPERTY()
+	class AIBSkillProjectileController* IBSkillProjectileController;
 
-
+	FVector GoalPos;
+	bool bStartMove;
+	float DeleteTime;
+	UNavigationSystem* NavSystem;
 };

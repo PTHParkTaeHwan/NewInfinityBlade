@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "IBSkillProjectile.h"
+#include "IBSkillProjectileController.h"
 
 
 // Sets default values
@@ -37,6 +38,12 @@ AIBSkillProjectile::AIBSkillProjectile()
 	ProjectileMovementComponent->bIsSliding = true;
 
 	bFire = false;
+	
+
+	//AIControllerClass = AIB_E_GREATERSPIDER_AIController::StaticClass();
+	//AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+
+	EnableInput(IBSkillProjectileController);
 
 }
 
@@ -67,7 +74,7 @@ void AIBSkillProjectile::FireInDirection(FVector ShootDirection, float NewSpeed)
 	Speed = NewSpeed;
 
 	UNavigationSystem* NavSystem = UNavigationSystem::GetNavigationSystem(GetWorld());
-	NavSystem->SimpleMoveToLocation(GetWorld()->GetFirstPlayerController(), GetActorLocation() + GetActorForwardVector()*200.0f);
+	NavSystem->SimpleMoveToLocation(IBSkillProjectileController, GetActorLocation() + GetActorForwardVector()*400.0f);
 
 	
 

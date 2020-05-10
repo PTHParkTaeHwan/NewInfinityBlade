@@ -40,6 +40,11 @@ public:
 	void SetProjectileGravityScale(float NewGravityScale);
 
 private:
+	UPROPERTY()
+	class AIBSkillProjectileController* IBSkillProjectileController;
+
+
+private:
 	FVector StartVector;
 	bool bFire;
 	float Speed;

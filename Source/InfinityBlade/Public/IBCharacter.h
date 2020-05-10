@@ -285,6 +285,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class AIBSkillProjectile> ProjectileClass;
 
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	TSubclassOf<class APlayerSkillActor> PlayerSkillActor;
+
+
 private:
 	void SkillHub(float DeltaTime);
 
@@ -295,7 +299,7 @@ private:
 	float EffectIntervalTime;
 	int32 EffectNum;
 	AIBSkillProjectile* Projectile;
-
+	APlayerSkillActor* SkillActor;
 
 	//2nd
 	void InitShieldSkillParameter();
