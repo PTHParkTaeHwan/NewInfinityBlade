@@ -69,6 +69,7 @@ private:
 	void IsDodgeCheck();
 
 
+
 private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		bool IsAttacking;
@@ -163,13 +164,18 @@ private:
 
 	bool bPushedbySkill;
 
-	FVector StartPos;
-	FVector TargetPos;
-
 	void KnockBackMotionHub(float DeltaTime);
 
 private:
 	bool bInitWidgetLocation;
+	
+	//디텍트 task 관련
+	bool bDetectSuccess;
+public:
+	void SetDetectState(bool NewState);
+	bool GetDetectState();
+
+	
 
 
 //test parameter

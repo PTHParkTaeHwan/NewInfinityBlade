@@ -55,7 +55,7 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 		HPBarWidget->SetWidgetClass(UI_HUD.Class);
 		HPBarWidget->SetDrawSize(FVector2D(75.0f, 25.0f));
 	}
-	HPBarWidget->SetHiddenInGame(false);	
+	HPBarWidget->SetHiddenInGame(true);	
 
 
 	//콜리전 프리셋 설정
@@ -121,6 +121,9 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 	//WidgetLocation
 	bInitWidgetLocation = false;
 
+	//디텍트 task
+	bDetectSuccess = false;
+
 	//test
 	TestFloat1 = 0.0f;
 	TestFloat2 = 0.0f;
@@ -171,11 +174,11 @@ void AIB_E_GreaterSpider::PostInitializeComponents()
 
 	//hit motion
 	IB_E_GSAnim->E_OnHitCheck.AddLambda([this]()->void {
-		if (!bKnockBackByBasicAttack)
+		/*if (!bKnockBackByBasicAttack)
 		{
 			HitMotionOn = false;
 			TentionModeInit();
-		}
+		}*/
 	});
 	
 	IB_E_GSAnim->E_FOnDodgeCheck.AddUObject(this, &AIB_E_GreaterSpider::PlayerCheck);
@@ -192,6 +195,9 @@ float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & D
 	HitEffect->Activate(true);
 	IB_E_GSAnim->PlayHitMontage();
 	CharacterStat->SetDamage(FinalDamage);
+
+	TentionModeInit();
+	IsAttacking = false;
 
 	if (DeadModeOn)
 	{
@@ -233,35 +239,50 @@ void AIB_E_GreaterSpider::KnockBackMotion(AActor * DamageCauser)
 	if (!bKnockBackByBasicAttack && AttackActor->GetCurrntCombo() < 4 && AttackActor->GetCurrentAttackStyle() == AttackStyle::BASICATTACK)
 	{
 		MaxKnockBackTime = 0.5f;
-		StartPos = GetActorLocation();
-		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 100.0f;
+
+		FVector DirectionVector = DamageCauser->GetActorForwardVector();
+		DirectionVector.X = DirectionVector.X*1000.0f;
+		DirectionVector.Y = DirectionVector.Y*1000.0f;
+		GetMovementComponent()->Velocity = DirectionVector;
 		bKnockBackByBasicAttack = true;
 	}
 
 	if (!bKnockBackByBasicAttack && AttackActor->GetCurrntCombo() == 4 && AttackActor->GetCurrentAttackStyle() == AttackStyle::BASICATTACK)
 	{
 		MaxKnockBackTime = 1.16;
-		StartPos = GetActorLocation();
-		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 300.0f;
+		FVector DirectionVector = DamageCauser->GetActorForwardVector();
+		DirectionVector.X = DirectionVector.X*2000.0f;
+		DirectionVector.Y = DirectionVector.Y*2000.0f;
+		GetMovementComponent()->Velocity = DirectionVector;
 		bKnockBackByBasicAttack = true;
 	}
 
 	if (!bKnockBackBySkill && AttackActor->GetCurrentAttackStyle() == AttackStyle::CLAW)
 	{
-		GetCharacterMovement()->JumpZVelocity = 400.0f;
-		StartPos = GetActorLocation();
-		TargetPos = GetActorLocation() + (-1.0*GetActorForwardVector()) * 500.0f;
-		MaxKnockBackTime = 2.0f;
+		MaxKnockBackTime = 1.16f;
+		FVector DirectionVector = DamageCauser->GetActorForwardVector();
+		DirectionVector.X = DirectionVector.X*4000.0f;
+		DirectionVector.Y = DirectionVector.Y*4000.0f;
+		GetMovementComponent()->Velocity = DirectionVector;
 		bKnockBackBySkill = true;
 	}
+
+	if (/*!bKnockBackBySkill && */AttackActor->GetCurrentAttackStyle() == AttackStyle::ULITIMATE)
+	{
+		MaxKnockBackTime = 0.01f;
+		FVector DirectionVector = DamageCauser->GetActorForwardVector();
+		DirectionVector.X = DirectionVector.X*2000.0f;
+		DirectionVector.Y = DirectionVector.Y*2000.0f;
+		GetMovementComponent()->Velocity = DirectionVector;
+		bKnockBackBySkill = true;
+	}
+
 }
 void AIB_E_GreaterSpider::KnockBackMotionHub(float DeltaTime)
 {
 	if (bKnockBackByBasicAttack)
 	{
 		KnockBackTime += DeltaTime;
-		SetActorLocation(FMath::VInterpTo(StartPos, TargetPos, DeltaTime, 1.0f));
-		StartPos = GetActorLocation();
 		if (KnockBackTime >= MaxKnockBackTime)
 		{
 			bKnockBackByBasicAttack = false;
@@ -274,8 +295,6 @@ void AIB_E_GreaterSpider::KnockBackMotionHub(float DeltaTime)
 	if (bKnockBackBySkill)
 	{
 		KnockBackTime += DeltaTime;
-		SetActorLocation(FMath::VInterpTo(StartPos, TargetPos, DeltaTime, 15.0f));
-		StartPos = GetActorLocation();
 		if (KnockBackTime >= MaxKnockBackTime)
 		{
 			bKnockBackBySkill = false;
@@ -284,6 +303,14 @@ void AIB_E_GreaterSpider::KnockBackMotionHub(float DeltaTime)
 			KnockBackTime = 0.0f;
 		}
 	}
+}
+void AIB_E_GreaterSpider::SetDetectState(bool NewState)
+{
+	bDetectSuccess = NewState;
+}
+bool AIB_E_GreaterSpider::GetDetectState()
+{
+	return bDetectSuccess;
 }
 // Called to bind functionality to input
 void AIB_E_GreaterSpider::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -560,6 +587,9 @@ bool AIB_E_GreaterSpider::GetHitMotionOn()
 void AIB_E_GreaterSpider::SetCharacterInAttackRange(bool InAttackRange)
 {
 	CharacterInAttackRange = InAttackRange;
+	TentionModeInit();
+	IsAttacking = false;
+	OnAttackEnd.Broadcast();
 }
 void AIB_E_GreaterSpider::SetEnemyMode(EnemyMode NewMode)
 {

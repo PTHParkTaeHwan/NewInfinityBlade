@@ -380,7 +380,7 @@ void AIBCharacter::Tick(float DeltaTime)
 	if (bHitRotator)
 	{
 		SetActorRotation(FMath::RInterpTo(GetActorRotation(), TargetRot, DeltaTime, 3.0f));
-		SetActorLocation(FMath::VInterpTo(GetActorLocation(), TargetPos, DeltaTime, 1.0f));
+		//SetActorLocation(FMath::VInterpTo(GetActorLocation(), TargetPos, DeltaTime, 1.0f));
 	}
 	
 	if (this->GetVelocity().Size() <= 300.0f)
@@ -475,7 +475,15 @@ float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEv
 	FVector LookVector = DamageCauser->GetActorLocation() - GetActorLocation();
 	LookVector.Z = 0.0f;
 	TargetRot = FRotationMatrix::MakeFromX(LookVector).Rotator();
-	TargetPos = GetActorLocation() + DamageCauser->GetActorForwardVector()*(DamageCauser->GetDistanceTo(this)*1.2f);
+	GetMovementComponent()->Velocity;
+
+	FVector BackVector = DamageCauser->GetActorForwardVector();
+	BackVector.X = BackVector.X * 1000.0f;
+	BackVector.Y = BackVector.Y * 1000.0f;
+	GetMovementComponent()->Velocity = BackVector;
+
+
+	//TargetPos = GetActorLocation() + DamageCauser->GetActorForwardVector()*(DamageCauser->GetDistanceTo(this)*1.2f);
 
 	//================== ÃßÈÄ¼öÁ¤ =================
 	FinalDamage = 0.0f;
@@ -693,7 +701,7 @@ void AIBCharacter::Attack()
 void AIBCharacter::DodgeMotion()
 {
 	ABLOG(Warning, TEXT("%d"), bCanDodge);
-	if (!bCanDodge) return;
+	if (!bCanDodge || IBAnim->GetIsPlayHitMontage()) return;
 	bSkipTakeDamage = true;
 	IBAnim->PlayDodgeMontage(1);	
 	//GetWorld()->GetWorldSettings()->SetTimeDilation(0.5f);
@@ -701,8 +709,8 @@ void AIBCharacter::DodgeMotion()
 	BackVector.X = BackVector.X * 4000.0f;
 	BackVector.Y = BackVector.Y * 4000.0f;*/
 	FVector ForwardVector = GetActorForwardVector();
-	ForwardVector.X = ForwardVector.X * 3000.0f;
-	ForwardVector.Y = ForwardVector.Y * 3000.0f;
+	ForwardVector.X = ForwardVector.X * 6000.0f;
+	ForwardVector.Y = ForwardVector.Y * 6000.0f;
 	GetMovementComponent()->Velocity = ForwardVector;
 }
 void AIBCharacter::SetCanDodge(bool NewDodgeState)
@@ -790,7 +798,7 @@ void AIBCharacter::AttackCheck()
 	FCollisionQueryParams Params(NAME_None, false, this);
 	TArray<FHitResult> HitResults;
 	bool bResults = GetWorld()->SweepMultiByChannel(HitResults,
-		GetActorLocation(),
+		GetActorLocation() + GetActorForwardVector() * 50.0f,
 		GetActorLocation() + GetActorForwardVector() * AttackRange,
 		FQuat::Identity,
 		ECollisionChannel::ECC_GameTraceChannel4,
@@ -799,7 +807,7 @@ void AIBCharacter::AttackCheck()
 
 #if ENABLE_DRAW_DEBUG
 
-	FVector TraceVec = GetActorForwardVector() * AttackRange;
+	/*FVector TraceVec = GetActorForwardVector() * AttackRange;
 	FVector Center = GetActorLocation() + TraceVec * 0.5f;
 	float HalfHeight = AttackRange * 0.5f + AttackRadius;
 	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
@@ -813,7 +821,7 @@ void AIBCharacter::AttackCheck()
 		CapsuleRot,
 		DrawColor,
 		false,
-		DebugLifeTime);
+		DebugLifeTime);*/
 
 #endif
 	if (bResults)
@@ -1113,6 +1121,8 @@ void AIBCharacter::InitSecondSkill()
 }
 void AIBCharacter::InitForthSkill()
 {
+	CurrentAttackStyle = AttackStyle::ULITIMATE;
+
 	if (ShieldSkill->IsActive())
 	{
 		ShieldSkill->SetVisibility(false);
@@ -1174,13 +1184,6 @@ void AIBCharacter::FirstSkillAttackCheck(FVector ExplosionVector)
 		Params);
 
 #if ENABLE_DRAW_DEBUG
-
-	//FVector TraceVec = ExplosionVector * AttackRange;
-	//FVector Center = ExplosionVector + TraceVec * 0.5f;
-	//float HalfHeight = AttackRange * 0.5f + AttackRadius;
-	//FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
-	//FColor DrawColor = bResults ? FColor::Green : FColor::Red;
-	//float DebugLifeTime = 2.0f;
 	
 	DrawDebugPoint(GetWorld(), ExplosionVector, 20.0f, FColor::Red, false, 5.0f);
 
@@ -1208,6 +1211,40 @@ void AIBCharacter::FirstSkillStepMove()
 	if (bClawStepMoveOn)
 	{
 		SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation() + GetActorForwardVector() * 400.0f, GetWorld()->GetDeltaSeconds(), 0.2f));
+	}
+}
+void AIBCharacter::ForthSkillAttackCheck(FVector ExplosionVector)
+{
+	FCollisionQueryParams Params(NAME_None, false, this);
+	TArray<FHitResult> HitResults;
+	bool bResults = GetWorld()->SweepMultiByChannel(HitResults,
+		ExplosionVector,
+		ExplosionVector,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel4,
+		FCollisionShape::MakeSphere(100.0f),
+		Params);
+
+#if ENABLE_DRAW_DEBUG
+
+	DrawDebugPoint(GetWorld(), ExplosionVector, 10.0f, FColor::Red, false, 5.0f);
+
+#endif
+	if (bResults)
+	{
+		for (FHitResult HitResult : HitResults)
+		{
+			if (EffectNum < 70)
+			{
+				FDamageEvent DamageEvent;
+				HitResult.Actor->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
+			}
+			else
+			{
+				FDamageEvent DamageEvent;
+				HitResult.Actor->TakeDamage(CharacterStat->GetAttack() * 2, DamageEvent, GetController(), this);
+			}
+		}
 	}
 }
 void AIBCharacter::SkillHub(float DeltaTime)
@@ -1279,7 +1316,7 @@ void AIBCharacter::SkillHub(float DeltaTime)
 		EffectIntervalTime += DeltaTime;
 		
 		//±âº» ±Ã
-		if (!bBasicUltimateSkill)
+		/*if (bBasicUltimateSkill)
 		{
 			if (EffectIntervalTime >= 0.05)
 			{
@@ -1371,12 +1408,12 @@ void AIBCharacter::SkillHub(float DeltaTime)
 				}
 			}
 		}
-		else if (bBasicUltimateSkill)
-		{
-			//°­È­ ±Ã
-			//·£´ý Æø¹ß
+		*/
+		//°­È­ ±Ã//·£´ý Æø¹ß
+		if (!bBasicUltimateSkill)
+		{	
 			EffectIntervalTime += DeltaTime;
-			if (EffectIntervalTime >= 0.01)
+			if (EffectIntervalTime >= 0.015)
 			{
 
 				EffectIntervalTime = 0.0f;
@@ -1386,13 +1423,19 @@ void AIBCharacter::SkillHub(float DeltaTime)
 				NavSystem->GetRandomPointInNavigableRadius(GetActorLocation(), 500.0f, NextPatrol);
 				SkillEffect_1->SetWorldLocation(NextPatrol.Location);			
 				SkillEffect_1->Activate(true);
+				ForthSkillAttackCheck(SkillEffect_1->GetComponentLocation());
 				EffectNum++;
 				if (EffectNum >= 70)
 				{
-					EffectNum = 7;
+					EffectNum = 0;
 					for (auto it = m_vUSParticleVector.begin(); it != m_vUSParticleVector.end(); ++it)
 					{
-						switch (ParticelNum)
+						NavSystem->GetRandomPointInNavigableRadius(GetActorLocation(), 500.0f, NextPatrol);
+						it->SecondParticle->SetWorldLocation(NextPatrol.Location);
+						it->SecondParticle->Activate(true);
+						ForthSkillAttackCheck(it->SecondParticle->GetComponentLocation());
+
+						/*switch (ParticelNum)
 						{
 						case 0:
 							it->SecondParticle->SetWorldLocation(SkillStartLocation + SkillStartForwardVector * (float)EffectNum*130.0f);
@@ -1428,9 +1471,11 @@ void AIBCharacter::SkillHub(float DeltaTime)
 							break;
 						}
 						ParticelNum++;
+						*/
 					}
 					InitGroundBurstSkillParameter();
 					InitUltimateSkillParameter();
+					CurrentAttackStyle = AttackStyle::BASICATTACK;
 				}
 			}
 		}

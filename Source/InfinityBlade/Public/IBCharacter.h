@@ -80,6 +80,8 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = UI)
 	class UWidgetComponent* HPBarWidget;
 	
+	
+
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UCameraShake> MyShake;
 	
@@ -278,6 +280,7 @@ public:
 
 	void FirstSkillAttackCheck(FVector ExplosionVector);
 	void FirstSkillStepMove();
+	void ForthSkillAttackCheck(FVector ExplosionVector);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	FVector MuzzleOffset;
