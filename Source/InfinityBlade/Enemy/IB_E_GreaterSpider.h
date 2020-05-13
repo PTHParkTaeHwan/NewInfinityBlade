@@ -176,7 +176,10 @@ public:
 	void SetDetectState(bool NewState);
 	bool GetDetectState();
 
-	
+	//Sound
+
+
+
 
 
 //test parameter

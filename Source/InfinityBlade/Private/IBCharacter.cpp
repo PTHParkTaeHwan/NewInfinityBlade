@@ -84,6 +84,7 @@ AIBCharacter::AIBCharacter()
 	//HIT 모션 관리
 	IsHit = false;
 	bHitRotator = false;
+	bHitMotionBlendTime = false;
 	TargetRot = FRotator::ZeroRotator;
 
 	//Dodge 모션
@@ -170,6 +171,39 @@ AIBCharacter::AIBCharacter()
 		DodgeSoundComponent3->SetSound(DodgeSound3);
 		DodgeSoundComponent3->bAutoActivate = false;
 	}
+
+	static ConstructorHelpers::FObjectFinder<USoundCue> SHS(TEXT("SoundCue'/Game/dev/Sound/Player/Skill/ShieldHitSound2_Cue.ShieldHitSound2_Cue'"));
+	if (SHS.Succeeded())
+	{
+		ShieldHitSound = SHS.Object;
+		ShieldHitSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("ShieldHitSound"));
+		ShieldHitSoundComponent->SetupAttachment(RootComponent);
+		ShieldHitSoundComponent->SetSound(ShieldHitSound);
+		ShieldHitSoundComponent->bAutoActivate = false;
+	}
+
+	static ConstructorHelpers::FObjectFinder<USoundCue> PHS(TEXT("SoundCue'/Game/dev/Sound/Player/hit/SpiderPunchSound_Cue.SpiderPunchSound_Cue'"));
+	if (PHS.Succeeded())
+	{
+		PlayerHitSound = PHS.Object;
+		PlayerHitSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("PlayerHitSound"));
+		PlayerHitSoundComponent->SetupAttachment(RootComponent);
+		PlayerHitSoundComponent->SetSound(PlayerHitSound);
+		PlayerHitSoundComponent->bAutoActivate = false;
+	}
+
+	static ConstructorHelpers::FObjectFinder<USoundCue> EHS(TEXT("SoundCue'/Game/dev/Sound/Player/hit/SpiderHitSound_Cue.SpiderHitSound_Cue'"));
+	if (EHS.Succeeded())
+	{
+		EnemyHitSound = EHS.Object;
+		EnemyHitSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("EnemyHitSound"));
+		EnemyHitSoundComponent->SetupAttachment(RootComponent);
+		EnemyHitSoundComponent->SetSound(EnemyHitSound);
+		EnemyHitSoundComponent->bAutoActivate = false;
+	}
+
+
+
 	
 	//HP, SE UI
 	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
@@ -415,14 +449,12 @@ void AIBCharacter::Tick(float DeltaTime)
 	MoveAttackType1();
 	FirstSkillStepMove();
 
-	//일반, 콤보 어택 관리
-	if (TimeCheckStart) CheckIntervalTime += DeltaTime;
-	if (CheckIntervalTime > 0.17f && !SetAttackMode)
+	//managet to HitMotion blend time 
+	if (bHitMotionBlendTime) CheckIntervalTime += DeltaTime;
+	if (CheckIntervalTime >= 0.31f)
 	{
-		TimeCheckStart = false;
-		SetAttackMode = true;
-		CurrentAttackMode = LSAttackMode::BASIC;
-		Attack();
+		CheckIntervalTime = 0.f;
+		bHitMotionBlendTime = false;
 	}	
 	//스킬
 	SkillHub(DeltaTime);
@@ -500,7 +532,16 @@ void AIBCharacter::PostInitializeComponents()
 	IBAnim->FOnHitMotionDoneCheck.AddLambda([this]()->void {
 		IsHit = false;
 		bHitRotator = false;
+		bHitMotionBlendTime = true;
 	});
+
+	IBAnim->FOnShieldSkillStart.AddLambda([this]()->void {
+		bSecondSkillEffect = true;
+		ShieldSkill->Activate(true);
+		IsAttacking = true;
+	});
+
+
 }
 float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
@@ -513,10 +554,14 @@ float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEv
 		ShieldHitEffect->SetWorldLocation(DamageCauser->GetActorLocation() + DamageCauser->GetActorForwardVector()*(DamageCauser->GetDistanceTo(this)*0.7f));		
 		ShieldHitEffect->Activate(true);
 		HitEffect->Activate(true);
+
+		ShieldHitSoundComponent->Play(0.f);
+		PlayerHitSoundComponent->Play(0.f);
 	}
 	else
 	{
 		HitEffect->Activate(true);
+		PlayerHitSoundComponent->Play(0.f);
 	}
 	GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(CS_BasicHit, 1.0f);
 	IBAnim->PlayHitMontage(FMath::RandRange(1, 7));
@@ -537,6 +582,8 @@ float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEv
 
 	//================== 추후수정 =================
 	FinalDamage = 0.0f;
+	//================== 추후수정 =================
+
 	switch (CurrentControlMode)
 	{
 	case AIBCharacter::EControlMode::GTA:
@@ -670,8 +717,7 @@ void AIBCharacter::RunChange()
 }
 void AIBCharacter::Attack()
 {	
-	if (IsHit) return;
-
+	if (IsHit || bHitMotionBlendTime) return;
 	if (bBasicAttackMontage)
 	{
 		if (!IsAttacking)
@@ -685,14 +731,13 @@ void AIBCharacter::Attack()
 			AttackStartComboState();
 			IBAnim->PlayAttackMontage();
 			IBAnim->JumpToAttackMontageSection(CurrentCombo);
-
 		}
 		else
 		{
 			if (!CanNextCombo) CanNextCombo = true;
 		}
 	}
-	else if (!bBasicAttackMontage)
+	/*else if (!bBasicAttackMontage)
 	{
 		if (!SetAttackMode)
 		{
@@ -746,7 +791,7 @@ void AIBCharacter::Attack()
 			}
 			break;
 		}
-	}
+	}*/
 }
 void AIBCharacter::DodgeMotion()
 {
@@ -810,6 +855,8 @@ void AIBCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupte
 		switch (CurrentAttackMode)
 		{
 		case LSAttackMode::BASIC:
+			ABLOG(Warning, TEXT("case LSAttackMode::BASIC:"));
+
 			IsAttacking = false;
 			break;
 		case LSAttackMode::COMBO:
@@ -896,8 +943,7 @@ void AIBCharacter::AttackCheck()
 	{
 		if (NewMyShake == nullptr)
 		{
-			ABLOG(Warning, TEXT("CameraShake nullptr"));
-			
+		
 		}
 		else
 		{
@@ -915,6 +961,8 @@ void AIBCharacter::AttackCheck()
 				FDamageEvent DamageEvent;
 				HitResult.Actor->TakeDamage(CharacterStat->GetAttack()*2, DamageEvent, GetController(), this);
 			}
+			EnemyHitSoundComponent->SetWorldLocation(HitResult.Actor->GetActorLocation());
+			EnemyHitSoundComponent->Play(0.f);
 		}
 	}
 }
@@ -1181,10 +1229,7 @@ void AIBCharacter::InitSecondSkill()
 {
 	if (!bSecondSkillEffect)
 	{
-		bSecondSkillEffect = true;
 		IBAnim->PlayShieldSkillMontage();
-		ShieldSkill->Activate(true);
-		IsAttacking = true;
 	}
 }
 void AIBCharacter::InitForthSkill()
@@ -1330,7 +1375,6 @@ void AIBCharacter::SkillHub(float DeltaTime)
 
 			UWorld* World = GetWorld();
 			FVector PlayForward = GetActorLocation() + GetActorForwardVector()*10.0f;
-			ABLOG(Warning, TEXT("PlayForward %s"), *PlayForward.ToString());
 			PlayForward.Z = PlayForward.Z - 50.0f;
 
 			SkillEffect_1->SetWorldLocation(PlayForward);
@@ -1392,10 +1436,9 @@ void AIBCharacter::SkillHub(float DeltaTime)
 	{
 		ShieldSkill->SetWorldLocation(GetActorLocation() + FVector(0.0f, 0.0f, -48.0f));
 		ShieldSkillActiveTime += DeltaTime;
-		if (/*ShieldSkillActiveTime >= fMaxShieldSkillTime*/false)
+		if (ShieldSkillActiveTime >= fMaxShieldSkillTime)
 		{
 			InitShieldSkillParameter();
-			ShieldSkill->Activate(false);
 			ShieldSkill->Complete();
 		}
 	}

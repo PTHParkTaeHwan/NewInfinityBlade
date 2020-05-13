@@ -279,6 +279,10 @@ void UIBAnimInstance::AnimNotify_FirstSkillStart()
 {
 	FOnFirstSkillStartCheck.Broadcast();
 }
+void UIBAnimInstance::AnimNotify_ShieldStart()
+{
+	FOnShieldSkillStart.Broadcast();
+}
 void UIBAnimInstance::AnimNotify_ShieldSkillDone()
 {
 	FOnSecondSkillDoneCheck.Broadcast();
@@ -300,6 +304,7 @@ void UIBAnimInstance::AnimNotify_HitMotionDone()
 {
 	Montage_Stop(0.3f, HitMontage);
 	FOnHitMotionDoneCheck.Broadcast();
+	ABLOG(Warning, TEXT("AnimNotify_HitMotionDone"));
 }
 void UIBAnimInstance::AnimNotify_DodgeMotionDone()
 {

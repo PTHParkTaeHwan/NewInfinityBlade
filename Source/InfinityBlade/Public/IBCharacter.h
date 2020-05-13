@@ -115,6 +115,16 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
 	class USoundCue* DodgeSound3;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* ShieldHitSound;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* PlayerHitSound;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* EnemyHitSound;
+
+	   
 private:
 	struct S_AudioComponent
 	{
@@ -127,6 +137,10 @@ private:
 	UAudioComponent* DodgeSoundComponent1;
 	UAudioComponent* DodgeSoundComponent2;
 	UAudioComponent* DodgeSoundComponent3;
+
+	UAudioComponent* ShieldHitSoundComponent;
+	UAudioComponent* PlayerHitSoundComponent;
+	UAudioComponent* EnemyHitSoundComponent;
 
 public:
 	bool GetIsRun();
@@ -169,6 +183,7 @@ private:
 	//Hit Motion
 	bool IsHit;
 	bool bHitRotator;
+	bool bHitMotionBlendTime;
 	FRotator TargetRot;
 	FVector TargetPos = FVector::ZeroVector;
 

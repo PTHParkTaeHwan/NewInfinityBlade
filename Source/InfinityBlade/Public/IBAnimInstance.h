@@ -16,6 +16,7 @@ DECLARE_MULTICAST_DELEGATE(FOnAttackType1_2StepDoneCheckDelegate);
 
 DECLARE_MULTICAST_DELEGATE(FOnFirstSkillStartCheckDelegate);
 DECLARE_MULTICAST_DELEGATE(FOnSecondSkillDoneCheckDelegate);
+DECLARE_MULTICAST_DELEGATE(FOnShieldSkillStartDelegate);
 DECLARE_MULTICAST_DELEGATE(FOnForthSkillStartCheckDelegate);
 
 DECLARE_MULTICAST_DELEGATE(FOnFirstSkillStepCheckDelegate);
@@ -69,6 +70,9 @@ public:
 	FOnAttackType1_1StepDoneCheckDelegate FOnAttackType1_1StepDoneCheck;
 	FOnAttackType1_2StepStartCheckDelegate FOnAttackType1_2StepStartCheck;
 	FOnAttackType1_2StepDoneCheckDelegate FOnAttackType1_2StepDoneCheck;
+	
+	FOnShieldSkillStartDelegate FOnShieldSkillStart;
+	
 	FOnSecondSkillDoneCheckDelegate FOnSecondSkillDoneCheck;
 	FOnForthSkillStartCheckDelegate FOnForthSkillStartCheck;
 
@@ -93,6 +97,9 @@ private:
 
 	UFUNCTION()
 	void AnimNotify_FirstSkillStart();
+
+	UFUNCTION()
+	void AnimNotify_ShieldStart();
 
 	UFUNCTION()
 	void AnimNotify_ShieldSkillDone();

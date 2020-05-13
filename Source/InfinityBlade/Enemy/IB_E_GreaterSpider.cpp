@@ -124,6 +124,10 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 	//µğÅØÆ® task
 	bDetectSuccess = false;
 
+
+
+
+
 	//test
 	TestFloat1 = 0.0f;
 	TestFloat2 = 0.0f;
