@@ -61,6 +61,10 @@ public:
 	E_FOnSlowMotionDoneCheckDelegate E_FOnSlowMotionDoneCheck;
 
 	void SetDeadAnim() { IsDead = true; }
+	bool GetIsAttackMontage();
+	
+	
+
 
 private:
 	UFUNCTION()

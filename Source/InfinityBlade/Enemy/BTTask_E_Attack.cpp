@@ -64,6 +64,13 @@ void UBTTask_E_Attack::TickTask(UBehaviorTreeComponent & OwnerComp, uint8 * Node
 			IsAttacking = false;
 			FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);
 		}
+		else if (IBGreaterSpider->GetCurrentCombo() == 3 && !IBGreaterSpider->GetIsAttackMontage())
+		{
+			IBGreaterSpider->TentionModeInit();
+			IBGreaterSpider->SetIsAttacking(false);
+			IsAttacking = false;
+			FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);
+		}
 	}
 	if (!IsAttacking)
 	{

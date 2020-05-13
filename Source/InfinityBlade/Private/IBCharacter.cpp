@@ -750,18 +750,36 @@ void AIBCharacter::Attack()
 }
 void AIBCharacter::DodgeMotion()
 {
-	ABLOG(Warning, TEXT("%d"), bCanDodge);
-	if (!bCanDodge || IBAnim->GetIsPlayHitMontage()) return;
-	bSkipTakeDamage = true;
-	IBAnim->PlayDodgeMontage(1);	
-	//GetWorld()->GetWorldSettings()->SetTimeDilation(0.5f);
-	/*FVector BackVector = -1 * GetActorForwardVector();
-	BackVector.X = BackVector.X * 4000.0f;
-	BackVector.Y = BackVector.Y * 4000.0f;*/
+	if (IBAnim->GetIsDodgeMontage() || IBAnim->GetIsPlayHitMontage()) return;
+	IBAnim->PlayDodgeMontage(1);
+	int32 Temp = FMath::RandRange(1, 3);
+	switch (Temp)
+	{
+	case 1:
+		DodgeSoundComponent1->Play(0.f);
+		break;
+	case 2:
+		DodgeSoundComponent2->Play(0.f);
+		break;
+	case 3:
+		DodgeSoundComponent3->Play(0.f);
+		break;
+	}
 	FVector ForwardVector = GetActorForwardVector();
 	ForwardVector.X = ForwardVector.X * 6000.0f;
 	ForwardVector.Y = ForwardVector.Y * 6000.0f;
 	GetMovementComponent()->Velocity = ForwardVector;
+	if (bCanDodge) bSkipTakeDamage = true;
+
+	/*
+	if (!bCanDodge || IBAnim->GetIsPlayHitMontage()) return;
+	bSkipTakeDamage = true;
+	IBAnim->PlayDodgeMontage(1);	
+	FVector ForwardVector = GetActorForwardVector();
+	ForwardVector.X = ForwardVector.X * 6000.0f;
+	ForwardVector.Y = ForwardVector.Y * 6000.0f;
+	GetMovementComponent()->Velocity = ForwardVector;
+	*/
 }
 void AIBCharacter::SetCanDodge(bool NewDodgeState)
 {
@@ -781,7 +799,7 @@ void AIBCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupte
 	{
 		IsComboInputOn = false;
 	}
-	else
+	else if(!IsComboInputOn)
 	{
 		IsAttacking = false;
 		CurrentCombo = 0;

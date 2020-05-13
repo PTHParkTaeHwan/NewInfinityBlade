@@ -252,6 +252,10 @@ FName UIBAnimInstance::GetDodgeMontageSectionName(int32 Section)
 {
 	return FName(*FString::Printf(TEXT("Dodge%d"), Section));
 }
+bool UIBAnimInstance::GetIsDodgeMontage()
+{
+	return Montage_IsPlaying(DodgeMontage);
+}
 //================================
 //          AnimNotify          //
 //================================

@@ -181,6 +181,7 @@ public:
 	//Dodge ¸ð¼Ç
 	void PlayDodgeMontage(int32 SectionNum);
 	FName GetDodgeMontageSectionName(int32 Section);
+	bool GetIsDodgeMontage();
 
 private:
 

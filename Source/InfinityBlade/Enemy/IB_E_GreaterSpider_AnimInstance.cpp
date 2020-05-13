@@ -84,6 +84,13 @@ void UIB_E_GreaterSpider_AnimInstance::JumpToAttackMontageSectionInCombo(int32 N
 }
 
 
+bool UIB_E_GreaterSpider_AnimInstance::GetIsAttackMontage()
+{
+	return Montage_IsPlaying(E_AttackMontage);
+}
+
+
+
 void UIB_E_GreaterSpider_AnimInstance::AnimNotify_AttackHitCheck()
 {
 	E_OnAttackHitCheck.Broadcast();

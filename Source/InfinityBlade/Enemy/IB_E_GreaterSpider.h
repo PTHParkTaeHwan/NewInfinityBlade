@@ -40,8 +40,9 @@ public:
 
 	//霓焊 柳青 蜡公
 	void SetCharacterInAttackRange(bool InAttackRange);
-
 	void SetEnemyMode(EnemyMode NewMode);
+	int32 GetCurrentCombo();
+	bool GetIsAttackMontage();
 
 	//HP Bar widget 包府
 public:

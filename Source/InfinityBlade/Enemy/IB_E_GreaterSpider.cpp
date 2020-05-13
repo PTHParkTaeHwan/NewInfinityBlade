@@ -614,3 +614,13 @@ void AIB_E_GreaterSpider::SetEnemyMode(EnemyMode NewMode)
 		break;
 	}
 }
+
+int32 AIB_E_GreaterSpider::GetCurrentCombo()
+{
+	return CurrentCombo;
+}
+
+bool AIB_E_GreaterSpider::GetIsAttackMontage()
+{
+	return IB_E_GSAnim->GetIsAttackMontage();
+}
