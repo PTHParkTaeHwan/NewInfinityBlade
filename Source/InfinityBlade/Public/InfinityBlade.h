@@ -5,7 +5,7 @@
 //#include "CoreMinimal.h"
 #include "EngineMinimal.h"
 #include <vector>
-
+#include "Components/AudioComponent.h"
 UENUM(BlueprintType)
 enum class ECharacterState : uint8
 {

@@ -17,6 +17,7 @@
 #include "MyCameraShake.h"
 #include "PlayerSkillActor.h"
 #include "IBSkillProjectile.h"
+#include "Sound/SoundCue.h"
 
 
 // Sets default values
@@ -121,6 +122,55 @@ AIBCharacter::AIBCharacter()
 	InitShieldSkillParameter();
 	InitUltimateSkillParameter();
 
+	//스킬 사운드
+	static ConstructorHelpers::FObjectFinder<USoundCue> SOUNDCUE(TEXT("SoundCue'/Game/dev/Sound/Player/Skill/Bomb2_Cue.Bomb2_Cue'"));
+	if (SOUNDCUE.Succeeded())
+	{
+		FSkillSound = SOUNDCUE.Object;
+		for (int i = 1; i < 8; i++)
+		{
+			S_AudioComponent SAC;			
+			//UP.FirstParticle = CreateDefaultSubobject<UParticleSystemComponent>(FName(*FString::Printf(TEXT("FirstParticle_%d"), i)));
+
+			SAC.SkillSoundComponent = CreateDefaultSubobject<UAudioComponent>(FName(*FString::Printf(TEXT("SkillAudioComponent%d"), i)));
+			SAC.SkillSoundComponent->SetupAttachment(RootComponent);
+			SAC.SkillSoundComponent->SetSound(FSkillSound);
+			SAC.SkillSoundComponent->bAutoActivate = false;
+
+			vAuidoVector.push_back(SAC);
+		}
+		SE_SoundNum = 1;
+	}
+
+	//DodgetSound
+	static ConstructorHelpers::FObjectFinder<USoundCue> DODGE1(TEXT("SoundCue'/Game/HumanVocalizations/HumanMaleC/Cues/voice_male_c_effort_short_jump_03_Cue.voice_male_c_effort_short_jump_03_Cue'"));
+	if (DODGE1.Succeeded())
+	{
+		DodgeSound1 = DODGE1.Object;
+		DodgeSoundComponent1 = CreateDefaultSubobject<UAudioComponent>(TEXT("DodgeSound1"));
+		DodgeSoundComponent1->SetupAttachment(RootComponent);
+		DodgeSoundComponent1->SetSound(DodgeSound1);
+		DodgeSoundComponent1->bAutoActivate = false;
+	}
+	static ConstructorHelpers::FObjectFinder<USoundCue> DODGE2(TEXT("SoundCue'/Game/HumanVocalizations/HumanMaleC/Cues/voice_male_c_effort_short_jump_04_Cue.voice_male_c_effort_short_jump_04_Cue'"));
+	if (DODGE2.Succeeded())
+	{
+		DodgeSound2 = DODGE2.Object;
+		DodgeSoundComponent2 = CreateDefaultSubobject<UAudioComponent>(TEXT("DodgeSound2"));
+		DodgeSoundComponent2->SetupAttachment(RootComponent);
+		DodgeSoundComponent2->SetSound(DodgeSound2);
+		DodgeSoundComponent2->bAutoActivate = false;
+	}
+	static ConstructorHelpers::FObjectFinder<USoundCue> DODGE3(TEXT("SoundCue'/Game/HumanVocalizations/HumanMaleC/Cues/voice_male_c_effort_short_jump_05_Cue.voice_male_c_effort_short_jump_05_Cue'"));
+	if (DODGE3.Succeeded())
+	{
+		DodgeSound3 = DODGE3.Object;
+		DodgeSoundComponent3 = CreateDefaultSubobject<UAudioComponent>(TEXT("DodgeSound3"));
+		DodgeSoundComponent3->SetupAttachment(RootComponent);
+		DodgeSoundComponent3->SetSound(DodgeSound3);
+		DodgeSoundComponent3->bAutoActivate = false;
+	}
+	
 	//HP, SE UI
 	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
 	HPBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
@@ -524,9 +574,9 @@ void AIBCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AIBCharacter::Turn);
 	PlayerInputComponent->BindAction(TEXT("DefenseMode"), EInputEvent::IE_Pressed, this, &AIBCharacter::ModeChange);
 	PlayerInputComponent->BindAction(TEXT("DefenseMode"), EInputEvent::IE_Released, this, &AIBCharacter::ModeChange);
-	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &AIBCharacter::Jump);
+	PlayerInputComponent->BindAction(TEXT("Dodge"), EInputEvent::IE_Pressed, this, &AIBCharacter::DodgeMotion);
 	
-	PlayerInputComponent->BindAction(TEXT("Runing"), EInputEvent::IE_Pressed, this, &AIBCharacter::DodgeMotion);
+	//PlayerInputComponent->BindAction(TEXT("Runing"), EInputEvent::IE_Pressed, this, &AIBCharacter::DodgeMotion);
 	//PlayerInputComponent->BindAction(TEXT("Runing"), EInputEvent::IE_Released, this, &AIBCharacter::ShiftButtonChange);
 	PlayerInputComponent->BindAction(TEXT("Attack"), EInputEvent::IE_Pressed, this, &AIBCharacter::Attack);
 	PlayerInputComponent->BindAction(TEXT("Skill_1"), EInputEvent::IE_Pressed, this, &AIBCharacter::InitFirstSkill);
@@ -1285,16 +1335,37 @@ void AIBCharacter::SkillHub(float DeltaTime)
 			}
 			SkillEffect_1->SetWorldLocation(SkillActor->GetMovementComponent()->GetActorNavLocation());
 			SkillEffect_1->Activate(true);
+			for (auto it = vAuidoVector.begin(); it != vAuidoVector.end(); ++it)
+			{
+				if (SE_SoundNum == EffectNum)
+				{
+					it->SkillSoundComponent->SetRelativeLocation(SkillEffect_1->GetComponentLocation());
+					it->SkillSoundComponent->Play(0.f);
+					SE_SoundNum++;
+					break;
+				}
+			}
 			FirstSkillAttackCheck(SkillEffect_1->GetComponentLocation());
 			EffectNum++;
 		}
 		if (EffectNum >= 7)
 		{
+			for (auto it = vAuidoVector.begin(); it != vAuidoVector.end(); ++it)
+			{
+				if (SE_SoundNum == EffectNum)
+				{
+					it->SkillSoundComponent->SetRelativeLocation(SkillEffect_1_Final->GetComponentLocation());
+					it->SkillSoundComponent->Play(0.f);
+					SE_SoundNum++;
+					break;
+				}
+			}
 			SkillEffect_1_Final->SetWorldLocation(SkillActor->GetMovementComponent()->GetActorNavLocation()/*SkillStartLocation + SkillStartForwardVector* (float)EffectNum*130.0f*/);
 			SkillEffect_1_Final->Activate(true);
 			FirstSkillAttackCheck(SkillEffect_1_Final->GetComponentLocation());
 			InitGroundBurstSkillParameter();
 			EffectNum = 1;
+			SE_SoundNum = 1;
 			CurrentAttackStyle = AttackStyle::BASICATTACK;
 		}
 	}
@@ -1415,9 +1486,7 @@ void AIBCharacter::SkillHub(float DeltaTime)
 			EffectIntervalTime += DeltaTime;
 			if (EffectIntervalTime >= 0.015)
 			{
-
 				EffectIntervalTime = 0.0f;
-
 				UNavigationSystem* NavSystem = UNavigationSystem::GetNavigationSystem(GetWorld());
 				FNavLocation NextPatrol;
 				NavSystem->GetRandomPointInNavigableRadius(GetActorLocation(), 500.0f, NextPatrol);
@@ -1425,15 +1494,33 @@ void AIBCharacter::SkillHub(float DeltaTime)
 				SkillEffect_1->Activate(true);
 				ForthSkillAttackCheck(SkillEffect_1->GetComponentLocation());
 				EffectNum++;
-				if (EffectNum >= 70)
+				if (EffectNum % 4 == 0)
 				{
-					EffectNum = 0;
+					for (auto it = vAuidoVector.begin(); it != vAuidoVector.end(); ++it)
+					{
+						it->SkillSoundComponent->SetRelativeLocation(SkillEffect_1->GetComponentLocation());
+						it->SkillSoundComponent->Play(0.f);
+						
+						break;
+					}
+				}
+
+				if (EffectNum >= 71)
+				{
+					EffectNum = 1;
 					for (auto it = m_vUSParticleVector.begin(); it != m_vUSParticleVector.end(); ++it)
 					{
 						NavSystem->GetRandomPointInNavigableRadius(GetActorLocation(), 500.0f, NextPatrol);
 						it->SecondParticle->SetWorldLocation(NextPatrol.Location);
 						it->SecondParticle->Activate(true);
 						ForthSkillAttackCheck(it->SecondParticle->GetComponentLocation());
+
+						for (auto it2 = vAuidoVector.begin(); it2 != vAuidoVector.end(); ++it)
+						{
+							it2->SkillSoundComponent->SetRelativeLocation(it->SecondParticle->GetComponentLocation());
+							it2->SkillSoundComponent->Play(0.f);
+							break;
+						}
 
 						/*switch (ParticelNum)
 						{

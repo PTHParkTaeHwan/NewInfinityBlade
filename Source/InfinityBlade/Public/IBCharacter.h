@@ -78,9 +78,7 @@ public:
 	UCameraComponent* Camera;
 
 	UPROPERTY(VisibleAnywhere, Category = UI)
-	class UWidgetComponent* HPBarWidget;
-	
-	
+	class UWidgetComponent* HPBarWidget;	
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UCameraShake> MyShake;
@@ -102,6 +100,33 @@ public:
 	//공격 모션
 	void Attack();
 	FOnAttackEndDelegate OnAttackEnd;
+
+	//sound
+public:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* FSkillSound;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* DodgeSound1;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* DodgeSound2;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* DodgeSound3;
+
+private:
+	struct S_AudioComponent
+	{
+		UAudioComponent* SkillSoundComponent;
+	};
+	std::vector<S_AudioComponent> vAuidoVector;
+	std::vector<S_AudioComponent>::iterator viAuidoVector;
+	int32 SE_SoundNum;
+
+	UAudioComponent* DodgeSoundComponent1;
+	UAudioComponent* DodgeSoundComponent2;
+	UAudioComponent* DodgeSoundComponent3;
 
 public:
 	bool GetIsRun();
