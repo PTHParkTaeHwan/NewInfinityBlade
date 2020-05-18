@@ -46,9 +46,9 @@ void UBTService_E_Detect::TickNode(UBehaviorTreeComponent & OwnerComp, uint8 * N
 			{
 				OwnerComp.GetBlackboardComponent()->SetValueAsObject(AIB_E_GREATERSPIDER_AIController::TargetKey, IBCharacter);
 				//DetectRadius = 300.0f;
-				DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Green, false, 0.2f);
+				/*DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Green, false, 0.2f);
 				DrawDebugPoint(World, IBCharacter->GetActorLocation(), 20.0f, FColor::Blue, false, 0.2f);
-				DrawDebugLine(World, ControllingPawn->GetActorLocation(), IBCharacter->GetActorLocation(), FColor::Blue, false, 0.2f);
+				DrawDebugLine(World, ControllingPawn->GetActorLocation(), IBCharacter->GetActorLocation(), FColor::Blue, false, 0.2f);*/
 				//ControllingCharacter->GetCharacterMovement()->MaxWalkSpeed = 600;
 				Enemy->SetEnemyMode(EnemyMode::TARGETON);
 				//Enemy->SetHPBarWidgetHiddenInGame(false);
@@ -61,7 +61,7 @@ void UBTService_E_Detect::TickNode(UBehaviorTreeComponent & OwnerComp, uint8 * N
 		//ControllingCharacter->GetCharacterMovement()->MaxWalkSpeed = 60;
 		//DetectRadius = 200.0f;
 		OwnerComp.GetBlackboardComponent()->SetValueAsObject(AIB_E_GREATERSPIDER_AIController::TargetKey, nullptr);
-		DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Red, false, 0.2f);
+		//DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Red, false, 0.2f);
 	}
 
 

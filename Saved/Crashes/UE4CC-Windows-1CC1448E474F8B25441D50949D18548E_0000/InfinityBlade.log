@@ -1,0 +1,1194 @@
+﻿Log file open, 05/18/20 23:12:18
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogInit: Display: Running engine for game: InfinityBlade
+LogPlatformFile: Not using cached read wrapper
+LogInit: Display: RandInit(813926481) SRandInit(813926481).
+LogInit: Read version file with build ID '3944462'
+LogInit: Overriding engine version to CL 4033788, compatible CL 3944462
+LogInit: Registered custom module enumerator with build ID '3944462'
+LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.409385
+LogD3D11RHI: Aftermath initialized
+LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: +9:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin LinearTimecode
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleARKit
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin ImmediatePhysics
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Plugin shader directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders found
+LogPluginManager: Mapping shader source directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders to virtual directory /Plugin/OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogStreaming: Display: Took  0.180s to configure plugins.
+LogModuleManager: Display: Found up-to-date module file ../../../../../../dev/NewInfinityBlade/Binaries/Win64/UE4Editor-InfinityBladeSetting.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../../../../dev/NewInfinityBlade/Binaries/Win64/UE4Editor-InfinityBlade.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2DEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperSpriteSheetImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperTiledImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-SmartSnapping.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Animation/LiveLink/Binaries/Win64/UE4Editor-LiveLink.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Animation/LiveLink/Binaries/Win64/UE4Editor-LiveLinkEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Blendables/LightPropagationVolume/Binaries/Win64/UE4Editor-LightPropagationVolumeRuntime.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Blendables/LightPropagationVolume/Binaries/Win64/UE4Editor-LightPropagationVolumeEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/CLionSourceCodeAccess/Binaries/Win64/UE4Editor-CLionSourceCodeAccess.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/GitSourceControl/Binaries/Win64/UE4Editor-GitSourceControl.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/PerforceSourceControl/Binaries/Win64/UE4Editor-PerforceSourceControl.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/SubversionSourceControl/Binaries/Win64/UE4Editor-SubversionSourceControl.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/UObjectPlugin/Binaries/Win64/UE4Editor-UObjectPlugin.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/VisualStudioCodeSourceCodeAccess/Binaries/Win64/UE4Editor-VisualStudioCodeSourceCodeAccess.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Developer/VisualStudioSourceCodeAccess/Binaries/Win64/UE4Editor-VisualStudioSourceCodeAccess.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/AssetManagerEditor/Binaries/Win64/UE4Editor-AssetManagerEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/CryptoKeys/Binaries/Win64/UE4Editor-CryptoKeys.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/CryptoKeys/Binaries/Win64/UE4Editor-CryptoKeysOpenSSL.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/DataValidation/Binaries/Win64/UE4Editor-DataValidation.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/FacialAnimation/Binaries/Win64/UE4Editor-FacialAnimation.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/FacialAnimation/Binaries/Win64/UE4Editor-FacialAnimationEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/GameplayTagsEditor/Binaries/Win64/UE4Editor-GameplayTagsEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/MobileLauncherProfileWizard/Binaries/Win64/UE4Editor-MobileLauncherProfileWizard.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/PluginBrowser/Binaries/Win64/UE4Editor-PluginBrowser.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Editor/SpeedTreeImporter/Binaries/Win64/UE4Editor-SpeedTreeImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Enterprise/DatasmithContent/Binaries/Win64/UE4Editor-DatasmithContent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/AlembicImporter/Binaries/Win64/UE4Editor-AlembicImporter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/AlembicImporter/Binaries/Win64/UE4Editor-AlembicLibrary.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/CharacterAI/Binaries/Win64/UE4Editor-CharacterAI.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Experimental/HTML5Networking/Binaries/Win64/UE4Editor-HTML5Networking.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AndroidMedia/Binaries/Win64/UE4Editor-AndroidMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AndroidMedia/Binaries/Win64/UE4Editor-AndroidMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AvfMedia/Binaries/Win64/UE4Editor-AvfMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AvfMedia/Binaries/Win64/UE4Editor-AvfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/AvfMedia/Binaries/Win64/UE4Editor-AvfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMedia.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-ImgMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/ImgMedia/Binaries/Win64/UE4Editor-OpenExrWrapper.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/LinearTimecode/Binaries/Win64/UE4Editor-LinearTimecode.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/MediaCompositing/Binaries/Win64/UE4Editor-MediaCompositing.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/MediaCompositing/Binaries/Win64/UE4Editor-MediaCompositingEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/MediaPlayerEditor/Binaries/Win64/UE4Editor-MediaPlayerEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMedia.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMediaEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Media/WmfMedia/Binaries/Win64/UE4Editor-WmfMediaFactory.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Messaging/TcpMessaging/Binaries/Win64/UE4Editor-TcpMessaging.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Messaging/UdpMessaging/Binaries/Win64/UE4Editor-UdpMessaging.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/MovieScene/ActorSequence/Binaries/Win64/UE4Editor-ActorSequence.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor-LevelSequenceEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/MovieScene/MatineeToLevelSequence/Binaries/Win64/UE4Editor-MatineeToLevelSequence.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/NetcodeUnitTest/NetcodeUnitTest/Binaries/Win64/UE4Editor-NetcodeUnitTest.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/NetcodeUnitTest/NUTUnrealEngine4/Binaries/Win64/UE4Editor-NUTUnrealEngine4.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystem/Binaries/Win64/UE4Editor-OnlineSubsystem.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystemNull/Binaries/Win64/UE4Editor-OnlineSubsystemNull.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystemUtils/Binaries/Win64/UE4Editor-OnlineSubsystemUtils.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Online/OnlineSubsystemUtils/Binaries/Win64/UE4Editor-OnlineBlueprintSupport.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AndroidDeviceProfileSelector/Binaries/Win64/UE4Editor-AndroidDeviceProfileSelector.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AndroidPermission/Binaries/Win64/UE4Editor-AndroidPermission.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AppleARKit/Binaries/Win64/UE4Editor-AppleARKit.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ArchVisCharacter/Binaries/Win64/UE4Editor-ArchVisCharacter.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AudioCapture/Binaries/Win64/UE4Editor-AudioCapture.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/AudioCapture/Binaries/Win64/UE4Editor-AudioCaptureEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/CableComponent/Binaries/Win64/UE4Editor-CableComponent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/CustomMeshComponent/Binaries/Win64/UE4Editor-CustomMeshComponent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ExampleDeviceProfileSelector/Binaries/Win64/UE4Editor-ExampleDeviceProfileSelector.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ImmediatePhysics/Binaries/Win64/UE4Editor-ImmediatePhysics.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ImmediatePhysics/Binaries/Win64/UE4Editor-ImmediatePhysicsEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/LocationServicesBPLibrary/Binaries/Win64/UE4Editor-LocationServicesBPLibrary.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/MobilePatchingUtils/Binaries/Win64/UE4Editor-MobilePatchingUtils.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Binaries/Win64/UE4Editor-OculusHMD.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Binaries/Win64/UE4Editor-OculusInput.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Binaries/Win64/UE4Editor-OculusEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/PhysXVehicles/Binaries/Win64/UE4Editor-PhysXVehicles.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/PhysXVehicles/Binaries/Win64/UE4Editor-PhysXVehiclesEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ProceduralMeshComponent/Binaries/Win64/UE4Editor-ProceduralMeshComponent.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/ProceduralMeshComponent/Binaries/Win64/UE4Editor-ProceduralMeshComponentEditor.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor-RuntimePhysXCooking.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Steam/SteamVR/Binaries/Win64/UE4Editor-SteamVR.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/Steam/SteamVR/Binaries/Win64/UE4Editor-SteamVRController.dll (API version 3944462).
+LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/Runtime/WindowsMoviePlayer/Binaries/Win64/UE4Editor-WindowsMoviePlayer.dll (API version 3944462).
+LogInit: Using libcurl 7.47.1
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2g
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogInit: WinSock: I am DESKTOP-EO5RAPV (192.168.0.42:0)
+LogInit: Build: ++UE4+Release-4.19-CL-4033788
+LogInit: Engine Version: 4.19.2-4033788+++UE4+Release-4.19
+LogInit: Compatible Engine Version: 4.19.0-3944462+++UE4+Release-4.19
+LogInit: Net CL: 3944462
+LogDevObjectVersion: Number of dev versions registered: 18
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 23
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 33
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 25
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 6
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 1
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 2
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 16
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogInit: Compiled (64-bit): Apr 27 2018 02:06:57
+LogInit: Compiled with Visual C++: 19.00.24215.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.19
+LogInit: Command Line: 
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogStreaming: Display: Took  0.008s to delete old logs.
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2020.05.18-14.12.20:733][  0]LogInit: Selected Device Profile: [Windows]
+[2020.05.18-14.12.20:733][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2020.05.18-14.12.20:752][  0]LogInit: Computer: DESKTOP-EO5RAPV
+[2020.05.18-14.12.20:752][  0]LogInit: User: pth08
+[2020.05.18-14.12.20:752][  0]LogInit: CPU Page size=4096, Cores=6
+[2020.05.18-14.12.20:752][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2020.05.18-14.12.20:752][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2020.05.18-14.12.20:752][  0]LogMemory: Platform Memory Stats for Windows
+[2020.05.18-14.12.20:752][  0]LogMemory: Process Physical Memory: 279.74 MB used, 279.75 MB peak
+[2020.05.18-14.12.20:752][  0]LogMemory: Process Virtual Memory: 278.68 MB used, 278.68 MB peak
+[2020.05.18-14.12.20:752][  0]LogMemory: Physical Memory: 6935.34 MB used,  9397.89 MB free, 16333.23 MB total
+[2020.05.18-14.12.20:752][  0]LogMemory: Virtual Memory: 4807.18 MB used,  9397.89 MB free, 134217728.00 MB total
+[2020.05.18-14.12.20:776][  0]LogInit: Using OS detected language (ko-KR).
+[2020.05.18-14.12.20:776][  0]LogInit: Using OS detected locale (ko-KR).
+[2020.05.18-14.12.20:780][  0]LogTextLocalizationManager: No specific localization for 'ko-KR' exists, so the 'ko' localization will be used.
+[2020.05.18-14.12.21:101][  0]LogStreaming: Display: Took  0.325s to EndInitTextLocalization.
+[2020.05.18-14.12.21:101][  0]LogInit: Setting process to per monitor DPI aware
+[2020.05.18-14.12.21:151][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2020.05.18-14.12.21:151][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2020.05.18-14.12.21:460][  0]LogD3D11RHI: D3D11 adapters:
+[2020.05.18-14.12.21:549][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1660 SUPER' (Feature Level 11_0)
+[2020.05.18-14.12.21:549][  0]LogD3D11RHI:       5991/0/8166 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2020.05.18-14.12.21:552][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2020.05.18-14.12.21:552][  0]LogD3D11RHI:       0/0/8166 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2020.05.18-14.12.21:552][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2020.05.18-14.12.21:559][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2020.05.18-14.12.21:559][  0]LogD3D11RHI:     GPU DeviceId: 0x21c4 (for the marketing name, search the web for "GPU Device Id")
+[2020.05.18-14.12.21:559][  0]LogWindows: EnumDisplayDevices:
+[2020.05.18-14.12.21:559][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1660 SUPER' (P:0 D:1)
+[2020.05.18-14.12.21:560][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1660 SUPER' (P:1 D:1)
+[2020.05.18-14.12.21:561][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1660 SUPER' (P:0 D:0)
+[2020.05.18-14.12.21:561][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1660 SUPER' (P:0 D:0)
+[2020.05.18-14.12.21:561][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[2020.05.18-14.12.21:561][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1660 SUPER
+[2020.05.18-14.12.21:561][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
+[2020.05.18-14.12.21:561][  0]LogD3D11RHI:      Driver Date: Unknown
+[2020.05.18-14.12.21:561][  0]LogRHI: Texture pool is 4193 MB (70% of 5991 MB)
+[2020.05.18-14.12.21:608][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
+[2020.05.18-14.12.21:608][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
+[2020.05.18-14.12.21:608][  0]LogD3D11RHI: Async texture creation enabled
+[2020.05.18-14.12.21:623][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2020.05.18-14.12.21:631][  0]LogShaderCompilers: Guid format shader working directory is 7 characters bigger than the processId version (../../../../../../dev/NewInfinityBlade/Intermediate/Shaders/WorkingDirectory/16228/).
+[2020.05.18-14.12.21:631][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/pth08/AppData/Local/Temp/UnrealShaderWorkingDir/F515247A41BBDCDDF7F2BB91C0CB0330/'.
+[2020.05.18-14.12.21:842][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2020.05.18-14.12.21:857][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2020.05.18-14.12.21:873][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2020.05.18-14.12.21:888][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2020.05.18-14.12.21:904][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2020.05.18-14.12.21:919][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2020.05.18-14.12.21:937][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2020.05.18-14.12.21:953][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2020.05.18-14.12.21:963][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2020.05.18-14.12.21:976][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
+[2020.05.18-14.12.21:989][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
+[2020.05.18-14.12.22:003][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
+[2020.05.18-14.12.22:017][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
+[2020.05.18-14.12.22:030][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
+[2020.05.18-14.12.22:043][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
+[2020.05.18-14.12.22:070][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
+[2020.05.18-14.12.22:070][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
+[2020.05.18-14.12.22:083][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2020.05.18-14.12.22:085][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2020.05.18-14.12.22:124][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2020.05.18-14.12.22:136][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2020.05.18-14.12.22:149][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2020.05.18-14.12.22:162][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2020.05.18-14.12.22:174][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2020.05.18-14.12.22:187][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2020.05.18-14.12.22:187][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2020.05.18-14.12.22:336][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2020.05.18-14.12.22:336][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2020.05.18-14.12.22:336][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2020.05.18-14.12.23:134][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2020.05.18-14.12.23:197][  0]LogDerivedDataCache: Loaded boot cache 0.06s 104MB C:/Users/pth08/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2020.05.18-14.12.23:197][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/pth08/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
+[2020.05.18-14.12.23:197][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../dev/NewInfinityBlade/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2020.05.18-14.12.23:197][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2020.05.18-14.12.23:197][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../dev/NewInfinityBlade/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.05.18-14.12.23:197][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2020.05.18-14.12.23:212][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2020.05.18-14.12.23:225][  0]LogDerivedDataCache: Using Local data cache path C:/Users/pth08/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2020.05.18-14.12.23:225][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2020.05.18-14.12.23:225][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2020.05.18-14.12.23:234][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2020.05.18-14.12.23:234][  0]LogSlate: Using Freetype 2.6.0
+[2020.05.18-14.12.23:235][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.05.18-14.12.23:235][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.05.18-14.12.23:398][  0]LogAssetRegistry: FAssetRegistry took 0.0264 seconds to start up
+[2020.05.18-14.12.23:745][  0]LogInit: Selected Device Profile: [Windows]
+[2020.05.18-14.12.23:889][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2020.05.18-14.12.23:892][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2020.05.18-14.12.23:893][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2020.05.18-14.12.23:893][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2020.05.18-14.12.23:893][  0]LogMeshReduction: No automatic mesh merging module available
+[2020.05.18-14.12.23:893][  0]LogMeshMerging: No automatic mesh merging module available
+[2020.05.18-14.12.23:928][  0]LogNetVersion: InfinityBlade , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 376743747)
+[2020.05.18-14.12.24:328][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.092388 seconds
+[2020.05.18-14.12.24:332][  0]LogUObjectArray: 36728 objects as part of root set at end of initial load.
+[2020.05.18-14.12.24:333][  0]LogUObjectAllocator: 7314312 out of 0 bytes used by permanent object pool.
+[2020.05.18-14.12.24:333][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2020.05.18-14.12.25:944][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2020.05.18-14.12.25:982][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2020.05.18-14.12.26:269][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.155000ms] /Game/InfinityBladeAdversaries/Enemy/Enemy_Great_Spider/SK_Greater_Spider.SK_Greater_Spider
+[2020.05.18-14.12.26:304][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001994c9c12b0, Size=8, Default__GreaterSpiderAnimBlueprint_C Function /Game/dev/Enemy/Animation/GreaterSpiderAnimBlueprint.GreaterSpiderAnimBlueprint_C:ExecuteUbergraph_GreaterSpiderAnimBlueprint
+[2020.05.18-14.12.26:307][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001994c9c12b0, Size=8
+[2020.05.18-14.12.26:307][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001994c9c12b0, Size=8, Default__GreaterSpiderAnimBlueprint_C Function /Engine/Transient.REINST_GreaterSpiderAnimBlueprint_C_0:ExecuteUbergraph_GreaterSpiderAnimBlueprint
+[2020.05.18-14.12.26:309][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001994c9c1178, Size=8, Default__GreaterSpiderAnimBlueprint_C Function /Game/dev/Enemy/Animation/GreaterSpiderAnimBlueprint.GreaterSpiderAnimBlueprint_C:ExecuteUbergraph_GreaterSpiderAnimBlueprint
+[2020.05.18-14.12.26:386][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorAttack4.WarriorAttack4
+[2020.05.18-14.12.26:387][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorAttack4.WarriorAttack4) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:389][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorAttack3.WarriorAttack3
+[2020.05.18-14.12.26:389][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorAttack3.WarriorAttack3) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:391][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorAttack2.WarriorAttack2
+[2020.05.18-14.12.26:391][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorAttack2.WarriorAttack2) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:392][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorAttack1.WarriorAttack1
+[2020.05.18-14.12.26:392][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorAttack1.WarriorAttack1) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:411][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Jump_T.Attack_Jump_T
+[2020.05.18-14.12.26:411][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Jump_T.Attack_Jump_T) using current/default (AnimCompress_BitwiseCompressOnly_24) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:418][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/2xAttack_Move_med_Rdown_L_1.2xAttack_Move_med_Rdown_L_1
+[2020.05.18-14.12.26:418][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/2xAttack_Move_med_Rdown_L_1.2xAttack_Move_med_Rdown_L_1) using current/default (AnimCompress_BitwiseCompressOnly_9) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:428][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/2xAttack_Move_med_Rlow_Lhi_1.2xAttack_Move_med_Rlow_Lhi_1
+[2020.05.18-14.12.26:428][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/2xAttack_Move_med_Rlow_Lhi_1.2xAttack_Move_med_Rlow_Lhi_1) using current/default (AnimCompress_BitwiseCompressOnly_12) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:436][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/2xAttack_Place_fast_Ldwon_Rdown_1.2xAttack_Place_fast_Ldwon_Rdown_1
+[2020.05.18-14.12.26:436][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/2xAttack_Place_fast_Ldwon_Rdown_1.2xAttack_Place_fast_Ldwon_Rdown_1) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:452][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Place_fast_T_1.Attack_Place_fast_T_1
+[2020.05.18-14.12.26:452][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Place_fast_T_1.Attack_Place_fast_T_1) using current/default (AnimCompress_BitwiseCompressOnly_120) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:456][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Place_fast_Rdown_1.Attack_Place_fast_Rdown_1
+[2020.05.18-14.12.26:456][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Place_fast_Rdown_1.Attack_Place_fast_Rdown_1) using current/default (AnimCompress_BitwiseCompressOnly_114) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:459][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Place_fast_Ldown_1.Attack_Place_fast_Ldown_1
+[2020.05.18-14.12.26:459][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Place_fast_Ldown_1.Attack_Place_fast_Ldown_1) using current/default (AnimCompress_BitwiseCompressOnly_105) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:467][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Move_slow_Lup.Attack_Move_slow_Lup
+[2020.05.18-14.12.26:467][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Attack_Move_slow_Lup.Attack_Move_slow_Lup) using current/default (AnimCompress_BitwiseCompressOnly_78) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:481][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_swordplay.Sword1h_swordplay
+[2020.05.18-14.12.26:481][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_swordplay.Sword1h_swordplay) using current/default (AnimCompress_BitwiseCompressOnly_437) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:494][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorSkill1.WarriorSkill1
+[2020.05.18-14.12.26:494][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorSkill1.WarriorSkill1) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:518][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_RightUp.Sword1h_Hit_Head_RightUp
+[2020.05.18-14.12.26:518][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_RightUp.Sword1h_Hit_Head_RightUp) using current/default (AnimCompress_BitwiseCompressOnly_249) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:523][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_RightDown.Sword1h_Hit_Head_RightDown
+[2020.05.18-14.12.26:523][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_RightDown.Sword1h_Hit_Head_RightDown) using current/default (AnimCompress_BitwiseCompressOnly_246) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:528][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_Right.Sword1h_Hit_Head_Right
+[2020.05.18-14.12.26:528][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_Right.Sword1h_Hit_Head_Right) using current/default (AnimCompress_BitwiseCompressOnly_243) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:533][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_LeftUp.Sword1h_Hit_Head_LeftUp
+[2020.05.18-14.12.26:533][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_LeftUp.Sword1h_Hit_Head_LeftUp) using current/default (AnimCompress_BitwiseCompressOnly_240) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:539][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_LeftDown.Sword1h_Hit_Head_LeftDown
+[2020.05.18-14.12.26:539][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_LeftDown.Sword1h_Hit_Head_LeftDown) using current/default (AnimCompress_BitwiseCompressOnly_237) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:542][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_Left.Sword1h_Hit_Head_Left
+[2020.05.18-14.12.26:542][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_Left.Sword1h_Hit_Head_Left) using current/default (AnimCompress_BitwiseCompressOnly_234) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:548][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_Front.Sword1h_Hit_Head_Front
+[2020.05.18-14.12.26:549][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Hit_Head_Front.Sword1h_Hit_Head_Front) using current/default (AnimCompress_BitwiseCompressOnly_231) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:565][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodgle_Right.Sword1h_Dodgle_Right
+[2020.05.18-14.12.26:565][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodgle_Right.Sword1h_Dodgle_Right) using current/default (AnimCompress_BitwiseCompressOnly_192) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:569][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodge_Left.Sword1h_Dodge_Left
+[2020.05.18-14.12.26:569][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodge_Left.Sword1h_Dodge_Left) using current/default (AnimCompress_BitwiseCompressOnly_189) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:573][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodge_Fwd.Sword1h_Dodge_Fwd
+[2020.05.18-14.12.26:573][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodge_Fwd.Sword1h_Dodge_Fwd) using current/default (AnimCompress_BitwiseCompressOnly_186) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:577][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodge.Sword1h_Dodge
+[2020.05.18-14.12.26:577][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Dodge.Sword1h_Dodge) using current/default (AnimCompress_BitwiseCompressOnly_183) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:599][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.685800ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Bladed.SK_CharM_Bladed
+[2020.05.18-14.12.26:628][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001994c5784c0, Size=20, Default__WarriorAnimBlueprint_C Function /Game/Book/Animations/WarriorAnimBlueprint.WarriorAnimBlueprint_C:ExecuteUbergraph_WarriorAnimBlueprint
+[2020.05.18-14.12.26:635][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001994c5784c0, Size=20
+[2020.05.18-14.12.26:635][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001994c831b58, Size=20, Default__WarriorAnimBlueprint_C Function /Engine/Transient.REINST_WarriorAnimBlueprint_C_1:ExecuteUbergraph_WarriorAnimBlueprint
+[2020.05.18-14.12.26:642][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019952d1e410, Size=20, Default__WarriorAnimBlueprint_C Function /Game/Book/Animations/WarriorAnimBlueprint.WarriorAnimBlueprint_C:ExecuteUbergraph_WarriorAnimBlueprint
+[2020.05.18-14.12.26:645][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorIdle.WarriorIdle
+[2020.05.18-14.12.26:645][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorIdle.WarriorIdle) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:646][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorDead.WarriorDead
+[2020.05.18-14.12.26:646][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorDead.WarriorDead) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:647][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_RunFwdLoop.Sword1h_RunFwdLoop
+[2020.05.18-14.12.26:647][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_RunFwdLoop.Sword1h_RunFwdLoop) using current/default (AnimCompress_BitwiseCompressOnly_347) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:650][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Idle.Sword1h_Idle
+[2020.05.18-14.12.26:650][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Idle.Sword1h_Idle) using current/default (AnimCompress_BitwiseCompressOnly_270) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:656][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorJump_End.WarriorJump_End
+[2020.05.18-14.12.26:656][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorJump_End.WarriorJump_End) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:657][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorRun.WarriorRun
+[2020.05.18-14.12.26:657][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorRun.WarriorRun) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:657][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorPersonWalk.WarriorPersonWalk
+[2020.05.18-14.12.26:658][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorPersonWalk.WarriorPersonWalk) using current/default (AnimCompress_RemoveLinearKeys_2) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:685][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorJump_Start.WarriorJump_Start
+[2020.05.18-14.12.26:685][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorJump_Start.WarriorJump_Start) using current/default (AnimCompress_RemoveLinearKeys_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:698][  0]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/WarriorJump_Loop.WarriorJump_Loop
+[2020.05.18-14.12.26:698][  0]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/WarriorJump_Loop.WarriorJump_Loop) using current/default (AnimCompress_RemoveLinearKeys_1) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.12.26:901][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.053000ms] /Game/InfinityBladeWeapons/Weapons/Blade/Swords/Blade_BlackKnight/SK_Blade_BlackKnight.SK_Blade_BlackKnight
+[2020.05.18-14.12.26:922][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.197600ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Cardboard.SK_CharM_Cardboard
+[2020.05.18-14.12.27:001][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.064300ms] /Game/InfinityBladeAdversaries/Enemy/Enemy_Chicken/S_Survival_CA_Chicken.S_Survival_CA_Chicken
+[2020.05.18-14.12.27:020][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.121200ms] /Game/InfinityBladeAdversaries/Enemy/Enemy_Wolf/SK_Enemy_Wolf_Armored.SK_Enemy_Wolf_Armored
+[2020.05.18-14.12.27:188][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.18-14.12.27:188][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.18-14.12.27:211][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.18-14.12.27:234][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.18-14.12.27:819][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2020.05.18-14.12.28:109][  0]LogOcInput: OculusInput pre-init called
+[2020.05.18-14.12.28:224][  0]LogEngine: Initializing Engine...
+[2020.05.18-14.12.28:226][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.05.18-14.12.28:228][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2020.05.18-14.12.28:228][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2020.05.18-14.12.28:400][  0]LogAIModule: Creating AISystem for world Untitled
+[2020.05.18-14.12.28:471][  0]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.12.28:507][  0]LogInit: FAudioDevice initialized.
+[2020.05.18-14.12.28:573][  0]LogDerivedDataCache: Saved boot cache 0.07s 112MB C:/Users/pth08/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2020.05.18-14.12.28:590][  0]LogInit: Texture streaming: Enabled
+[2020.05.18-14.12.28:613][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2020.05.18-14.12.28:630][  0]LogInit: Transaction tracking system initialized
+[2020.05.18-14.12.28:661][  0]BlueprintLog: New page: 에디터 로드
+[2020.05.18-14.12.28:774][  0]LocalizationService: 현지화 서비스가 비활성화되었습니다.
+[2020.05.18-14.12.28:920][  0]LogConsoleResponse: Display: 
+[2020.05.18-14.12.29:074][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2020.05.18-14.12.29:074][  0]LogCook: Display: Mobile HDR setting 1
+[2020.05.18-14.12.29:074][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2020.05.18-14.12.29:074][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2020.05.18-14.12.29:074][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2020.05.18-14.12.29:290][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Content/' took 0.11s
+[2020.05.18-14.12.29:543][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2020.05.18-14.12.29:543][  0]Cmd: MAP LOAD FILE="../../../../../../dev/NewInfinityBlade/Content/dev/Maps/StartRoom.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.05.18-14.12.29:544][  0]LightingResults: New page: 라이팅 빌드
+[2020.05.18-14.12.29:547][  0]MapCheck: New page: 맵 체크
+[2020.05.18-14.12.29:547][  0]LightingResults: New page: 라이팅 빌드
+[2020.05.18-14.12.29:554][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001994c9c12b0, Size=8
+[2020.05.18-14.12.29:554][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001994c831b58, Size=20
+[2020.05.18-14.12.29:707][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001993ce6b200, Size=816, Default__StartRoom_C Function /Game/dev/Maps/StartRoom.StartRoom_C:ExecuteUbergraph_StartRoom
+[2020.05.18-14.12.29:713][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001993ce6b200, Size=816
+[2020.05.18-14.12.29:713][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001993ce6b200, Size=816, Default__StartRoom_C Function /Engine/Transient.REINST_StartRoom_C_11:ExecuteUbergraph_StartRoom
+[2020.05.18-14.12.29:717][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001993ce6a400, Size=816, Default__StartRoom_C Function /Game/dev/Maps/StartRoom.StartRoom_C:ExecuteUbergraph_StartRoom
+[2020.05.18-14.12.29:982][  0]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.18-14.12.29:985][  0]LogMaterial: Warning: Material /Game/InfinityBladeGrassLands/Environments/Plains/Env_Plains_Flora/Materials/M_PLains_Fern01.M_PLains_Fern01 needed to have new flag set bUsedWithInstancedStaticMeshes !
+[2020.05.18-14.12.29:987][  0]LogMaterial: Missing cached shader map for material M_PLains_Fern01, compiling. 
+[2020.05.18-14.12.30:059][  0]MapCheck: Warning: M_PLains_Fern01 /Game/InfinityBladeGrassLands/Environments/Plains/Env_Plains_Flora/Materials/M_PLains_Fern01.M_PLains_Fern01 머티리얼이 bUsedWithInstancedStaticMeshes 사용 플래그에 빠져있었습니다. 머티리얼 애셋이 재저장되지 않은 경우, 에디터 밖에서 실행시 제대로 렌더링되지 않을 수 있습니다. 픽스
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 117
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 107
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 97
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 87
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 77
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 67
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 57
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 47
+[2020.05.18-14.12.30:395][  0]LogShaderCompilers: Display: Shaders left to compile 37
+[2020.05.18-14.12.30:399][  0]LogStreaming: Display: ULevelStreaming::RequestLevel(/Game/InfinityBladeGrassLands/Maps/ElvenRuins) is flushing async loading
+[2020.05.18-14.12.34:324][  0]LogShaderCompilers: Display: Shaders left to compile 27
+[2020.05.18-14.12.34:324][  0]LogShaderCompilers: Display: Shaders left to compile 17
+[2020.05.18-14.12.34:324][  0]LogShaderCompilers: Display: Shaders left to compile 7
+[2020.05.18-14.12.34:324][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [5.600400ms] /Game/InfinityBladeGrassLands/Environments/Earth/EX_EnvAssets/Meshes/SK_Env_Ice_Deco2_BlowingFlag.SK_Env_Ice_Deco2_BlowingFlag
+[2020.05.18-14.12.34:329][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [5.416100ms] /Game/InfinityBladeGrassLands/Environments/Earth/EX_EnvAssets/Meshes/SK_Env_Ice_Deco2_BlowingFlag3.SK_Env_Ice_Deco2_BlowingFlag3
+[2020.05.18-14.12.34:508][  0]LogStreaming: Display: ULevelStreaming::RequestLevel(/Game/InfinityBladeIceLands/Maps/FrozenCove) is flushing async loading
+[2020.05.18-14.12.35:480][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_MelancholicTroll01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.35:480][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.35:809][  0]LogPackageName: SearchForPackageOnDisk took   0.328s, but failed to resolve Env_Ice_Rocky.
+[2020.05.18-14.12.35:809][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_MelancholicTroll01" could not be resolved.
+[2020.05.18-14.12.35:811][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.35:812][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.36:057][  0]LogPackageName: SearchForPackageOnDisk took   0.245s, but failed to resolve Env_Ice_Rocky.
+[2020.05.18-14.12.36:057][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" could not be resolved.
+[2020.05.18-14.12.36:060][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.36:061][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.36:306][  0]LogPackageName: SearchForPackageOnDisk took   0.246s, but failed to resolve Env_Ice_Rocky.
+[2020.05.18-14.12.36:306][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_NordHeed01" could not be resolved.
+[2020.05.18-14.12.36:309][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Texture.Env_Ice_RockyStairs01" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.36:309][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.36:553][  0]LogPackageName: SearchForPackageOnDisk took   0.245s, but failed to resolve Env_Ice_Rocky.
+[2020.05.18-14.12.36:553][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Texture.Env_Ice_RockyStairs01" could not be resolved.
+[2020.05.18-14.12.36:556][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_RuinedSteps001" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.36:556][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.36:802][  0]LogPackageName: SearchForPackageOnDisk took   0.246s, but failed to resolve Env_Ice_Rocky.
+[2020.05.18-14.12.36:802][  0]LogPackageName: Warning: String asset reference "Env_Ice_Rocky.Mesh.Env_Ice_RuinedSteps001" could not be resolved.
+[2020.05.18-14.12.36:804][  0]LogPackageName: Warning: String asset reference "Env_Ice_RuinedWalls001" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.36:804][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.37:054][  0]LogPackageName: SearchForPackageOnDisk took   0.250s, but failed to resolve Env_Ice_RuinedWalls001.
+[2020.05.18-14.12.37:054][  0]LogPackageName: Warning: String asset reference "Env_Ice_RuinedWalls001" could not be resolved.
+[2020.05.18-14.12.37:121][  0]LogPackageName: Warning: String asset reference "Env_ALL_Artifacts.Mesh.Env_ALL_Terminus001" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.37:121][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.37:371][  0]LogPackageName: SearchForPackageOnDisk took   0.249s, but failed to resolve Env_ALL_Artifacts.
+[2020.05.18-14.12.37:371][  0]LogPackageName: Warning: String asset reference "Env_ALL_Artifacts.Mesh.Env_ALL_Terminus001" could not be resolved.
+[2020.05.18-14.12.37:372][  0]LogPackageName: Warning: String asset reference "S_ClothTarps_03.SM.Mesh.S_ClothTarps_03" is in short form, which is unsupported and -- even if valid -- resolving it will be really slow.
+[2020.05.18-14.12.37:373][  0]LogPackageName: Warning: Please consider resaving package in order to speed-up loading.
+[2020.05.18-14.12.37:617][  0]LogPackageName: SearchForPackageOnDisk took   0.244s, but failed to resolve S_ClothTarps_03.
+[2020.05.18-14.12.37:617][  0]LogPackageName: Warning: String asset reference "S_ClothTarps_03.SM.Mesh.S_ClothTarps_03" could not be resolved.
+[2020.05.18-14.12.39:813][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.965400ms] /Game/InfinityBladeIceLands/Environments/Ice/EX_EnvAssets/Meshes/SK_Env_Ice_Deco2_BlowingFlag3.SK_Env_Ice_Deco2_BlowingFlag3
+[2020.05.18-14.12.40:037][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.05.18-14.12.40:047][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001993ce6b200, Size=816
+[2020.05.18-14.12.40:049][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.05.18-14.12.40:424][  0]MapCheck: 맵 체크 완료: 오류 0 회, 경고 1 회, 소요 시간 374.792ms.
+[2020.05.18-14.12.40:447][  0]LogFileHelpers: Loading map 'StartRoom' took 10.905
+[2020.05.18-14.12.40:632][  0]LogCollectionManager: Loaded 0 collections in 0.002217 seconds
+[2020.05.18-14.12.40:680][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Saved/Collections/' took 0.01s
+[2020.05.18-14.12.40:680][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Content/Developers/pth08/Collections/' took 0.01s
+[2020.05.18-14.12.40:680][  0]LogFileCache: Scanning file cache for directory 'C:/dev/NewInfinityBlade/Content/Collections/' took 0.01s
+[2020.05.18-14.12.40:680][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2020.05.18-14.12.40:696][  0]LogContentBrowser: Native class hierarchy populated in 0.0157 seconds. Added 2499 classes and 567 folders.
+[2020.05.18-14.12.40:713][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0078 seconds. Added 0 classes and 0 folders.
+[2020.05.18-14.12.40:920][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0077 seconds. Added 0 classes and 0 folders.
+[2020.05.18-14.12.40:935][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0078 seconds. Added 1 classes and 2 folders.
+[2020.05.18-14.12.41:284][  0]LogSlate: Only BGRA pngs, bmps or icos are supported in by External Image Picker
+[2020.05.18-14.12.41:998][  0]LogSlate: Took 0.000305 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2020.05.18-14.12.42:001][  0]LogSlate: Took 0.002148 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothic.ttf' (4243K)
+[2020.05.18-14.12.42:003][  0]LogSlate: Took 0.001774 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothicBold.ttf' (4188K)
+[2020.05.18-14.12.42:004][  0]LogSlate: Took 0.000307 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2020.05.18-14.12.42:008][  0]LogSlate: Took 0.001063 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2020.05.18-14.12.42:168][  0]LogTemp: Executing iPhonePackager certificates Engine -bundlename com.YourCompany.InfinityBlade
+[2020.05.18-14.12.42:168][  0]LogTemp: CWD: C:\Program Files\Epic Games\UE_4.19\Engine\Binaries\DotNET\IOS
+[2020.05.18-14.12.42:168][  0]LogTemp: Initial Dir: C:\Program Files\Epic Games\UE_4.19
+[2020.05.18-14.12.42:168][  0]LogTemp: Env CWD: C:\Program Files\Epic Games\UE_4.19\Engine\Binaries\DotNET\IOS
+[2020.05.18-14.12.42:168][  0]LogTemp: BranchPath = DESKTOP-EO5RAPV/C/Program Files/Epic Games/UE_4.19/Engine/Binaries --- GameBranchPath = DESKTOP-EO5RAPV/C/Program Files/Epic Games/UE_4.19/Engine/Binaries
+[2020.05.18-14.12.42:168][  0]LogTemp: IPP ERROR: Could not find provision directory 'C:\Users\pth08\AppData\Local/Apple Computer/MobileDevice/Provisioning Profiles/'.
+[2020.05.18-14.12.42:168][  0]LogRenderer: Reallocating scene render targets to support 900x556 Format 10 NumSamples 1 (Frame:1).
+[2020.05.18-14.12.42:289][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0087 seconds. Added 0 classes and 0 folders.
+[2020.05.18-14.12.42:289][  0]LogLoad: (Engine Initialization) Total time: 25.30 seconds
+[2020.05.18-14.12.42:289][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2020.05.18-14.12.42:652][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2020.05.18-14.12.43:656][  3]LogSlate: Took 0.000235 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.05.18-14.12.44:314][  5]LogAssetRegistry: Asset discovery search completed in 20.9383 seconds
+[2020.05.18-14.12.44:325][  5]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2020.05.18-14.12.44:325][  5]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000123 seconds (updated 0 objects)
+[2020.05.18-14.13.06:968][331]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.13.07:142][345]LogContentBrowser: Native class hierarchy updated for 'SkeletonEditor' in 0.0097 seconds. Added 1 classes and 2 folders.
+[2020.05.18-14.13.07:317][345]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_3:PersistentLevel.Actor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.18-14.13.07:329][345]LogContentBrowser: Native class hierarchy updated for 'PinnedCommandList' in 0.0078 seconds. Added 1 classes and 0 folders.
+[2020.05.18-14.13.07:563][345]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_4:PersistentLevel.Actor_1.DebugSkelMeshComponent_1) Already registered. Aborting.
+[2020.05.18-14.13.07:784][345]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_5:PersistentLevel.Actor_2.DebugSkelMeshComponent_2) Already registered. Aborting.
+[2020.05.18-14.13.08:036][345]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_6:PersistentLevel.Actor_3.DebugSkelMeshComponent_3) Already registered. Aborting.
+[2020.05.18-14.13.08:410][345]LogContentBrowser: Native class hierarchy updated for 'Cascade' in 0.0079 seconds. Added 2 classes and 2 folders.
+[2020.05.18-14.13.08:774][345]LogSlate: Took 0.001828 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/../../Editor/Slate/Fonts/NanumGothic.ttf' (4243K)
+[2020.05.18-14.13.11:762][652]LogSlate: Window 'P_Trail' being destroyed
+[2020.05.18-14.13.11:768][652]LogCascade: Quitting Cascade. FXSystem=0x00000199D845EB60
+[2020.05.18-14.13.16:374][118]LogCascade: Quitting Cascade. FXSystem=0x00000199D0A4CCC0
+[2020.05.18-14.13.16:399][118]LogActorComponent: UnregisterComponent: (/Engine/Transient.FloorComponent) Not registered. Aborting.
+[2020.05.18-14.13.18:003][291]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.13.18:038][291]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.18-14.13.18:038][291]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.18-14.13.18:038][291]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.18-14.13.18:039][291]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.13.18:039][291]PIE: New page: PIE 세션: StartRoom (2020. 5. 19. 오전 8:13:18)
+[2020.05.18-14.13.18:039][291]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_StartRoom
+[2020.05.18-14.13.18:051][291]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012407s)
+[2020.05.18-14.13.18:052][291]LogAIModule: Creating AISystem for world StartRoom
+[2020.05.18-14.13.18:052][291]LogPlayLevel: PIE: World Init took: (0.000618s)
+[2020.05.18-14.13.18:052][291]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/StartRoom.StartRoom to /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom (0.013194s)
+[2020.05.18-14.13.18:142][291]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.13.18:163][291]LogInit: FAudioDevice initialized.
+[2020.05.18-14.13.18:208][291]LogLoad: Game class is 'IBGameMode'
+[2020.05.18-14.13.18:211][291]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_StartRoom.StartRoom up for play (max tick rate 0) at 2020.05.18-23.13.18
+[2020.05.18-14.13.18:211][291]LogWorld: Bringing up level for play took: 0.003190
+[2020.05.18-14.13.18:212][291]InfinityBlade: Warning: AIBPlayerController::SetupInputComponent(30)SetupInputComponent
+[2020.05.18-14.13.18:223][291]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0076 seconds. Added 11 classes and 0 folders.
+[2020.05.18-14.13.18:231][291]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.18-14.13.18:231][291]InfinityBlade: Warning: UIBHUDWidget::UpdateCharacterStat(54)SEBar 1.000000
+[2020.05.18-14.13.18:231][291]PIE: /Game/dev/Maps/UEDPIE_0_StartRoom 에 대한 에디터에서 플레이 시작 시간: 0.2
+[2020.05.18-14.13.18:232][291]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.18-14.13.18:232][291]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.18-14.13.18:232][291]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.18-14.13.18:314][294]LogSkeletalMesh: Skeletal Mesh found in DDC [0.697500ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Ram.SK_CharM_Ram
+[2020.05.18-14.13.22:359][779]LogLevel: ActivateLevel /Game/InfinityBladeGrassLands/Maps/UEDPIE_0_ElvenRuins 1 1 1
+[2020.05.18-14.13.35:267][302]InfinityBlade: Warning: AIBPlayerController::NPCKill(70)10
+[2020.05.18-14.13.35:267][302]InfinityBlade: Warning: AIBPlayerState::AddExp(78)AddExp : 20
+[2020.05.18-14.13.46:221][611]InfinityBlade: Warning: UIBAnimInstance::AnimNotify_FirstSkillStepStart(296)AnimNotify_FirstSkillStepStart
+[2020.05.18-14.13.47:796][798]InfinityBlade: Warning: AIBPlayerController::NPCKill(70)10
+[2020.05.18-14.13.47:796][798]InfinityBlade: Warning: AIBPlayerState::AddExp(78)AddExp : 0
+[2020.05.18-14.14.04:667][816]InfinityBlade: Warning: UIBAnimInstance::AnimNotify_FirstSkillStepStart(296)AnimNotify_FirstSkillStepStart
+[2020.05.18-14.14.09:943][447]InfinityBlade: Warning: UIBAnimInstance::AnimNotify_FirstSkillStepStart(296)AnimNotify_FirstSkillStepStart
+[2020.05.18-14.14.11:580][643]InfinityBlade: Warning: AIBPlayerController::NPCKill(70)10
+[2020.05.18-14.14.11:581][643]InfinityBlade: Warning: AIBPlayerState::AddExp(78)AddExp : 10
+[2020.05.18-14.14.21:033][774]InfinityBlade: Warning: UIBAnimInstance::AnimNotify_FirstSkillStepStart(296)AnimNotify_FirstSkillStepStart
+[2020.05.18-14.14.22:223][916]InfinityBlade: Warning: AIBPlayerController::NPCKill(70)10
+[2020.05.18-14.14.22:223][916]InfinityBlade: Warning: AIBPlayerState::AddExp(78)AddExp : 20
+[2020.05.18-14.14.31:691][ 50]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.18-14.14.31:691][ 50]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.18-14.14.31:691][ 50]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.18-14.14.31:732][ 50]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom' with GeneratedClass '/Game/dev/Maps/StartRoom.StartRoom_C' with ClassGeneratedBy '/Game/dev/Maps/StartRoom.StartRoom:PersistentLevel.StartRoom'
+[2020.05.18-14.14.31:732][ 50]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins' with GeneratedClass '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins_C' with ClassGeneratedBy '/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.ElvenRuins'
+[2020.05.18-14.14.31:732][ 50]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel' has LevelScriptBlueprint '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove' with GeneratedClass '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove_C' with ClassGeneratedBy '/Game/InfinityBladeIceLands/Maps/FrozenCove.FrozenCove:PersistentLevel.FrozenCove'
+[2020.05.18-14.14.31:757][ 50]LogActorComponent: ReregisterComponent: (/Game/InfinityBladeGrassLands/Maps/ElvenRuins.ElvenRuins:PersistentLevel.StartLevelWindStorm_Cue_2.AudioComponent0) Not currently registered. Aborting.
+[2020.05.18-14.17.22:975][363]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.17.25:602][654]LogUObjectGlobals: Created PersistentFrame Addr=0x00000199c81609f8, Size=4, Default__CrowAnim_C Function /Game/Book/Animations/Animal/CrowAnim.CrowAnim_C:ExecuteUbergraph_CrowAnim
+[2020.05.18-14.17.25:604][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000199c81609f8, Size=4
+[2020.05.18-14.17.25:604][654]LogUObjectGlobals: Created PersistentFrame Addr=0x00000199c81609f8, Size=4, Default__CrowAnim_C Function /Engine/Transient.REINST_CrowAnim_C_2:ExecuteUbergraph_CrowAnim
+[2020.05.18-14.17.25:605][654]LogUObjectGlobals: Created PersistentFrame Addr=0x00000199c8160c10, Size=4, Default__CrowAnim_C Function /Game/Book/Animations/Animal/CrowAnim.CrowAnim_C:ExecuteUbergraph_CrowAnim
+[2020.05.18-14.17.25:672][654]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019906ac3b00, Size=560, Default__SK_Crow_Blueprint2_C Function /Game/Book/Animations/Animal/SK_Crow_Blueprint2.SK_Crow_Blueprint2_C:ExecuteUbergraph_SK_Crow_Blueprint2
+[2020.05.18-14.17.25:675][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019906ac3b00, Size=560
+[2020.05.18-14.17.25:675][654]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019906ac3b00, Size=560, Default__SK_Crow_Blueprint2_C Function /Engine/Transient.REINST_SK_Crow_Blueprint2_C_16:ExecuteUbergraph_SK_Crow_Blueprint2
+[2020.05.18-14.17.25:682][654]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019906b26980, Size=560, Default__SK_Crow_Blueprint2_C Function /Game/Book/Animations/Animal/SK_Crow_Blueprint2.SK_Crow_Blueprint2_C:ExecuteUbergraph_SK_Crow_Blueprint2
+[2020.05.18-14.17.25:706][654]LogUObjectGlobals: Created PersistentFrame Addr=0x000001997ab08c00, Size=32, Default__UI_Title_C Function /Game/Book/UI/UI_Title.UI_Title_C:ExecuteUbergraph_UI_Title
+[2020.05.18-14.17.25:715][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001997ab08c00, Size=32
+[2020.05.18-14.17.25:715][654]LogUObjectGlobals: Created PersistentFrame Addr=0x000001997ab08c00, Size=32, Default__UI_Title_C Function /Engine/Transient.REINST_UI_Title_C_4:ExecuteUbergraph_UI_Title
+[2020.05.18-14.17.25:717][654]LogUObjectGlobals: Created PersistentFrame Addr=0x000001997ab0bd80, Size=32, Default__UI_Title_C Function /Game/Book/UI/UI_Title.UI_Title_C:ExecuteUbergraph_UI_Title
+[2020.05.18-14.17.25:747][654]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Elven_Harmonies' 파일을 찾을 수 없습니다.
+[2020.05.18-14.17.25:747][654]LogLinker: Warning: ../../../../../../dev/NewInfinityBlade/Content/dev/Sound/BGM/TitleLevelElvenHarmonies.uasset 로드중 '/Game/FantasyOrchestral/audio/Elven_Harmonies' 애셋에 대한 파일을 찾을 수 없습니다.
+[2020.05.18-14.17.25:747][654]LoadErrors: Error: /Game/dev/Sound/BGM/TitleLevelElvenHarmonies : 애셋에 대한 파일을 찾을 수 없습니다. /Game/FantasyOrchestral/audio/Elven_Harmonies
+[2020.05.18-14.17.25:748][654]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Elven_Harmonies' 파일을 찾을 수 없습니다.
+[2020.05.18-14.17.25:748][654]LogLinker: Warning: ../../../../../../dev/NewInfinityBlade/Content/dev/Sound/BGM/TitleLevelElvenHarmonies.uasset 로드중 '/Game/FantasyOrchestral/audio/Elven_Harmonies' 애셋에 대한 파일을 찾을 수 없습니다.
+[2020.05.18-14.17.25:811][654]LogUObjectGlobals: Created PersistentFrame Addr=0x00000199616ff6a0, Size=48, Default__Title_C Function /Game/dev/Maps/Title.Title_C:ExecuteUbergraph_Title
+[2020.05.18-14.17.25:815][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000199616ff6a0, Size=48
+[2020.05.18-14.17.25:815][654]LogUObjectGlobals: Created PersistentFrame Addr=0x00000199616ff8b0, Size=48, Default__Title_C Function /Engine/Transient.REINST_Title_C_21:ExecuteUbergraph_Title
+[2020.05.18-14.17.25:816][654]LogUObjectGlobals: Created PersistentFrame Addr=0x00000199616fc130, Size=48, Default__Title_C Function /Game/dev/Maps/Title.Title_C:ExecuteUbergraph_Title
+[2020.05.18-14.17.25:898][654]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Elven_Harmonies' 파일을 찾을 수 없습니다.
+[2020.05.18-14.17.25:898][654]LoadErrors: 로드에 실패했습니다. /Game/FantasyOrchestral/audio/Elven_Harmonies.Elven_Harmonies 레퍼런싱한 것: SoundNodeWavePlayer_0
+[2020.05.18-14.17.25:898][654]LogLinker: Warning: NULL 로드중 '/Game/FantasyOrchestral/audio/Elven_Harmonies' 애셋에 대한 파일을 찾을 수 없습니다.
+[2020.05.18-14.17.26:004][654]LogSkeletalMesh: Skeletal Mesh found in DDC [4.054800ms] /Game/AnimalVarietyPack/Crow/Meshes/SK_Crow.SK_Crow
+[2020.05.18-14.17.26:013][654]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Elven_Harmonies' 파일을 찾을 수 없습니다.
+[2020.05.18-14.17.26:013][654]LogUObjectGlobals: Warning: 'Object /Game/FantasyOrchestral/audio/Elven_Harmonies.Elven_Harmonies' 오브젝트를 찾는 데 실패했습니다.
+[2020.05.18-14.17.26:105][654]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.17.26:184][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000199616ff8b0, Size=48
+[2020.05.18-14.17.26:184][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001997ab08c00, Size=32
+[2020.05.18-14.17.26:184][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019906ac3b00, Size=560
+[2020.05.18-14.17.26:184][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000199c81609f8, Size=4
+[2020.05.18-14.17.26:186][654]Cmd: MAP LOAD FILE="../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Title.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.05.18-14.17.26:186][654]LightingResults: New page: 라이팅 빌드
+[2020.05.18-14.17.26:187][654]LoadErrors: New page: 맵 로드중: Title.umap
+[2020.05.18-14.17.26:192][654]MapCheck: New page: 맵 체크
+[2020.05.18-14.17.26:193][654]LightingResults: New page: 라이팅 빌드
+[2020.05.18-14.17.26:212][654]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001993ce6a400, Size=816
+[2020.05.18-14.17.34:821][654]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.05.18-14.17.34:875][654]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.05.18-14.17.35:276][654]MapCheck: 맵 체크 완료: 오류 0 회, 경고 0 회, 소요 시간 401.28ms.
+[2020.05.18-14.17.35:288][654]LogFileHelpers: Loading map 'Title' took 9.104
+[2020.05.18-14.17.51:706][582]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.17.59:475][429]LogSlate: Took 0.000449 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.05.18-14.18.16:103][905]LogStaticMesh: SM_Plains_Angel_Statue_01 스태틱 메시 빌드중...
+[2020.05.18-14.18.16:140][905]LogStaticMesh: Built static mesh [0.04s] /Game/InfinityBladeGrassLands/Environments/Plains/Env_Plains_Statues/StaticMesh/SM_Plains_Angel_Statue_01.SM_Plains_Angel_Statue_01
+[2020.05.18-14.18.18:598][ 94]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.18.18:875][111]LogActorFactory: Actor Factory created SM_Plains_Angel_Statue_01
+[2020.05.18-14.18.19:793][161]LogActorFactory: Actor Factory created SM_Plains_Angel_Statue_01
+[2020.05.18-14.18.34:125][219]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.18.51:976][523]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Env_Plains_Mountain_01)
+[2020.05.18-14.18.54:098][667]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.19.03:317][356]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Sky)
+[2020.05.18-14.19.07:370][625]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.19.30:524][291]LogEditorViewport: Clicking on Actor (context menu): StaticMeshActor (SM_WaterPlain)
+[2020.05.18-14.19.30:581][291]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.18-14.19.31:451][336]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_WaterPlain)
+[2020.05.18-14.19.33:472][472]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.19.49:281][652]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Plains_Angel_Statue_01)
+[2020.05.18-14.19.49:428][658]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2020.05.18-14.19.52:220][842]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.20.22:248][ 51]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Plains_Angel_Statue_01)
+[2020.05.18-14.20.29:333][564]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.20.53:759][369]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape1)
+[2020.05.18-14.20.56:894][595]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.21.04:859][130]InfinityBlade: Error: UIB_E_GS_StatComponent::SetNewLevel(47)ASSERTION : 'nullptr != IBGameInstance'
+[2020.05.18-14.21.04:889][131]InfinityBlade: Error: UIBCharacterStatComponent::SetNewLevel(37)ASSERTION : 'nullptr != IBGameInstance'
+[2020.05.18-14.21.29:504][867]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight)
+[2020.05.18-14.21.32:529][ 88]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape1)
+[2020.05.18-14.21.33:877][186]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight)
+[2020.05.18-14.21.38:001][486]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.21.43:922][904]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.21.45:966][ 40]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Plains_Angel_Statue_01)
+[2020.05.18-14.21.47:055][116]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.21.51:302][417]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape1)
+[2020.05.18-14.21.51:991][463]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Plains_Angel_Statue_01)
+[2020.05.18-14.21.54:745][662]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.22.13:097][961]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape1)
+[2020.05.18-14.22.13:790][  7]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Plains_Grass01)
+[2020.05.18-14.22.18:086][321]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Plains_Fern03)
+[2020.05.18-14.22.21:830][596]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Plains_Angel_Statue_01)
+[2020.05.18-14.22.22:449][639]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.22.24:519][782]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight)
+[2020.05.18-14.22.47:134][435]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.22.56:098][ 80]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.23.07:030][824]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.23.10:636][ 63]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.23.12:369][177]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.23.12:993][214]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.23.18:099][560]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.23.44:169][464]LogEditorViewport: Clicking on Actor (LMB): SK_Crow_Blueprint2_C (SK_Crow_Blueprint2)
+[2020.05.18-14.23.49:635][826]LogEditorViewport: Clicking on Actor (LMB): CameraActor (CameraActor)
+[2020.05.18-14.23.51:475][945]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.23.51:586][953]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.23.51:623][953]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.23.51:623][953]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.23.51:623][953]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:23:51)
+[2020.05.18-14.23.51:623][953]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.23.51:726][953]LogPlayLevel: PIE: StaticDuplicateObject took: (0.102573s)
+[2020.05.18-14.23.51:726][953]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.23.51:727][953]LogPlayLevel: PIE: World Init took: (0.000698s)
+[2020.05.18-14.23.51:727][953]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.103433s)
+[2020.05.18-14.23.51:829][953]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.23.51:851][953]LogInit: FAudioDevice initialized.
+[2020.05.18-14.23.51:878][953]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.23.51:899][953]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.23.51
+[2020.05.18-14.23.51:899][953]LogWorld: Bringing up level for play took: 0.020745
+[2020.05.18-14.23.51:910][953]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: -0.121
+[2020.05.18-14.23.51:910][953]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.24.00:049][669]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.24.00:086][669]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.27.34:645][604]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/dev/Maps/Title" FILE="../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/Title_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2020.05.18-14.27.34:677][604]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000199616fc130, Size=48
+[2020.05.18-14.27.34:677][604]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019952b364a0, Size=48, Default__Title_C Function /Engine/Transient.REINST_Title_C_25:ExecuteUbergraph_Title
+[2020.05.18-14.27.34:678][604]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019952b37610, Size=48, Default__Title_C Function /Game/dev/Maps/Title.Title_C:ExecuteUbergraph_Title
+[2020.05.18-14.27.36:443][604]LogSavePackage: Save=1771.90ms
+[2020.05.18-14.27.36:443][604]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/Title_Auto13F1CE724447E5F722EA9BE9BA8C706B9.tmp' to '../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/Title_Auto1.umap'
+[2020.05.18-14.27.36:446][604]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Saved/Autosaves/Game/dev/Maps/Title_Auto1.umap
+[2020.05.18-14.27.36:453][604]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/dev/Maps/Title' took 1.820
+[2020.05.18-14.27.36:453][604]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 1.820
+[2020.05.18-14.31.47:445][599]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.31.47:583][611]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.31.47:618][611]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.31.47:618][611]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.31.47:618][611]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:31:47)
+[2020.05.18-14.31.47:619][611]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.31.47:716][611]LogPlayLevel: PIE: StaticDuplicateObject took: (0.097839s)
+[2020.05.18-14.31.47:717][611]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.31.47:717][611]LogPlayLevel: PIE: World Init took: (0.000749s)
+[2020.05.18-14.31.47:717][611]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.098750s)
+[2020.05.18-14.31.47:725][611]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019952b364a0, Size=48
+[2020.05.18-14.31.47:795][611]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.31.47:817][611]LogInit: FAudioDevice initialized.
+[2020.05.18-14.31.47:846][611]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.31.47:866][611]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.31.47
+[2020.05.18-14.31.47:866][611]LogWorld: Bringing up level for play took: 0.020268
+[2020.05.18-14.31.47:869][611]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: -0.162
+[2020.05.18-14.31.47:869][611]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.31.51:250][914]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.31.51:288][914]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.31.57:701][454]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.31.57:829][465]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.31.57:863][465]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.31.57:863][465]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.31.57:864][465]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:31:57)
+[2020.05.18-14.31.57:864][465]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.31.57:963][465]LogPlayLevel: PIE: StaticDuplicateObject took: (0.099691s)
+[2020.05.18-14.31.57:964][465]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.31.57:964][465]LogPlayLevel: PIE: World Init took: (0.000594s)
+[2020.05.18-14.31.57:964][465]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.100451s)
+[2020.05.18-14.31.58:042][465]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.31.58:063][465]LogInit: FAudioDevice initialized.
+[2020.05.18-14.31.58:091][465]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.31.58:113][465]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.31.58
+[2020.05.18-14.31.58:114][465]LogWorld: Bringing up level for play took: 0.022313
+[2020.05.18-14.31.58:116][465]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: 0.085
+[2020.05.18-14.31.58:116][465]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.32.04:267][  0]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.32.04:302][  0]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.32.17:378][964]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0074 seconds. Added 116 classes and 0 folders.
+[2020.05.18-14.32.17:660][964]LogUObjectGlobals: Created PersistentFrame Addr=0x000001998b6c2f98, Size=4, Default__SKEL_PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.SKEL_PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
+[2020.05.18-14.32.17:661][964]LogUObjectGlobals: Created PersistentFrame Addr=0x000001998b6c2f60, Size=4, Default__PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
+[2020.05.18-14.32.18:054][964]LogSlate: Took 0.003720 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.05.18-14.32.19:711][126]LogSlate: Took 0.008300 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2020.05.18-14.32.41:176][987]PIE: '/Engine/Transient.TextBlock_636' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:180][987]PIE: '/Engine/Transient.TextBlock_1' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:182][987]PIE: '/Engine/Transient.TextBlock_3' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:194][988]PIE: '/Engine/Transient.TextBlock_5' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:197][988]PIE: '/Engine/Transient.TextBlock_7' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:207][989]PIE: '/Engine/Transient.TextBlock_9' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:209][989]PIE: '/Engine/Transient.TextBlock_11' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:212][989]PIE: '/Engine/Transient.TextBlock_13' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:222][990]PIE: '/Engine/Transient.TextBlock_15' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:224][990]PIE: '/Engine/Transient.TextBlock_17' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:227][990]PIE: '/Engine/Transient.TextBlock_19' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:237][991]PIE: '/Engine/Transient.TextBlock_21' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:240][991]PIE: '/Engine/Transient.TextBlock_23' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:251][992]PIE: '/Engine/Transient.TextBlock_25' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:255][992]PIE: '/Engine/Transient.TextBlock_27' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:265][993]PIE: '/Engine/Transient.TextBlock_29' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:269][993]PIE: '/Engine/Transient.TextBlock_31' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:279][994]PIE: '/Engine/Transient.TextBlock_33' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:282][994]PIE: '/Engine/Transient.TextBlock_35' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:285][994]PIE: '/Engine/Transient.TextBlock_37' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:295][995]PIE: '/Engine/Transient.TextBlock_39' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:298][995]PIE: '/Engine/Transient.TextBlock_41' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:300][995]PIE: '/Engine/Transient.TextBlock_43' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:311][996]PIE: '/Engine/Transient.TextBlock_45' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:313][996]PIE: '/Engine/Transient.TextBlock_47' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:316][996]PIE: '/Engine/Transient.TextBlock_49' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:327][997]PIE: '/Engine/Transient.TextBlock_51' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:337][998]PIE: '/Engine/Transient.TextBlock_53' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:340][998]PIE: '/Engine/Transient.TextBlock_55' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:350][999]PIE: '/Engine/Transient.TextBlock_57' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:354][999]PIE: '/Engine/Transient.TextBlock_59' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:363][  0]PIE: '/Engine/Transient.TextBlock_61' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:367][  0]PIE: '/Engine/Transient.TextBlock_63' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:378][  1]PIE: '/Engine/Transient.TextBlock_65' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:389][  2]PIE: '/Engine/Transient.TextBlock_67' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:400][  3]PIE: '/Engine/Transient.TextBlock_69' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:411][  4]PIE: '/Engine/Transient.TextBlock_71' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:422][  5]PIE: '/Engine/Transient.TextBlock_73' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:434][  6]PIE: '/Engine/Transient.TextBlock_75' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:445][  7]PIE: '/Engine/Transient.TextBlock_77' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:448][  7]PIE: '/Engine/Transient.TextBlock_79' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:461][  8]PIE: '/Engine/Transient.TextBlock_81' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:471][  9]PIE: '/Engine/Transient.TextBlock_83' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:474][  9]PIE: '/Engine/Transient.TextBlock_85' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:484][ 10]PIE: '/Engine/Transient.TextBlock_87' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:487][ 10]PIE: '/Engine/Transient.TextBlock_89' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:498][ 11]PIE: '/Engine/Transient.TextBlock_91' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:509][ 12]PIE: '/Engine/Transient.TextBlock_93' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:520][ 13]PIE: '/Engine/Transient.TextBlock_95' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:531][ 14]PIE: '/Engine/Transient.TextBlock_97' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:542][ 15]PIE: '/Engine/Transient.TextBlock_99' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:553][ 16]PIE: '/Engine/Transient.TextBlock_101' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:564][ 17]PIE: '/Engine/Transient.TextBlock_103' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:575][ 18]PIE: '/Engine/Transient.TextBlock_105' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:586][ 19]PIE: '/Engine/Transient.TextBlock_107' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:597][ 20]PIE: '/Engine/Transient.TextBlock_109' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:608][ 21]PIE: '/Engine/Transient.TextBlock_111' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:619][ 22]PIE: '/Engine/Transient.TextBlock_113' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:630][ 23]PIE: '/Engine/Transient.TextBlock_115' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:641][ 24]PIE: '/Engine/Transient.TextBlock_117' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:651][ 25]PIE: '/Engine/Transient.TextBlock_119' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:662][ 26]PIE: '/Engine/Transient.TextBlock_121' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:673][ 27]PIE: '/Engine/Transient.TextBlock_123' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:684][ 28]PIE: '/Engine/Transient.TextBlock_125' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:695][ 29]PIE: '/Engine/Transient.TextBlock_127' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:706][ 30]PIE: '/Engine/Transient.TextBlock_129' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:717][ 31]PIE: '/Engine/Transient.TextBlock_131' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:728][ 32]PIE: '/Engine/Transient.TextBlock_133' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:739][ 33]PIE: '/Engine/Transient.TextBlock_135' 에서 호출된 UWidget::RemoveFromParent() 에 UMG 부모가 없습니다 (TakeWidget() 을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent() 를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2020.05.18-14.32.41:753][ 34]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a24039098, Size=4, Default__SKEL_UI_Title_C Function /Game/Book/UI/UI_Title.SKEL_UI_Title_C:ExecuteUbergraph_UI_Title
+[2020.05.18-14.32.42:208][ 69]LogEditorTransaction: Undo 위젯 이동
+[2020.05.18-14.32.42:208][ 69]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a24039098, Size=4
+[2020.05.18-14.32.42:208][ 69]LogUObjectGlobals: Created PersistentFrame Addr=0x00000199643632f8, Size=4, Default__SKEL_UI_Title_C Function /Engine/Transient.REINST_SKEL_UI_Title_C_6:ExecuteUbergraph_UI_Title
+[2020.05.18-14.32.42:210][ 69]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019964363270, Size=4, Default__SKEL_UI_Title_C Function /Game/Book/UI/UI_Title.SKEL_UI_Title_C:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.12:870][673]BlueprintLog: New page: UI_Title 컴파일
+[2020.05.18-14.33.12:874][673]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019964363270, Size=4
+[2020.05.18-14.33.12:874][673]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a2403bf40, Size=4, Default__SKEL_UI_Title_C Function /Engine/Transient.REINST_SKEL_UI_Title_C_7:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.12:878][673]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001997ab0bd80, Size=32
+[2020.05.18-14.33.12:878][673]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a2806ec60, Size=32, Default__UI_Title_C Function /Engine/Transient.REINST_UI_Title_C_8:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.12:880][673]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a2806c0a0, Size=32, Default__UI_Title_C Function /Game/Book/UI/UI_Title.UI_Title_C:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.12:898][673]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000199643632f8, Size=4
+[2020.05.18-14.33.12:898][673]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a2403bf40, Size=4
+[2020.05.18-14.33.13:492][709]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Book/UI/UI_Title" FILE="../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset" SILENT=true
+[2020.05.18-14.33.13:550][709]LogSavePackage: Save=39.36ms
+[2020.05.18-14.33.13:551][709]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/UI_Title150267D1473F499694FAFF9B9C426308.tmp' to '../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset'
+[2020.05.18-14.33.13:556][709]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset
+[2020.05.18-14.33.15:087][821]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.33.15:124][821]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.15:124][821]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.33.15:125][821]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:33:15)
+[2020.05.18-14.33.15:125][821]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.33.15:219][821]LogPlayLevel: PIE: StaticDuplicateObject took: (0.093932s)
+[2020.05.18-14.33.15:219][821]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.33.15:219][821]LogPlayLevel: PIE: World Init took: (0.000655s)
+[2020.05.18-14.33.15:219][821]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.094754s)
+[2020.05.18-14.33.15:303][821]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.33.15:324][821]LogInit: FAudioDevice initialized.
+[2020.05.18-14.33.15:351][821]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.33.15:373][821]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.33.15
+[2020.05.18-14.33.15:373][821]LogWorld: Bringing up level for play took: 0.021980
+[2020.05.18-14.33.15:376][821]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: -0.655
+[2020.05.18-14.33.15:376][821]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.17:554][  8]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.17:596][  8]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.30:801][ 99]BlueprintLog: New page: UI_Title 컴파일
+[2020.05.18-14.33.30:809][ 99]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a2806c0a0, Size=32
+[2020.05.18-14.33.30:809][ 99]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a27f6b300, Size=32, UI_Title_C_11 Function /Engine/Transient.REINST_UI_Title_C_10:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.30:811][ 99]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a29397280, Size=32, Default__UI_Title_C Function /Game/Book/UI/UI_Title.UI_Title_C:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.31:346][132]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Book/UI/UI_Title" FILE="../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset" SILENT=true
+[2020.05.18-14.33.31:394][132]LogSavePackage: Save=35.89ms
+[2020.05.18-14.33.31:394][132]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/UI_Title3520D22E4ED06687F6BE08B616DCD094.tmp' to '../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset'
+[2020.05.18-14.33.31:399][132]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset
+[2020.05.18-14.33.32:895][240]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.33.32:932][240]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.32:932][240]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.33.32:933][240]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:33:32)
+[2020.05.18-14.33.32:933][240]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.33.33:027][240]LogPlayLevel: PIE: StaticDuplicateObject took: (0.093616s)
+[2020.05.18-14.33.33:027][240]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.33.33:027][240]LogPlayLevel: PIE: World Init took: (0.000610s)
+[2020.05.18-14.33.33:028][240]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.094401s)
+[2020.05.18-14.33.33:111][240]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.33.33:132][240]LogInit: FAudioDevice initialized.
+[2020.05.18-14.33.33:163][240]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.33.33:184][240]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.33.33
+[2020.05.18-14.33.33:185][240]LogWorld: Bringing up level for play took: 0.021654
+[2020.05.18-14.33.33:188][240]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: 1.157
+[2020.05.18-14.33.33:188][240]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.35:456][435]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.35:494][435]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.33.50:425][693]LogSlate: Window '색 선택기' being destroyed
+[2020.05.18-14.33.53:998][980]LogSlate: Window '색 선택기' being destroyed
+[2020.05.18-14.33.57:393][252]LogSlate: Window '색 선택기' being destroyed
+[2020.05.18-14.33.58:489][342]BlueprintLog: New page: UI_Title 컴파일
+[2020.05.18-14.33.58:497][342]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a29397280, Size=32
+[2020.05.18-14.33.58:497][342]LogUObjectGlobals: Created PersistentFrame Addr=0x000001996163ebc0, Size=32, UI_Title_C_16 Function /Engine/Transient.REINST_UI_Title_C_12:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.58:499][342]LogUObjectGlobals: Created PersistentFrame Addr=0x000001996163c4e0, Size=32, Default__UI_Title_C Function /Game/Book/UI/UI_Title.UI_Title_C:ExecuteUbergraph_UI_Title
+[2020.05.18-14.33.58:966][372]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Book/UI/UI_Title" FILE="../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset" SILENT=true
+[2020.05.18-14.33.59:016][372]LogSavePackage: Save=38.02ms
+[2020.05.18-14.33.59:016][372]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/UI_Title1B2FAF81407AA8B093B5BBA2A55C71E0.tmp' to '../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset'
+[2020.05.18-14.33.59:022][372]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Content/Book/UI/UI_Title.uasset
+[2020.05.18-14.34.00:380][466]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.34.00:417][466]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.00:417][466]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.34.00:417][466]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:34:00)
+[2020.05.18-14.34.00:417][466]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.34.00:510][466]LogPlayLevel: PIE: StaticDuplicateObject took: (0.093021s)
+[2020.05.18-14.34.00:511][466]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.34.00:511][466]LogPlayLevel: PIE: World Init took: (0.000631s)
+[2020.05.18-14.34.00:511][466]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.093816s)
+[2020.05.18-14.34.00:595][466]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.34.00:618][466]LogInit: FAudioDevice initialized.
+[2020.05.18-14.34.00:650][466]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.34.00:670][466]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.34.00
+[2020.05.18-14.34.00:671][466]LogWorld: Bringing up level for play took: 0.020298
+[2020.05.18-14.34.00:673][466]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: 0.642
+[2020.05.18-14.34.00:674][466]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.11:752][427]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.11:794][427]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.13:287][539]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.34.13:325][539]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.13:325][539]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.34.13:325][539]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:34:13)
+[2020.05.18-14.34.13:325][539]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.34.13:424][539]LogPlayLevel: PIE: StaticDuplicateObject took: (0.098604s)
+[2020.05.18-14.34.13:424][539]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.34.13:424][539]LogPlayLevel: PIE: World Init took: (0.000606s)
+[2020.05.18-14.34.13:424][539]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.099377s)
+[2020.05.18-14.34.13:507][539]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.34.13:528][539]LogInit: FAudioDevice initialized.
+[2020.05.18-14.34.13:559][539]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.34.13:581][539]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.34.13
+[2020.05.18-14.34.13:582][539]LogWorld: Bringing up level for play took: 0.022379
+[2020.05.18-14.34.13:584][539]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: -0.447
+[2020.05.18-14.34.13:584][539]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.24:216][438]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.24:259][438]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.28:476][776]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (SM_Sky)
+[2020.05.18-14.34.28:878][799]LogRenderer: Reallocating scene render targets to support 1156x680 Format 10 NumSamples 1 (Frame:37206).
+[2020.05.18-14.34.28:926][800]LogRenderer: Reallocating scene render targets to support 1688x932 Format 10 NumSamples 1 (Frame:37208).
+[2020.05.18-14.34.29:017][801]LogRenderer: Reallocating scene render targets to support 1920x1040 Format 10 NumSamples 1 (Frame:37211).
+[2020.05.18-14.34.29:017][801]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.18-14.34.43:138][197]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.34.43:177][197]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.43:177][197]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.34.43:177][197]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:34:43)
+[2020.05.18-14.34.43:178][197]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.34.43:274][197]LogPlayLevel: PIE: StaticDuplicateObject took: (0.096583s)
+[2020.05.18-14.34.43:275][197]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.34.43:275][197]LogPlayLevel: PIE: World Init took: (0.000642s)
+[2020.05.18-14.34.43:275][197]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.097403s)
+[2020.05.18-14.34.43:361][197]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.34.43:386][197]LogInit: FAudioDevice initialized.
+[2020.05.18-14.34.43:386][197]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.18-14.34.43:415][197]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.34.43:441][197]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.34.43
+[2020.05.18-14.34.43:442][197]LogWorld: Bringing up level for play took: 0.025056
+[2020.05.18-14.34.43:444][197]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: -0.587
+[2020.05.18-14.34.43:445][197]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.45:325][409]LogNet: Browse: /Game/dev/Maps/Select
+[2020.05.18-14.34.45:325][409]LogLoad: LoadMap: /Game/dev/Maps/Select
+[2020.05.18-14.34.45:466][409]LogUObjectGlobals: Created PersistentFrame Addr=0x000001995bbf3200, Size=1264, Default__UI_Select_C Function /Game/Book/UI/UI_Select.UI_Select_C:ExecuteUbergraph_UI_Select
+[2020.05.18-14.34.45:478][409]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001995bbf3200, Size=1264
+[2020.05.18-14.34.45:478][409]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a1586f200, Size=1264, Default__UI_Select_C Function /Engine/Transient.REINST_UI_Select_C_15:ExecuteUbergraph_UI_Select
+[2020.05.18-14.34.45:489][409]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019953681600, Size=1264, Default__UI_Select_C Function /Game/Book/UI/UI_Select.UI_Select_C:ExecuteUbergraph_UI_Select
+[2020.05.18-14.34.45:514][409]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Magical_Fantasy' 파일을 찾을 수 없습니다.
+[2020.05.18-14.34.45:514][409]LogLinker: Warning: ../../../../../../dev/NewInfinityBlade/Content/dev/Sound/BGM/SelectLevelMagicalFantasy.uasset 로드중 '/Game/FantasyOrchestral/audio/Magical_Fantasy' 애셋에 대한 파일을 찾을 수 없습니다.
+[2020.05.18-14.34.45:514][409]LoadErrors: Error: /Game/dev/Sound/BGM/SelectLevelMagicalFantasy : 애셋에 대한 파일을 찾을 수 없습니다. /Game/FantasyOrchestral/audio/Magical_Fantasy
+[2020.05.18-14.34.45:515][409]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Magical_Fantasy' 파일을 찾을 수 없습니다.
+[2020.05.18-14.34.45:515][409]LogLinker: Warning: ../../../../../../dev/NewInfinityBlade/Content/dev/Sound/BGM/SelectLevelMagicalFantasy.uasset 로드중 '/Game/FantasyOrchestral/audio/Magical_Fantasy' 애셋에 대한 파일을 찾을 수 없습니다.
+[2020.05.18-14.34.45:570][409]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019913b56530, Size=16, Default__Select_C Function /Game/dev/Maps/Select.Select_C:ExecuteUbergraph_Select
+[2020.05.18-14.34.45:571][409]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019913b56530, Size=16
+[2020.05.18-14.34.45:571][409]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019913b56530, Size=16, Default__Select_C Function /Engine/Transient.REINST_Select_C_52:ExecuteUbergraph_Select
+[2020.05.18-14.34.45:571][409]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019913b57c80, Size=16, Default__Select_C Function /Game/dev/Maps/Select.Select_C:ExecuteUbergraph_Select
+[2020.05.18-14.34.45:596][409]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Magical_Fantasy' 파일을 찾을 수 없습니다.
+[2020.05.18-14.34.45:596][409]LoadErrors: 로드에 실패했습니다. /Game/FantasyOrchestral/audio/Magical_Fantasy.Magical_Fantasy 레퍼런싱한 것: SoundNodeWavePlayer_7
+[2020.05.18-14.34.45:596][409]LogLinker: Warning: NULL 로드중 '/Game/FantasyOrchestral/audio/Magical_Fantasy' 애셋에 대한 파일을 찾을 수 없습니다.
+[2020.05.18-14.34.45:679][409]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Guarding_Idle_2.Sword1h_Guarding_Idle_2
+[2020.05.18-14.34.45:679][409]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Guarding_Idle_2.Sword1h_Guarding_Idle_2) using current/default (AnimCompress_BitwiseCompressOnly_222) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.34.45:691][409]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Guarding_Idle_1.Sword1h_Guarding_Idle_1
+[2020.05.18-14.34.45:691][409]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Guarding_Idle_1.Sword1h_Guarding_Idle_1) using current/default (AnimCompress_BitwiseCompressOnly_219) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.34.45:720][409]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Relaxed_Idle.Sword1h_Relaxed_Idle
+[2020.05.18-14.34.45:720][409]LogAnimationCompression: Recompressing (AnimSequence /Game/Book/Animations/Sword_Anim/Sword1h_Relaxed_Idle.Sword1h_Relaxed_Idle) using current/default (AnimCompress_BitwiseCompressOnly_341) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.18-14.34.45:744][409]LogLinker: Warning: '/Game/FantasyOrchestral/audio/Magical_Fantasy' 파일을 찾을 수 없습니다.
+[2020.05.18-14.34.45:744][409]LogUObjectGlobals: Warning: 'Object /Game/FantasyOrchestral/audio/Magical_Fantasy.Magical_Fantasy' 오브젝트를 찾는 데 실패했습니다.
+[2020.05.18-14.34.45:765][409]LogSkeletalMesh: Skeletal Mesh found in DDC [3.732900ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Barbarous.SK_CharM_Barbarous
+[2020.05.18-14.34.49:015][409]LogAIModule: Creating AISystem for world Select
+[2020.05.18-14.34.49:015][409]LogLoad: Game class is 'BP_SelectGameMode_C'
+[2020.05.18-14.34.49:016][409]LogMaterial: Warning: Material /Game/InfinityBladeGrassLands/Environments/Earth/Materials/M_TreeBark.M_TreeBark missing bUsedWithInstancedStaticMeshes=True! Default Material will be used in game.
+[2020.05.18-14.34.49:016][409]LogMaterial: Warning:      The material will recompile every editor launch until resaved.
+[2020.05.18-14.34.49:016][409]LogMaterial: Warning: Material /Game/InfinityBladeGrassLands/Environments/Earth/Materials/M_Cherry_Tree.M_Cherry_Tree missing bUsedWithInstancedStaticMeshes=True! Default Material will be used in game.
+[2020.05.18-14.34.49:016][409]LogMaterial: Warning:      The material will recompile every editor launch until resaved.
+[2020.05.18-14.34.49:017][409]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Select.Select up for play (max tick rate 0) at 2020.05.18-23.34.49
+[2020.05.18-14.34.49:017][409]LogWorld: Bringing up level for play took: 0.001540
+[2020.05.18-14.34.49:017][409]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2020.05.18-14.34.49:021][409]InfinityBlade: Warning: UIBCharacterSelecterWidget::NativeConstruct(59)TargetComponent SkeletalMeshComponent0
+[2020.05.18-14.34.49:021][409]InfinityBlade: Warning: UIBCharacterSelecterWidget::NativeConstruct(65)TargetComponent2 SkeletalMeshComponent0
+[2020.05.18-14.34.49:060][409]LogSkeletalMesh: Skeletal Mesh found in DDC [5.133300ms] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_solid.SK_CharM_solid
+[2020.05.18-14.34.49:093][409]LogLoad: Took 3.767413 seconds to LoadMap(/Game/dev/Maps/Select)
+[2020.05.18-14.34.50:302][491]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.50:343][491]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.50:361][491]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019913b57c80, Size=16
+[2020.05.18-14.34.50:361][491]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019913b56530, Size=16
+[2020.05.18-14.34.50:361][491]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a1586f200, Size=1264
+[2020.05.18-14.34.52:714][747]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.34.52:754][747]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.34.52:754][747]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.34.52:754][747]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:34:52)
+[2020.05.18-14.34.52:754][747]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.34.52:855][747]LogPlayLevel: PIE: StaticDuplicateObject took: (0.100834s)
+[2020.05.18-14.34.52:856][747]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.34.52:856][747]LogPlayLevel: PIE: World Init took: (0.000605s)
+[2020.05.18-14.34.52:856][747]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.101604s)
+[2020.05.18-14.34.52:940][747]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.34.52:962][747]LogInit: FAudioDevice initialized.
+[2020.05.18-14.34.52:995][747]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.34.53:016][747]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.34.53
+[2020.05.18-14.34.53:016][747]LogWorld: Bringing up level for play took: 0.020935
+[2020.05.18-14.34.53:019][747]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: 0.988
+[2020.05.18-14.34.53:019][747]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.35.01:423][340]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.35.01:460][340]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.35.02:338][430]Cmd: SELECT NONE
+[2020.05.18-14.35.05:349][762]Cmd: SELECT NONE
+[2020.05.18-14.35.07:277][959]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.18-14.35.10:435][206]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.35.37:774][178]LogSlate: Window 'TitleLevelElvenHarmonies' being destroyed
+[2020.05.18-14.35.40:968][409]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.35.53:341][237]LogSlate: Window '콘텐츠 저장' being destroyed
+[2020.05.18-14.35.53:365][237]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.18-14.35.53:763][237]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/dev/Maps/Title" FILE="../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Title.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2020.05.18-14.35.53:809][237]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019952b37610, Size=48
+[2020.05.18-14.35.53:809][237]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019996fb8ac0, Size=48, Default__Title_C Function /Engine/Transient.REINST_Title_C_56:ExecuteUbergraph_Title
+[2020.05.18-14.35.53:810][237]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019996fbaf80, Size=48, Default__Title_C Function /Game/dev/Maps/Title.Title_C:ExecuteUbergraph_Title
+[2020.05.18-14.35.55:569][237]LogSavePackage: Save=1763.11ms
+[2020.05.18-14.35.55:569][237]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/TitleA400A4A44474104FC39BC2B2CA19C1E9.tmp' to '../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Title.umap'
+[2020.05.18-14.35.55:576][237]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Title.umap
+[2020.05.18-14.35.55:623][237]LogFileHelpers: Saving map 'Title' took 2.253
+[2020.05.18-14.36.02:888][797]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.37.13:986][586]LogDirectoryWatcher: A directory notification failed for 'C:/dev/NewInfinityBlade/Content/Collections/' because it could not be accessed. Aborting watch request...
+[2020.05.18-14.37.13:986][586]LogDirectoryWatcher: A directory notification failed for 'C:/dev/NewInfinityBlade/Content/Developers/pth08/Collections/' because it could not be accessed. Aborting watch request...
+[2020.05.18-14.37.14:653][588]LogDirectoryWatcher: A directory notification failed for 'C:/dev/NewInfinityBlade/Saved/Collections/' because it could not be accessed. Aborting watch request...
+[2020.05.18-14.37.22:743][814]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.37.22:782][814]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.37.22:782][814]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.37.22:782][814]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:37:22)
+[2020.05.18-14.37.22:782][814]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.37.22:885][814]LogPlayLevel: PIE: StaticDuplicateObject took: (0.102575s)
+[2020.05.18-14.37.22:885][814]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.37.22:886][814]LogPlayLevel: PIE: World Init took: (0.000643s)
+[2020.05.18-14.37.22:886][814]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.103402s)
+[2020.05.18-14.37.22:901][814]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019996fb8ac0, Size=48
+[2020.05.18-14.37.22:901][814]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a2806ec60, Size=32
+[2020.05.18-14.37.22:901][814]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001996163ebc0, Size=32
+[2020.05.18-14.37.22:901][814]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a27f6b300, Size=32
+[2020.05.18-14.37.22:972][814]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.37.22:998][814]LogInit: FAudioDevice initialized.
+[2020.05.18-14.37.23:030][814]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.37.23:051][814]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.37.23
+[2020.05.18-14.37.23:051][814]LogWorld: Bringing up level for play took: 0.020812
+[2020.05.18-14.37.23:054][814]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: 1.023
+[2020.05.18-14.37.23:054][814]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.37.28:625][239]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.37.28:663][239]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.37.51:285][562]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/dev/Sound/BGM/TitleLevelElvenHarmonies" FILE="../../../../../../dev/NewInfinityBlade/Content/dev/Sound/BGM/TitleLevelElvenHarmonies.uasset" SILENT=true
+[2020.05.18-14.37.51:306][562]LogSavePackage: Save=6.04ms
+[2020.05.18-14.37.51:306][562]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/TitleLevelElvenHarmoniesB47937324A0C7B54E33294B0775C6262.tmp' to '../../../../../../dev/NewInfinityBlade/Content/dev/Sound/BGM/TitleLevelElvenHarmonies.uasset'
+[2020.05.18-14.37.51:311][562]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Content/dev/Sound/BGM/TitleLevelElvenHarmonies.uasset
+[2020.05.18-14.37.52:342][615]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.37.53:434][679]LogSlate: Window 'TitleLevelElvenHarmonies' being destroyed
+[2020.05.18-14.37.55:431][792]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.38.06:672][547]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.38.43:882][989]LogSlate: Window 'TitleLevelElvenHarmonies' being destroyed
+[2020.05.18-14.38.44:143][ 10]LogSlate: Took 0.000287 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2020.05.18-14.38.57:554][263]LogEditorViewport: Clicking on Actor (double click): Landscape (Landscape1)
+[2020.05.18-14.38.58:115][318]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape1)
+[2020.05.18-14.39.01:041][593]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.39.01:879][668]LogEditorActor: Deleted Actor: AmbientSound
+[2020.05.18-14.39.01:894][668]LogEditorActor: Deleted 1 Actors (0.046 secs)
+[2020.05.18-14.39.06:685][127]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.39.06:802][139]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.39.06:842][139]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.39.06:842][139]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.39.06:842][139]PIE: New page: PIE 세션: Title (2020. 5. 19. 오전 8:39:06)
+[2020.05.18-14.39.06:842][139]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Title
+[2020.05.18-14.39.06:943][139]LogPlayLevel: PIE: StaticDuplicateObject took: (0.100695s)
+[2020.05.18-14.39.06:944][139]LogAIModule: Creating AISystem for world Title
+[2020.05.18-14.39.06:944][139]LogPlayLevel: PIE: World Init took: (0.000663s)
+[2020.05.18-14.39.06:944][139]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Title.Title to /Game/dev/Maps/UEDPIE_0_Title.Title (0.101531s)
+[2020.05.18-14.39.07:030][139]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.39.07:052][139]LogInit: FAudioDevice initialized.
+[2020.05.18-14.39.07:079][139]LogLoad: Game class is 'BP_TitleGameMode_C'
+[2020.05.18-14.39.07:101][139]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Title.Title up for play (max tick rate 0) at 2020.05.18-23.39.07
+[2020.05.18-14.39.07:101][139]LogWorld: Bringing up level for play took: 0.021837
+[2020.05.18-14.39.07:104][139]PIE: /Game/dev/Maps/UEDPIE_0_Title 에 대한 에디터에서 플레이 시작 시간: 1.073
+[2020.05.18-14.39.07:104][139]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.39.09:983][477]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.39.10:025][477]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/dev/Maps/Title.Title:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Title.Title:PersistentLevel.Title' with GeneratedClass '/Game/dev/Maps/Title.Title_C' with ClassGeneratedBy '/Game/dev/Maps/Title.Title:PersistentLevel.Title'
+[2020.05.18-14.39.10:058][477]LogActorComponent: ReregisterComponent: (/Game/dev/Maps/Title.Title:PersistentLevel.TitleLevelElvenHarmonies_2.AudioComponent0) Not currently registered. Aborting.
+[2020.05.18-14.39.24:372][102]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a23d23e40, Size=16, Default__Select_C Function /Game/dev/Maps/Select.Select_C:ExecuteUbergraph_Select
+[2020.05.18-14.39.24:373][102]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a23d23e40, Size=16
+[2020.05.18-14.39.24:373][102]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a23d23e40, Size=16, Default__Select_C Function /Engine/Transient.REINST_Select_C_58:ExecuteUbergraph_Select
+[2020.05.18-14.39.24:374][102]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a23d228a0, Size=16, Default__Select_C Function /Game/dev/Maps/Select.Select_C:ExecuteUbergraph_Select
+[2020.05.18-14.39.24:396][102]LogAIModule: Creating AISystem for world Select
+[2020.05.18-14.39.24:414][102]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a23d23e40, Size=16
+[2020.05.18-14.39.26:506][102]LogSlate: Window '콘텐츠 저장' being destroyed
+[2020.05.18-14.39.26:915][102]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/dev/Maps/Title" FILE="../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Title.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2020.05.18-14.39.26:948][102]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019996fbaf80, Size=48
+[2020.05.18-14.39.26:948][102]LogUObjectGlobals: Created PersistentFrame Addr=0x000001995f9a17e0, Size=48, Default__Title_C Function /Engine/Transient.REINST_Title_C_62:ExecuteUbergraph_Title
+[2020.05.18-14.39.26:949][102]LogUObjectGlobals: Created PersistentFrame Addr=0x000001995f9a1120, Size=48, Default__Title_C Function /Game/dev/Maps/Title.Title_C:ExecuteUbergraph_Title
+[2020.05.18-14.39.28:738][102]LogSavePackage: Save=1794.88ms
+[2020.05.18-14.39.28:738][102]LogSavePackage: Moving '../../../../../../dev/NewInfinityBlade/Saved/Title99525A2B456A052D05A57C9A082CB4C1.tmp' to '../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Title.umap'
+[2020.05.18-14.39.28:745][102]LogSavePackage: Display: Finished SavePackage ../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Title.umap
+[2020.05.18-14.39.28:791][102]LogFileHelpers: Saving map 'Title' took 2.274
+[2020.05.18-14.39.28:792][102]Cmd: MAP LOAD FILE="../../../../../../dev/NewInfinityBlade/Content/dev/Maps/Select.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.05.18-14.39.28:792][102]LightingResults: New page: 라이팅 빌드
+[2020.05.18-14.39.28:792][102]LoadErrors: New page: 맵 로드중: Select.umap
+[2020.05.18-14.39.28:799][102]MapCheck: New page: 맵 체크
+[2020.05.18-14.39.28:799][102]LightingResults: New page: 라이팅 빌드
+[2020.05.18-14.39.28:835][102]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001995f9a17e0, Size=48
+[2020.05.18-14.39.28:835][102]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001995f9a1120, Size=48
+[2020.05.18-14.39.28:942][102]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.05.18-14.39.29:004][102]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.05.18-14.39.29:418][102]MapCheck: 맵 체크 완료: 오류 0 회, 경고 0 회, 소요 시간 413.842ms.
+[2020.05.18-14.39.29:424][102]LogFileHelpers: Loading map 'Select' took 0.633
+[2020.05.18-14.39.36:601][823]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2020.05.18-14.39.41:506][334]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.39.43:411][533]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape)
+[2020.05.18-14.39.45:608][755]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.39.47:633][964]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape)
+[2020.05.18-14.39.49:209][119]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.39.51:070][312]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape)
+[2020.05.18-14.39.57:843][ 36]LogEditorViewport: Clicking on Actor (LMB): AmbientSound (SelectLevelMagicalFantasy)
+[2020.05.18-14.40.05:711][832]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.40.11:626][350]LogEditorViewport: Clicking on Actor (LMB): AmbientSound (SelectLevelMagicalFantasy)
+[2020.05.18-14.40.12:403][426]Cmd: DELETE
+[2020.05.18-14.40.12:403][426]Cmd: ACTOR DELETE
+[2020.05.18-14.40.12:406][426]LogEditorActor: Deleted Actor: AmbientSound
+[2020.05.18-14.40.12:421][426]LogEditorActor: Deleted 1 Actors (0.018 secs)
+[2020.05.18-14.40.14:682][691]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape)
+[2020.05.18-14.40.15:272][749]LogEditorViewport: Clicking on Actor (LMB): AmbientSound (MagicalFantasy)
+[2020.05.18-14.40.18:169][ 10]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2020.05.18-14.40.18:299][ 25]LogTemp: Repeating last play command: 선택된 뷰포트
+[2020.05.18-14.40.18:341][ 25]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/dev/Maps/Select.Select:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Select.Select:PersistentLevel.Select' with GeneratedClass '/Game/dev/Maps/Select.Select_C' with ClassGeneratedBy '/Game/dev/Maps/Select.Select:PersistentLevel.Select'
+[2020.05.18-14.40.18:341][ 25]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.18-14.40.18:341][ 25]PIE: New page: PIE 세션: Select (2020. 5. 19. 오전 8:40:18)
+[2020.05.18-14.40.18:341][ 25]LogPlayLevel: Creating play world package: /Game/dev/Maps/UEDPIE_0_Select
+[2020.05.18-14.40.18:346][ 25]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004885s)
+[2020.05.18-14.40.18:347][ 25]LogAIModule: Creating AISystem for world Select
+[2020.05.18-14.40.18:347][ 25]LogPlayLevel: PIE: World Init took: (0.000747s)
+[2020.05.18-14.40.18:347][ 25]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/dev/Maps/Select.Select to /Game/dev/Maps/UEDPIE_0_Select.Select (0.005780s)
+[2020.05.18-14.40.18:444][ 25]LogInit: XAudio2 using '스피커(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2020.05.18-14.40.18:466][ 25]LogInit: FAudioDevice initialized.
+[2020.05.18-14.40.18:497][ 25]LogLoad: Game class is 'BP_SelectGameMode_C'
+[2020.05.18-14.40.18:498][ 25]LogWorld: Bringing World /Game/dev/Maps/UEDPIE_0_Select.Select up for play (max tick rate 0) at 2020.05.18-23.40.18
+[2020.05.18-14.40.18:498][ 25]LogWorld: Bringing up level for play took: 0.000971
+[2020.05.18-14.40.18:500][ 25]InfinityBlade: Warning: UIBCharacterSelecterWidget::NativeConstruct(59)TargetComponent SkeletalMeshComponent0
+[2020.05.18-14.40.18:500][ 25]InfinityBlade: Warning: UIBCharacterSelecterWidget::NativeConstruct(65)TargetComponent2 SkeletalMeshComponent0
+[2020.05.18-14.40.18:500][ 25]PIE: /Game/dev/Maps/UEDPIE_0_Select 에 대한 에디터에서 플레이 시작 시간: 0.469
+[2020.05.18-14.40.18:500][ 25]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/dev/Maps/Select.Select:PersistentLevel' has LevelScriptBlueprint '/Game/dev/Maps/Select.Select:PersistentLevel.Select' with GeneratedClass '/Game/dev/Maps/Select.Select_C' with ClassGeneratedBy '/Game/dev/Maps/Select.Select:PersistentLevel.Select'
+[2020.05.18-14.40.51:090][908]InfinityBlade: Warning: UIBCharacterSelecterWidget::OnConfirmClicked(171)CurrentIndex 14
+[2020.05.18-14.41.01:699][156]LogNet: Browse: /Game/dev/Maps/StartRoom
+[2020.05.18-14.41.01:699][156]LogLoad: LoadMap: /Game/dev/Maps/StartRoom
+[2020.05.18-14.41.01:797][156]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a5b2e5d00, Size=816, Default__StartRoom_C Function /Game/dev/Maps/StartRoom.StartRoom_C:ExecuteUbergraph_StartRoom
+[2020.05.18-14.41.01:802][156]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000019a5b2e5d00, Size=816
+[2020.05.18-14.41.01:802][156]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a5b2e5d00, Size=816, Default__StartRoom_C Function /Engine/Transient.REINST_StartRoom_C_64:ExecuteUbergraph_StartRoom
+[2020.05.18-14.41.01:806][156]LogUObjectGlobals: Created PersistentFrame Addr=0x0000019a5b2d6080, Size=816, Default__StartRoom_C Function /Game/dev/Maps/StartRoom.StartRoom_C:ExecuteUbergraph_StartRoom
+[2020.05.18-14.41.08:604][156]LogStats: FPlatformStackWalk::StackWalkAndDump -  6.742 s
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: === Handled ensure: ===
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: 
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: Ensure condition failed: IsObjectValidForDatabase(AssetObject) [File:D:\Build\++UE4+Release-4.19+Compile\Sync\Engine\Source\Editor\BlueprintGraph\Private\BlueprintActionDatabase.cpp] [Line: 1315]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: 
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: Stack: 
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x0000000018D7B706 UE4Editor-Core.dll!FWindowsPlatformStackWalk::StackWalkAndDump() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\core\private\windows\windowsplatformstackwalk.cpp:234]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x0000000018ADAE3A UE4Editor-Core.dll!FDebug::EnsureFailed() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\core\private\misc\assertionmacros.cpp:299]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x0000000018AEECD6 UE4Editor-Core.dll!FDebug::OptionallyLogFormattedEnsureMessageReturningFalse() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\core\private\misc\assertionmacros.cpp:430]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x00000000106FBBE9 UE4Editor-BlueprintGraph.dll!FBlueprintActionDatabase::RefreshAssetActions() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\blueprintgraph\private\blueprintactiondatabase.cpp:1315]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x00000000106CD28D UE4Editor-BlueprintGraph.dll!TBaseStaticDelegateInstance<void __cdecl(UObject * __ptr64)>::ExecuteIfSafe() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\core\public\delegates\delegateinstancesimpl.h:788]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x0000000032626F37 UE4Editor-CoreUObject.dll!TBaseMulticastDelegate<void,UObject * __ptr64>::Broadcast() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\core\public\delegates\delegatesignatureimpl.inl:937]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x000000003296C010 UE4Editor-CoreUObject.dll!EndLoad() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\uobjectglobals.cpp:1721]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x000000003298312B UE4Editor-CoreUObject.dll!LoadPackageInternal() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\uobjectglobals.cpp:1339]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x0000000032982544 UE4Editor-CoreUObject.dll!LoadPackage() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\coreuobject\private\uobject\uobjectglobals.cpp:1436]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x00000000123F917A UE4Editor-Engine.dll!UEngine::LoadMap() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\unrealengine.cpp:10889]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x00000000123AC788 UE4Editor-Engine.dll!UEngine::Browse() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\unrealengine.cpp:10373]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x000000001241A4A0 UE4Editor-Engine.dll!UEngine::TickWorldTravel() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\engine\private\unrealengine.cpp:10562]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x000000000EA0CD20 UE4Editor-UnrealEd.dll!UEditorEngine::Tick() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\unrealed\private\editorengine.cpp:1639]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x000000000F2A9626 UE4Editor-UnrealEd.dll!UUnrealEdEngine::Tick() [d:\build\++ue4+release-4.19+compile\sync\engine\source\editor\unrealed\private\unrealedengine.cpp:401]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x00000000B7995EAC UE4Editor.exe!FEngineLoop::Tick() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\launchengineloop.cpp:3339]
+[2020.05.18-14.41.08:604][156]LogOutputDevice: Error: [Callstack] 0x00000000B79A6BD0 UE4Editor.exe!GuardedMain() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\launch.cpp:166]
+[2020.05.18-14.41.08:605][156]LogOutputDevice: Error: [Callstack] 0x00000000B79A6C4A UE4Editor.exe!GuardedMainWrapper() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:144]
+[2020.05.18-14.41.08:605][156]LogOutputDevice: Error: [Callstack] 0x00000000B79B4177 UE4Editor.exe!WinMain() [d:\build\++ue4+release-4.19+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:223]
+[2020.05.18-14.41.08:605][156]LogOutputDevice: Error: [Callstack] 0x00000000B79B5B87 UE4Editor.exe!__scrt_common_main_seh() [f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl:253]
+[2020.05.18-14.41.08:605][156]LogOutputDevice: Error: [Callstack] 0x0000000065D97BD4 KERNEL32.DLL!UnknownFunction []
+[2020.05.18-14.41.08:605][156]LogOutputDevice: Error: [Callstack] 0x0000000066F0CE51 ntdll.dll!UnknownFunction []
+[2020.05.18-14.41.08:605][156]LogOutputDevice: Error: 
+[2020.05.18-14.41.08:606][156]LogStats:                SubmitErrorReport -  0.000 s

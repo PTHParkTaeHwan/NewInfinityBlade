@@ -581,7 +581,7 @@ float AIBCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEv
 	//TargetPos = GetActorLocation() + DamageCauser->GetActorForwardVector()*(DamageCauser->GetDistanceTo(this)*1.2f);
 
 	//================== 추후수정 =================
-	FinalDamage = 0.0f;
+	//FinalDamage = 0.0f;
 	//================== 추후수정 =================
 
 	switch (CurrentControlMode)
@@ -961,8 +961,11 @@ void AIBCharacter::AttackCheck()
 				FDamageEvent DamageEvent;
 				HitResult.Actor->TakeDamage(CharacterStat->GetAttack()*2, DamageEvent, GetController(), this);
 			}
-			EnemyHitSoundComponent->SetWorldLocation(HitResult.Actor->GetActorLocation());
-			EnemyHitSoundComponent->Play(0.f);
+			if (HitResult.Actor.IsValid())
+			{
+				EnemyHitSoundComponent->SetWorldLocation(HitResult.Actor->GetActorLocation());
+				EnemyHitSoundComponent->Play(0.f);
+			}
 		}
 	}
 }
@@ -1298,7 +1301,7 @@ void AIBCharacter::FirstSkillAttackCheck(FVector ExplosionVector)
 
 #if ENABLE_DRAW_DEBUG
 	
-	DrawDebugPoint(GetWorld(), ExplosionVector, 20.0f, FColor::Red, false, 5.0f);
+	//DrawDebugPoint(GetWorld(), ExplosionVector, 20.0f, FColor::Red, false, 5.0f);
 
 
 #endif
@@ -1340,7 +1343,7 @@ void AIBCharacter::ForthSkillAttackCheck(FVector ExplosionVector)
 
 #if ENABLE_DRAW_DEBUG
 
-	DrawDebugPoint(GetWorld(), ExplosionVector, 10.0f, FColor::Red, false, 5.0f);
+	//DrawDebugPoint(GetWorld(), ExplosionVector, 10.0f, FColor::Red, false, 5.0f);
 
 #endif
 	if (bResults)

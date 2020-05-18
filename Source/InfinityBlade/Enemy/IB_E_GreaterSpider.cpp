@@ -193,7 +193,7 @@ float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & D
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	//IB_E_GSAnim->StopAllMontage();
-	FinalDamage = 0.0f;
+	//FinalDamage = 0.0f;
 	KnockBackMotion(DamageCauser);
 	HitMotionOn = true;	
 	HitEffect->Activate(true);
@@ -408,7 +408,7 @@ void AIB_E_GreaterSpider::AttackCheck()
 
 #if ENABLE_DRAW_DEBUG
 
-	FVector TraceVec = GetActorForwardVector() * AttackRange;
+	/*FVector TraceVec = GetActorForwardVector() * AttackRange;
 	FVector Center = GetActorLocation() + TraceVec * 0.5f;
 	float HalfHeight = AttackRange * 0.5f + AttackRadius;
 	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
@@ -422,7 +422,7 @@ void AIB_E_GreaterSpider::AttackCheck()
 		CapsuleRot,
 		DrawColor,
 		false,
-		DebugLifeTime);
+		DebugLifeTime);*/
 
 	auto TempPlayer = Cast<AIBCharacter>(GetWorld()->GetFirstPlayerController()->GetCharacter());
 	if (TempPlayer == nullptr)
@@ -468,7 +468,7 @@ void AIB_E_GreaterSpider::PlayerCheck()
 
 #if ENABLE_DRAW_DEBUG
 
-	FVector TraceVec = GetActorForwardVector() * AttackRange;
+	/*FVector TraceVec = GetActorForwardVector() * AttackRange;
 	FVector Center = GetActorLocation() + TraceVec * 0.5f;
 	float HalfHeight = AttackRange * 0.5f + AttackRadius;
 	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
@@ -482,7 +482,7 @@ void AIB_E_GreaterSpider::PlayerCheck()
 		CapsuleRot,
 		DrawColor,
 		false,
-		DebugLifeTime);
+		DebugLifeTime);*/
 	
 #endif
 	if (bResults)
