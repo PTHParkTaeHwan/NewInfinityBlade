@@ -12,7 +12,7 @@ UIB_E_GS_StatComponent::UIB_E_GS_StatComponent()
 	PrimaryComponentTick.bCanEverTick = false;
 	bWantsInitializeComponent = true;
 	
-	Level = 1;
+	Level = 5;
 	// ...
 }
 
