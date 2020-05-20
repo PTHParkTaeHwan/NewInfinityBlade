@@ -258,12 +258,12 @@ public:
 	//스킬4
 
 
-
 	UPROPERTY(VisibleAnywhere, Category = Skill)
 	UParticleSystemComponent* TestParticle;
 
 	UPROPERTY(VisibleAnywhere, Category = Skill)
 	UParticleSystemComponent* TestParticle2;
+
 
 
 
@@ -381,6 +381,13 @@ private:
 	
 	FVector SkillStartLocation = FVector::ZeroVector;
 	FVector SkillStartForwardVector = FVector::ZeroVector;
+
+public:
+	//레벨업 관련
+	UPROPERTY(VisibleAnywhere, Category = LevelUp)
+	UParticleSystemComponent* LevelUpParticle;
+
+	void PlayLevelUpParticle();
 
 
 private:

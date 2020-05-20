@@ -68,7 +68,11 @@ void AIBPlayerController::NPCKill(AActor* KilledNPC /*AIBCharacter * KilledNPC*/
 {
 	auto Enemy = Cast<AIB_E_GreaterSpider>(KilledNPC);
 	ABLOG(Warning, TEXT("%d"), Enemy->GetExp());
-	IBPlayerState->AddExp(Enemy->GetExp());
+	if(IBPlayerState->AddExp(Enemy->GetExp()))
+	{
+		auto Player = Cast<AIBCharacter>(GetPawn());
+		Player->PlayLevelUpParticle();
+	}
 }
 
 void AIBPlayerController::ChangeInputMode(bool bGameMode)

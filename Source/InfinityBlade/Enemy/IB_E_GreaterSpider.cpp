@@ -46,7 +46,7 @@ AIB_E_GreaterSpider::AIB_E_GreaterSpider()
 
 	//HPBar Widget
 	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
-	HPBarWidget->bAbsoluteLocation = false;
+	//HPBarWidget->bAbsoluteLocation = false;
 	HPBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
 	//HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
 	static ConstructorHelpers::FClassFinder<UUserWidget> UI_HUD(TEXT("/Game/dev/Enemy/UI/UI_E_HPUIBar.UI_E_HPUIBar_C"));
@@ -174,7 +174,7 @@ void AIB_E_GreaterSpider::PostInitializeComponents()
 	{
 		CharacterWidget->BindCharacterStat(CharacterStat);
 	}
-	//HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
+	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 80.0f));
 
 	//hit motion
 	IB_E_GSAnim->E_OnHitCheck.AddLambda([this]()->void {
@@ -214,7 +214,9 @@ float AIB_E_GreaterSpider::TakeDamage(float DamageAmount, FDamageEvent const & D
 	if (!bInitWidgetLocation)
 	{
 		bInitWidgetLocation = true;
-		HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
+		//HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 70.0f));
+		HPBarWidget->SetWorldLocation(GetActorLocation()+FVector(0.0f, 0.0f, 70.0f));
+		HPBarWidget->SetHiddenInGame(false);
 	}
 
 	return FinalDamage;
@@ -232,6 +234,11 @@ void AIB_E_GreaterSpider::Tick(float DeltaTime)
 		{
 			TentionModeInit();
 		}
+	}
+
+	if (bInitWidgetLocation)
+	{
+		HPBarWidget->SetWorldLocation(GetActorLocation() + FVector(0.0f, 0.0f, 70.0f));
 	}
 
 	KnockBackMotionHub(DeltaTime);

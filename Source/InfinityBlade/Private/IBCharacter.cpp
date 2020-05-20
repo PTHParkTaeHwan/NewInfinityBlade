@@ -259,6 +259,17 @@ AIBCharacter::AIBCharacter()
 		CS_BasicHit = CS_BASICHIT.Class;
 	}	
 
+	//레벨업 변수 초기화
+	LevelUpParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("LevelUpParticle"));
+	LevelUpParticle->SetupAttachment(RootComponent);
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_LUP(TEXT("ParticleSystem'/Game/InfinityBladeEffects/Effects/FX_Mobile/Misc/P_levelUp_OLD.P_levelUp_OLD'"));
+	if (P_LUP.Succeeded())
+	{
+		LevelUpParticle->SetTemplate(P_LUP.Object);
+		LevelUpParticle->bAutoActivate = false;
+		LevelUpParticle->bAbsoluteLocation = true;
+		LevelUpParticle->bAbsoluteRotation = true;
+	}
 
 }
 void AIBCharacter::SetCharacterState(ECharacterState NewState)
@@ -978,6 +989,12 @@ void AIBCharacter::OnAssetLoadCompleted()
 	
 	SetCharacterState(ECharacterState::READY);
 
+}
+void AIBCharacter::PlayLevelUpParticle()
+{
+	ABLOG(Warning, TEXT("PlayLevelUpParticle"));
+	LevelUpParticle->SetWorldLocation(GetActorLocation());
+	LevelUpParticle->Activate(true);
 }
 void AIBCharacter::InitCameraShakeParam()
 {
