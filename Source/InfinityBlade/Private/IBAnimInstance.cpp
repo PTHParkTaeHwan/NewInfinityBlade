@@ -235,6 +235,10 @@ void UIBAnimInstance::PlayHitMontage(int32 SectionNum)
 	Montage_Play(HitMontage, 1.2f);
 	Montage_JumpToSection(GetHitMontageSectionName(SectionNum), HitMontage);
 }
+bool UIBAnimInstance::GetIsClawSkill()
+{
+	return Montage_IsPlaying(ClawMontage);
+}
 FName UIBAnimInstance::GetHitMontageSectionName(int32 Section)
 {
 	return FName(*FString::Printf(TEXT("Hit%d"), Section));

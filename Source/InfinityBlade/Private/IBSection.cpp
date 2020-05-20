@@ -34,7 +34,6 @@ AIBSection::AIBSection()
 	Trigger->SetCollisionProfileName(TEXT("IBTrigger"));
 	Trigger->OnComponentBeginOverlap.AddDynamic(this, &AIBSection::OnTriggerBeginOverlap);
 
-
 	FString GateAssetPath = TEXT("/Game/Book/SM_GATE.SM_GATE");
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> SM_GATE(*GateAssetPath);
 	if (!SM_GATE.Succeeded())
@@ -58,6 +57,7 @@ AIBSection::AIBSection()
 		NewGateTrigger->SetCollisionProfileName(TEXT("IBTrigger"));
 		GateTriggers.Add(NewGateTrigger);
 		NewGateTrigger->OnComponentBeginOverlap.AddDynamic(this, &AIBSection::OnGateTriggerBeginOverlap);
+		//NewGateTrigger->OnComponentEndOverlap.AddDynamic(this, &AIBSection::OnGateTriggerEndOverlap);
 		NewGateTrigger->ComponentTags.Add(GateSocket);
 	}
 
@@ -159,6 +159,7 @@ void AIBSection::OnGateTriggerBeginOverlap(UPrimitiveComponent * OverlappedCompo
 		SetState(ESectionState::BATTLE);
 	}
 
+
 	/*FVector NewLocation = Mesh->GetSocketLocation(SocketName);
 
 	TArray<FOverlapResult> OverlapResults;
@@ -181,6 +182,20 @@ void AIBSection::OnGateTriggerBeginOverlap(UPrimitiveComponent * OverlappedCompo
 	{
 		ABLOG(Warning, TEXT("not Empty"));
 	}*/
+}
+
+void AIBSection::OnGateTriggerEndOverlap(UPrimitiveComponent * OverlappedComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+{
+}
+
+void AIBSection::OpenGates()
+{
+	Trigger->SetCollisionProfileName(TEXT("NoCollision"));
+	for (UBoxComponent* GateTrigger : GateTriggers)
+	{
+		GateTrigger->SetCollisionProfileName(TEXT("IBTrigger"));
+	}
+	OperateGates(true);
 }
 
 // Called every frame

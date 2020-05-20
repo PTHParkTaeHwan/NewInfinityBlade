@@ -180,6 +180,8 @@ public:
 	void PlayShieldSkillMontage();
 	void PlayUltimateSkillMontage();
 
+	bool GetIsClawSkill();
+
 	//hit ¸ð¼Ç
 	void PlayHitMontage(int32 SectionNum);
 	FName GetHitMontageSectionName(int32 Section);

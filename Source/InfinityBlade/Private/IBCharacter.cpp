@@ -202,6 +202,15 @@ AIBCharacter::AIBCharacter()
 		EnemyHitSoundComponent->bAutoActivate = false;
 	}
 
+	static ConstructorHelpers::FObjectFinder<USoundCue> LUS(TEXT("SoundCue'/Game/dev/Sound/Player/LevelUp_Cue.LevelUp_Cue'"));
+	if (LUS.Succeeded())
+	{
+		LevelUpSound = LUS.Object;
+		LevelUpSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("LevelUpSound"));
+		LevelUpSoundComponent->SetupAttachment(RootComponent);
+		LevelUpSoundComponent->SetSound(LevelUpSound);
+		LevelUpSoundComponent->bAutoActivate = false;
+	}
 
 
 	
@@ -462,7 +471,7 @@ void AIBCharacter::Tick(float DeltaTime)
 
 	//managet to HitMotion blend time 
 	if (bHitMotionBlendTime) CheckIntervalTime += DeltaTime;
-	if (CheckIntervalTime >= 0.31f)
+	if (CheckIntervalTime >= 0.4f)
 	{
 		CheckIntervalTime = 0.f;
 		bHitMotionBlendTime = false;
@@ -486,6 +495,11 @@ void AIBCharacter::Tick(float DeltaTime)
 		IsRun = true;
 		GetCharacterMovement()->MaxWalkSpeed = 530.0f;
 	}	
+
+	if (LevelUpParticle->IsActive())
+	{
+		LevelUpParticle->SetWorldLocation(GetActorLocation());
+	}
 }
 void AIBCharacter::PostInitializeComponents()
 {
@@ -728,7 +742,7 @@ void AIBCharacter::RunChange()
 }
 void AIBCharacter::Attack()
 {	
-	if (IsHit || bHitMotionBlendTime) return;
+	if (IsHit || bHitMotionBlendTime || IBAnim->GetIsClawSkill() || IBAnim->GetIsDodgeMontage()) return;
 	if (bBasicAttackMontage)
 	{
 		if (!IsAttacking)
@@ -822,8 +836,8 @@ void AIBCharacter::DodgeMotion()
 		break;
 	}
 	FVector ForwardVector = GetActorForwardVector();
-	ForwardVector.X = ForwardVector.X * 6000.0f;
-	ForwardVector.Y = ForwardVector.Y * 6000.0f;
+	ForwardVector.X = ForwardVector.X * 9000.0f;
+	ForwardVector.Y = ForwardVector.Y * 9000.0f;
 	GetMovementComponent()->Velocity = ForwardVector;
 	if (bCanDodge) bSkipTakeDamage = true;
 
@@ -993,8 +1007,8 @@ void AIBCharacter::OnAssetLoadCompleted()
 void AIBCharacter::PlayLevelUpParticle()
 {
 	ABLOG(Warning, TEXT("PlayLevelUpParticle"));
-	LevelUpParticle->SetWorldLocation(GetActorLocation());
 	LevelUpParticle->Activate(true);
+	LevelUpSoundComponent->Play(0.f);
 }
 void AIBCharacter::InitCameraShakeParam()
 {

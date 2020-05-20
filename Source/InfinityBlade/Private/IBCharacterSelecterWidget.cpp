@@ -122,16 +122,16 @@ void UIBCharacterSelecterWidget::OnPrevClicked()
 	if (!bFirstClicked)
 	{
 		bFirstClicked = true;
-		CurrentIndex = 11;
+		CurrentIndex = 14;
 		return ;
 	}
-	if (CurrentIndex == 14)
-	{
-		CurrentIndex = 11;
-	}
-	else if (CurrentIndex == 11)
+	if (CurrentIndex == 11)
 	{
 		CurrentIndex = 14;
+	}
+	else if (CurrentIndex == 14)
+	{
+		CurrentIndex = 11;
 	}
 }
 
@@ -140,17 +140,17 @@ void UIBCharacterSelecterWidget::OnNextClicked()
 	if (!bFirstClicked)
 	{
 		bFirstClicked = true;
-		CurrentIndex = 14;
+		CurrentIndex = 11;
 		return;
 	}
 
-	if (CurrentIndex == 11)
-	{
-		CurrentIndex = 14;
-	}
-	else if (CurrentIndex == 14)
+	if (CurrentIndex == 14)
 	{
 		CurrentIndex = 11;
+	}
+	else if (CurrentIndex == 11)
+	{
+		CurrentIndex = 14;
 	}
 }
 

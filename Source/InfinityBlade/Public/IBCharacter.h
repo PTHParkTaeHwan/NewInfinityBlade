@@ -124,6 +124,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
 	class USoundCue* EnemyHitSound;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio, meta = (AllowPrivateAccess = "true"))
+	class USoundCue* LevelUpSound;
+
 	   
 private:
 	struct S_AudioComponent
@@ -141,6 +144,8 @@ private:
 	UAudioComponent* ShieldHitSoundComponent;
 	UAudioComponent* PlayerHitSoundComponent;
 	UAudioComponent* EnemyHitSoundComponent;
+
+	UAudioComponent* LevelUpSoundComponent;
 
 public:
 	bool GetIsRun();
